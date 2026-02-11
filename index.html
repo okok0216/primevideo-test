@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/respond.css">
 </head>
-
 <body>
     <header>
         <div class="inner">
@@ -190,10 +188,8 @@
                 </li>
             </ul>
             <ul class="arrow-btn">
-                <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a>
-                </li>
-                <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a>
-                </li>
+                <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
             </ul>
         </div>
         <ul class="pager-btn">
@@ -211,7 +207,18 @@
                 <div class="ranking-list-wrap">
                     <ul class="ranking-list list">
                         <li><a href="#"><img src="./images/rank/rank-1.jpg" alt="랭킹사진"><strong>1</strong></a></li>
-                        <li><a href="#"><img src="./images/rank/rank-2.jpg" alt="랭킹사진"><strong>2</strong></a></li>
+                        <li class="active">
+                            <a href="#"><img src="./images/rank/rank-2.jpg" alt="랭킹사진"><strong>2</strong></a>
+                            <div class="text-box">
+                                <h3 class="rank-title">콘텐츠 제목</h3>
+                                <ul class="rank-icon-list">
+                                    <li><a href="#"><img src="./images/card-icon/rank-btn_play.png" alt="재생"></a></li>
+                                    <li><a href="#"><img src="./images/card-icon/rank-btn_plus.png" alt="위시리스트추가"></a></li>
+                                </ul>
+                                <p class="rank-info"><span>00&plus;</span><span>시간 에피소드</span><img src="./images/card-icon/card-icon-star.png" alt="별점"><span class="rank-review">0.0</span></p>
+                            </div> 
+                        </li>
+                        <!-- <li><a href="#"><img src="./images/rank/rank-2.jpg" alt="랭킹사진"><strong>2</strong></a></li> -->
                         <li><a href="#"><img src="./images/rank/rank-3.jpg" alt="랭킹사진"><strong>3</strong></a></li>
                         <li><a href="#"><img src="./images/rank/rank-4.jpg" alt="랭킹사진"><strong>4</strong></a></li>
                         <li><a href="#"><img src="./images/rank/rank-5.jpg" alt="랭킹사진"><strong>5</strong></a></li>
@@ -222,10 +229,8 @@
                         <li><a href="#"><img src="./images/rank/rank-10.jpg" alt="랭킹사진"><strong>10</strong></a></li>
                     </ul>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a></li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a></li>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
                         <li class="active"><a href="#">1</a></li>
@@ -260,10 +265,8 @@
                         <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
                     </ul>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a></li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a></li>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
                         <li class="active"><a href="#">1</a></li>
@@ -280,7 +283,23 @@
                 <div class="playing-list-wrap">
                     <ul class="playing-list list movie-list">
                         <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a></li>
+                        <li>
+                            <a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a>
+                        </li>
+                        <li class="active">
+                            <a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a>
+                            <div class="text-box">
+                                <ul class="movie-icon-list">
+                                    <li><a href="#"><img src="./images/card-icon/btn_play.png" alt="재생하기"></a></li>
+                                    <li><a href="#"><img src="./images/card-icon/btn_trash.png" alt="삭제하기"></a></li>
+                                </ul>
+                                <div class="movie-title-box">
+                                    <h3>콘텐츠 제목</h3>
+                                    <p><img src="./images/card-icon/card-icon-star.png" alt="별점"><span class="rank-review">0.0</span></p>
+                                </div>
+                                <p class="movie-info">설명</p>
+                            </div>
+                        </li>
                         <li><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
                         <!-- <li><a href="#"><img src="./images/movie-video/movie-5.jpg" alt="movieimage"></a></li>
@@ -354,14 +373,11 @@
                         <li><a href="#"><img src="./images/movie-video/movie-35.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-36.jpg" alt="movieimage"></a></li>
                     </ul>
-                    <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png"
-                                alt="morearrow"></a></p>
+                    <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png" alt="morearrow"></a></p>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a>
                         </li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a>
                         </li>
                     </ul>
                     <ul class="pager-btn">
@@ -397,14 +413,11 @@
                         <li><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
                     </ul>
-                    <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png"
-                                alt="morearrow"></a></p>
+                    <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png" alt="morearrow"></a></p>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a>
                         </li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a>
                         </li>
                     </ul>
                     <ul class="pager-btn">
@@ -877,6 +890,15 @@
                             </div>
                         </li>
                     </ul>
+                    <ul class="arrow-btn">
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
+                    </ul>
+                    <ul class="pager-btn">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -901,10 +923,8 @@
                         <li><a href="#"><img src="./images/sports/team-13.png" alt="스포츠팀"></a></li>
                     </ul>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a></li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a></li>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
                         <li class="active"><a href="#">1</a></li>
@@ -915,8 +935,7 @@
                     <ul class="sport-event-list list">
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-1.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-1.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -925,8 +944,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-2.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-2.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -935,8 +953,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-3.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-3.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -945,8 +962,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-4.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-4.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -955,8 +971,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-5.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-5.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -965,8 +980,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-6.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-6.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -975,8 +989,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-7.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-7.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -985,8 +998,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <div class="img-box"><img src="./images/sports/game-schedule-8.png" alt="스포츠예정이벤트">
-                                </div>
+                                <div class="img-box"><img src="./images/sports/game-schedule-8.png" alt="스포츠예정이벤트"></div>
                             </a>
                             <div class="text-box">
                                 <h3>event title</h3>
@@ -995,10 +1007,8 @@
                         </li>
                     </ul>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a></li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a></li>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
                         <li class="active"><a href="#">1</a></li>
@@ -1019,12 +1029,9 @@
                                 <h3>Grizzlies vs Magic</h3>
                                 <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
-                                    </li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png"
-                                                alt="위시리스트"></a></li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
-                                    </li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png" alt="위시리스트"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -1034,12 +1041,9 @@
                                 <h3>Grizzlies vs Magic</h3>
                                 <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
-                                    </li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png"
-                                                alt="위시리스트"></a></li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
-                                    </li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png" alt="위시리스트"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -1049,12 +1053,9 @@
                                 <h3>Grizzlies vs Magic</h3>
                                 <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
-                                    </li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png"
-                                                alt="위시리스트"></a></li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
-                                    </li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png" alt="위시리스트"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -1064,12 +1065,9 @@
                                 <h3>Grizzlies vs Magic</h3>
                                 <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
-                                    </li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png"
-                                                alt="위시리스트"></a></li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
-                                    </li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png" alt="위시리스트"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -1079,21 +1077,16 @@
                                 <h3>Grizzlies vs Magic</h3>
                                 <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
-                                    </li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png"
-                                                alt="위시리스트"></a></li>
-                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
-                                    </li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sports_plus.png" alt="위시리스트"></a></li>
+                                    <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a></li>
                                 </ul>
                             </div>
                         </li>
                     </ul>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a></li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a></li>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
                         <li class="active"><a href="#">1</a></li>
@@ -1180,10 +1173,8 @@
                         </li>
                     </ul>
                     <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a></li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a></li>
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png" alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png" alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
                         <li class="active"><a href="#">1</a></li>
@@ -1226,5 +1217,4 @@
         </div>
     </footer>
 </body>
-
 </html>
