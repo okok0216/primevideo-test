@@ -331,7 +331,7 @@ section .inner {
     font-weight: bold;
 }
 
-.information-list>.detail-information {
+.information-list>.blue-text {
     color: #AAB1A9;
     position: relative;
     display: inline-block;
@@ -340,11 +340,11 @@ section .inner {
     transition: 0.3s;
 }
 
-.information-list>.detail-information:hover {
+.information-list>.blue-text:hover {
     color: #00A8E1;
 }
 
-.information-list>.detail-information::after {
+.information-list>.blue-text::after {
     content: "";
     display: block;
     width: 0px;
@@ -359,7 +359,7 @@ section .inner {
 
 
 
-.information-list>.detail-information:hover::after {
+.information-list>.blue-text:hover::after {
     width: 100%;
 }
 
