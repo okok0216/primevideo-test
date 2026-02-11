@@ -300,8 +300,8 @@ section .arrow-btn{
 /* ******************main*************************** */
 main{
     background: #16181d;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding: 50px 0 100px;
+    margin-top: 50px;
 }
 .no-margin{
     margin-top: 0;

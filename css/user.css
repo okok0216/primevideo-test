@@ -130,6 +130,7 @@
     width: 340px;
     margin: 0 auto;
     margin-top: 30px;
+    color: #fff;
 }
 
 .user-form .user-btn>a {
@@ -166,6 +167,17 @@
     gap: 30px;
     justify-content: center;
     margin: 20px 0;
+}
+
+.account-form .line{
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+.account-form div{
+    margin-bottom: 30px;
+}
+.account-form p {
+    margin-bottom: 20px;
 }
 
 /* ***************profile*************** */
