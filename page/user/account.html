@@ -5,58 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프라임비디오</title>
-    <link rel="stylesheet" href="./css/pretendard-font.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/user.css">
+    <link rel="shortcut icon" href="../../images/prime-favicon.png">
+    <link rel="stylesheet" href="../../css/pretendard-font.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/user.css">
 </head>
 
 <body>
     <header>
         <div class="inner">
             <div class="header-left">
-                <h1 class="logo"><a href="#"><img src="./images/logo-icon/primevideoLOGO.png" alt="프라임비디오"></a></h1>
-                <ul class="main-menu">
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">영화</a></li>
-                    <li><a href="#">TV프로그램</a></li>
-                    <li><a href="#">스포츠</a></li>
-                    <li><a href="#">장르</a></li>
-                </ul>
+                <h1 class="logo"><a href="#"><img src="../../images/logo-icon/primevideoLOGO.png" alt="프라임비디오"></a></h1>
+                <nav>
+                    <ul class="main-menu">
+                        <li class="mainmenu-home"><a href="#">홈</a></li>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">TV프로그램</a></li>
+                        <li><a href="#">스포츠</a></li>
+                        <li>
+                            <a href="#">장르</a>
+                            <div class="submenu-wrap">
+                                <ul class="sub-menu">
+                                    <li><a href="#">액션&middot;어드벤처</a></li>
+                                    <li><a href="#">코미디</a></li>
+                                    <li><a href="#">다큐멘터리</a></li>
+                                    <li><a href="#">드라마</a></li>
+                                    <li><a href="#">판타지</a></li>
+                                </ul>
+                                <ul class="sub-menu">
+                                    <li><a href="#">공포</a></li>
+                                    <li><a href="#">키즈</a></li>
+                                    <li><a href="#">미스터리&middot;스릴러</a></li>
+                                    <li><a href="#">로맨스</a></li>
+                                    <li><a href="#">공상과학</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <ul class="gnb-list">
-                <li><a href="#"><img src="./images/logo-icon/lyra-icon-search.png" alt="검색"></a></li>
-                <li><a href="#"><img src="./images/logo-icon/lyra-icon-bookmark.png" alt="위시리스트"></a></li>
+                <li class="gnb-home"><a href="#"><img src="../../images/logo-icon/lyra-icon-home.png"
+                            alt="홈"><span>홈</span></a>
+                </li>
+                <li><a href="#"><img src="../../images/logo-icon/lyra-icon-search.png" alt="검색"><span>검색</span></a></li>
+                <li><a href="#"><img src="../../images/logo-icon/lyra-icon-bookmark.png" alt="위시리스트"><span>위시리스트</span></a>
+                </li>
                 <li>
-                    <a href="#"><img src="./images/logo-icon/lyra-icon-User.png" alt="마이페이지"></a>
+                    <a href="#"><img src="../../images/logo-icon/lyra-icon-User.png" alt="마이페이지"><span>마이페이지</span></a>
                     <ul class="profile-submenu">
                         <li>
                             <a href="#">
-                                <img src="./images/logo-icon/lyra-icon-Exchange.png" alt="프로필변경">
+                                <img src="../../images/logo-icon/lyra-icon-Exchange.png" alt="프로필변경">
                                 <span>프로필변경</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./images/logo-icon/lyra-icon-slightly-smiling-face.png" alt="프로필관리">
+                                <img src="../../images/logo-icon/lyra-icon-slightly-smiling-face.png" alt="프로필관리">
                                 <span>프로필관리</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./images/logo-icon/lyra-icon-user-information.png" alt="계정">
+                                <img src="../../images/logo-icon/lyra-icon-user-information.png" alt="계정">
                                 <span>계정</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./images/logo-icon/lyra-icon-logout-box-r-line.png" alt="로그아웃">
+                                <img src="../../images/logo-icon/lyra-icon-logout-box-r-line.png" alt="로그아웃">
                                 <span>로그아웃</span>
                             </a>
                         </li>
                     </ul>
                 </li>
             </ul>
+            <p class="bell-btn"><a href="#"><img src="../../images/logo-icon/lyra-icon-Bell.png" alt="알림"></a></p>
         </div>
     </header>
 
@@ -68,11 +94,11 @@
                     <form action="#" class="account-form user-form">
                         <div>
                             <label for="user-name">이름</label>
-                            <input type="text" id="user-name" class="user-name user-input" placeholder="사용자 이름">
+                            <input type="text" id="user-name" class="user-name user-input" placeholder="사용자 이름" value="금요일">
                         </div>
                         <div>
                             <label for="user-tel">휴대폰번호</label>
-                            <input type="text" id="user-tel" class="user-tel user-input" placeholder="01012345678">
+                            <input type="text" id="user-tel" class="user-tel user-input" placeholder="01012345678" value="01012345678">
                         </div>
                         <div>
                             <label for="user-email">이메일</label>
@@ -81,7 +107,7 @@
                         <p class="line">비밀번호 변경</p>
                         <div>
                             <label for="user-oldpass">현재 비밀번호</label>
-                            <input type="text" id="user-oldpass" class="user-oldpass user-input" placeholder="최소 6자">
+                            <input type="text" id="user-oldpass" class="user-oldpass user-input" placeholder="비밀번호를 입력해주세요">
                         </div>
                         <div>
                             <label for="user-pass">새 비밀번호</label>
@@ -89,7 +115,7 @@
                         </div>
                         <div>
                             <label for="user-repass">새 비밀번호 재확인</label>
-                            <input type="text" id="user-repass" class="user-repass user-input" placeholder="비밀번호를 다시 입력해주세요">
+                            <input type="text" id="user-repass" class="user-repass user-input" placeholder="새 비밀번호를 다시 입력해주세요">
                         </div>
                         <p class="account-btn user-btn"><a href="#">저장하기</a></p>
                     </form>
@@ -100,7 +126,7 @@
 
     <footer>
         <div class="inner">
-            <p class="foote-logo"><img src="./images/logo-icon/Amazon_Prime_Logo1.png" alt="프라임비디오"></p>
+            <p class="foote-logo"><img src="../../images/logo-icon/Amazon_Prime_Logo1.png" alt="프라임비디오"></p>
             <div class="custom-wrap">
                 <p>질문이 있으신가요? 고객센터에 문의하세요.</p>
                 <ul class="footer-menu-list">
@@ -114,7 +140,7 @@
                 </ul>
             </div>
             <div class="lang-wrap">
-                <a href="#"><img src="./images/logo-icon/lyra-icon-earth.png" alt="언어"><span>한국어</span></a>
+                <a href="#"><img src="../../images/logo-icon/lyra-icon-earth.png" alt="언어"><span>한국어</span></a>
                 <ul class="lang">
                     <li><a href="#">한국어</a></li>
                     <li><a href="#">English</a></li>
