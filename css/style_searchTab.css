@@ -1,7 +1,7 @@
 .search-wrap {
     /* width: 1458px; */
     width: max(70%, 500px);
-    height: 480px;
+    height: 960px;
     background: black;
     opacity: 80%;
     margin: auto;
@@ -38,7 +38,7 @@
     line-height: 40px;
     text-align: center;
     z-index: 10;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 }
 
 .search-wrap>.main-search-tab>.search-icon>img {
@@ -51,82 +51,58 @@
     color: white;
 }
 
-/* ranking */
-.search-wrap>.ranking-wrap {
-    margin-bottom: 10px;
-}
+/* top-contents */
 
-.search-wrap>.ranking-wrap>.title {
-
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.ranking-wrap>.ranking-list {
-    /* position: relative; */
-
-}
-
-.search-wrap>.ranking-wrap>.ranking-list>.page>.rank-box {
-    /* position: absolute; */
-    /* width: calc(100%-40px); */
-    height: 54px;
-    background: black;
-    display: flex;
-    gap: 35px;
-    padding: 0 35px;
-
-    border: white solid 1px;
-    border-radius: 15px;
-    margin: 25px auto;
+.top-contents-wrap {
     position: relative;
 }
 
-.rank {
+.top-contents-wrap>.title {
     color: white;
-    line-height: 54px;
-    text-align: center;
-    font-size: 28px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
 }
 
-.ranking-wrap>.ranking-list>.page>.rank-box>img {
-    width: 36px;
-    height: 54px;
-    /* padding: 1.5px; */
+.top-contents {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 }
 
-.rank-box .content-name {
-    font-size: 18px;
-    color: white;
-    line-height: 54px;
-    text-align: center;
-}
-
-.rank-diff-info {
+.content-box {
     display: flex;
-    position: absolute;
-    right: 35px;
-    line-height: 54px;
-    text-align: center;
-    /* justify-content: center; */
-
-}
-
-.rank-box .rank-diff {
+    flex-direction: column;
+    background: #151313;
+    padding: 10px;
     color: white;
-    font-size: 18px;
+    position: relative;
+    border-radius: 10px;
 }
 
-.rank-box .search-rank-arrow {
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    margin-top: 12px;
+.content-box>.txt-info-box {
+    position: relative;
+
+    padding: 10px;
+    display: flex;
 }
 
-.page2,
-.page3,
-.page4 {
-    display: none;
+.content-box>.txt-info-box>.content-title {}
+
+.rank-diff-wrap {
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
+
+.content-box>.img-box>a>img {
+    width: 200px;
+    aspect-ratio: 1/1.485;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.more-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
