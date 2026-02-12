@@ -1,10 +1,11 @@
 /* ***************login/signup*************** */
 .form-wrap .title {
     text-align: center;
+    margin: 50px 0;
 }
 
 .form-content {
-    width: 430px;
+    max-width: 430px;
     margin: 0 auto;
 }
 
@@ -127,14 +128,13 @@
 }
 
 .user-form .user-btn {
-    width: 340px;
     margin: 0 auto;
     margin-top: 30px;
+    color: #fff;
 }
 
 .user-form .user-btn>a {
     display: block;
-    width: 340px;
     height: 50px;
     background: #1399FF;
     text-align: center;
@@ -143,10 +143,10 @@
     font-weight: 600;
 }
 
-.login-form .signup-btn>a {
+/* .login-form .signup-btn>a {
     background: #E9E9E9;
     color: #666;
-}
+} */
 
 .login-help {
     margin-top: 10px;
@@ -168,13 +168,18 @@
     margin: 20px 0;
 }
 
-/* ***************profile*************** */
-.profile-sel-title {
-    margin: 50px 0;
-    text-align: center;
-    font-size: 1.5em;
+.account-form .line{
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+.account-form div{
+    margin-bottom: 30px;
+}
+.account-form p {
+    margin-bottom: 20px;
 }
 
+/* ***************profile*************** */
 .profile-list {
     display: flex;
     justify-content: center;
