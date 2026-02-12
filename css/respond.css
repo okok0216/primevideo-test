@@ -23,8 +23,6 @@
         top: 0;
     }
 
-    .main-slider-list>li .text-box {}
-
     .main-slider-list>li .text-box .movie-title-img img {
         width: 60%;
     }
@@ -48,7 +46,6 @@
 
     .sport-real-list>li .control-btn {
         position: static;
-        order: -1;
     }
 }
 
@@ -56,13 +53,35 @@
     .ranking-list {
         width: calc(100% * 10 / 3)
     }
-
+    .movie-list{
+        width: calc(100% * 18 / 4);
+    }
+    .movie-list>li {
+        width: 215px;
+    }
+    .original-list{
+        width: calc(100% * 7 / 4);
+    }
     .sport-event-list {
         width: calc(100% * 8 / 3);
     }
-
+    .sport-event-list>li .text-box{
+        font-size: 1em;
+    }
     .sport-real-list {
         width: calc(100% * 5 / 3);
+    }
+    .open-banner-list {
+        width: calc(100% * 7 / 2.5);
+    }
+    .open-banner-list .text-box>h3 {
+        font-size: 1.3em;
+    }
+    .open-banner-list>li .text-box .text {
+        font-size: 1em;
+    }
+    .open-banner-list>li .text-box p {
+        font-size: 1.1em;
     }
 }
 
@@ -100,49 +119,111 @@
         /* width: 32px;
         height: 32px; */
     }
+    .movie-list {
+        width: calc(100% * 18 / 3);
+    }
+
+    .movie-list>li {
+        width: 200px;
+    }
+    .more-btn>a {
+        left: 80px;
+    }
+    .rec-tv-list-wrap .more-btn>a {
+        left: 140px;
+    }
 }
 
 @media screen and (max-width:480px) {
-    .gnb-list {
+    .mainmenu-home {
         display: none;
     }
 
     nav {
         position: fixed;
-        top: 0;
+        top: 54px;
         right: 0;
         z-index: 10000;
         width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.8);
-        display: none;
-
+        height: 50px;
+        background: #000;
+        /* display: none; */
     }
 
     .main-menu {
-        display: block;
-        line-height: 2.5;
-        width: 70%;
-        min-width: 280px;
-        text-indent: 30px;
-        background: black;
-        /* height: 100%; */
-        padding: 70px 20px;
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .main-menu>li>a{
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+    .main-menu>li:hover>a{
+        color: white;
+    }
+    .main-menu>li:last-child>a {
+        padding-right: 20px;
+        background: url(../images/logo-icon/footer-langicon-Arrow.png) no-repeat 95% center;
     }
 
     .main-menu>li>a::after {
-        bottom: 0;
+        display: none;
     }
 
-    .ham-btn {
+    .main-menu>li:hover .submenu-wrap {
+        display: none;
+    }
+    .main-menu .submenu-wrap{
+        display: none;
+        padding: 0;
+        top: 0;
+        height: 100vh;
+        background: #000;
+        padding: 10px 20px;
+    }
+    .main-menu .submenu-wrap .sub-menu{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bell-btn{
+        display: block;
+        padding: 0 20px;
+    }
+
+    .gnb-list {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .gnb-list .gnb-home {
+        display: flex;
+    }
+    .gnb-list>li>a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .gnb-list>li>a img{
+        width: 22px;
+    }
+    .gnb-list>li>a>span {
         display: block;
     }
 
-    .mgnb-list {
-        display: flex;
-        gap: 10px;
-        /* justify-content: center; */
-        margin-left: 50px;
+    .gnb-list .profile-submenu{
+        display: none;
+        right: 0;
+        left: unset;
+        top: -200px;
+        transform: none;
     }
 
     .main-slider-list>li .text-box {
@@ -163,7 +244,24 @@
     .ranking-list {
         width: calc(100% * 10 / 1.2);
     }
-
+    .movie-list {
+        width: calc(100% * 18 / 1.8);
+    }
+    .movie-list>li {
+        width: 190px;
+    }
+    .more-btn>a {
+        left: 80px;
+    }
+    .rec-tv-list-wrap .more-btn>a {
+        left: 140px;
+    }
+    .original-list {
+        width: calc(100% * 7 / 2);
+    }
+    .original-wrap .title{
+        background-size: 20px;
+    }
     .sport-event-list {
         width: calc(100% * 8 / 1.2);
     }
@@ -175,7 +273,12 @@
     .custom-wrap>p {
         font-size: 1.13em;
     }
-
+    .open-banner-list {
+        width: calc(100% * 7 / 1.5);
+    }
+    footer .inner{
+        padding-bottom: 50px;
+    }
     .footer-menu-list {
         display: block;
         line-height: 1.5;

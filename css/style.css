@@ -40,7 +40,9 @@ body::after{
     /* overflow: hidden; */
 }
 .mgnb-list,
-.ham-btn{
+.bell-btn,
+.gnb-home,
+.gnb-list>li>a>span{
     display: none;
 }
 /* ******************header************************* */
@@ -130,6 +132,9 @@ header>.inner{
 .gnb-list>li:hover .profile-submenu{
     display: block;
 }
+.gnb-list .gnb-bell{
+    display: none;
+}
 
 .profile-submenu{
     position: absolute;
@@ -139,7 +144,6 @@ header>.inner{
     left: 50%;
     top: 44px;
     transform: translateX(-50%);
-    overflow: hidden;
     display: none;
     z-index: 1000;
 }
@@ -167,8 +171,6 @@ header>.inner{
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 19%, rgba(0, 0, 0, 0.6) 32%, rgba(0, 0, 0, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     position: absolute;
-    /* z-index: 10; */
-    bottom: 0;
     left: 0;
 }
 .main-slider-wrap .inner{
@@ -233,7 +235,7 @@ header>.inner{
     display: block;
     width: 28px;
     height: 28px;
-    background: url(../images/logo-icon/check.png);
+    background: url(../images/logo-icon/check.png) no-repeat center center;
 }
 .main-slider-list>li .text-box .genre-wrap{
     display: flex;
@@ -378,6 +380,7 @@ section .pager-btn>.active>a {
 
 .ranking-list>li.active{
     width: 24.7%;
+    display: none;
 }
 .ranking-list>li.active:hover {
     transform: none;
@@ -440,9 +443,6 @@ section .pager-btn>.active>a {
 }
 
 /* 최근 추가된 콘텐츠, 계속 시청하기, 추천 영화, 추천 TV프로그램 */
-.playing-wrap {/* 나중에지우는거 */
-    overflow-x: visible;
-}
 .new-contents-list-wrap, .rec-movie-list-wrap, .rec-tv-list-wrap{
     position: relative;
 }
@@ -452,7 +452,7 @@ section .pager-btn>.active>a {
     gap: 20px;
 }
 .movie-list>li {
-    width: 288px;
+    width: 270px;
     transition: 0.3s;
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -466,10 +466,6 @@ section .pager-btn>.active>a {
     object-fit: cover;
     border-radius: 20px;
 }
-
-.playing-list {/* 나중에지우는거 */
-    width: calc(100% * 6 / 6);
-}
 .movie-list>li.active{
     width: 415px;
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
@@ -478,6 +474,7 @@ section .pager-btn>.active>a {
     left: 240px;
     top: -12px;
     z-index: 10;
+    display: none;
 }
 .movie-list>li.active:hover {
     transform: none;
@@ -718,7 +715,7 @@ section .pager-btn>.active>a {
     padding: 2px 16px;
     border-radius: 8px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 .sport-real-list>li>.text-box {
     padding: 15px 25px 25px;
@@ -764,13 +761,13 @@ section .pager-btn>.active>a {
     font-weight: 500;
 }
 .open-banner-list .text-box>h3 {
-    font-size: 30px;
+    font-size: 1.88em;
 }
 .open-banner-list>li .text-box .text {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 .open-banner-list>li .text-box p {
-    font-size: 22px;
+    font-size: 1.38em;
 }
 
 
