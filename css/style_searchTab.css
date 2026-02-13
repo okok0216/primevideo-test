@@ -1,7 +1,8 @@
 .search-wrap {
     /* width: 1458px; */
     width: max(70%, 500px);
-    height: 480px;
+    height: max(70%, 500px);
+    /* height: 650px; */
     background: black;
     opacity: 80%;
     margin: auto;
@@ -38,7 +39,7 @@
     line-height: 40px;
     text-align: center;
     z-index: 10;
-    margin-bottom: 48px;
+    margin-bottom: 30px;
 }
 
 .search-wrap>.main-search-tab>.search-icon>img {
@@ -51,59 +52,93 @@
     color: white;
 }
 
-/* ranking */
-.search-wrap>.ranking-wrap {
-    margin-bottom: 10px;
+/* top-contents */
+
+.top-contents-wrap {
+    position: relative;
 }
 
-.search-wrap>.ranking-wrap>.title {
-
+.top-contents-wrap>.title {
     color: white;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    /* text-align: center; */
 }
 
-.ranking-wrap>.ranking-list {
+.top-contents {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    background: #151313;
+    padding: 10px;
+    color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+.content-box>.txt-info-box {
     /* position: relative; */
 
-}
-
-.search-wrap>.ranking-wrap>.ranking-list>.page>.rank-box {
-    /* position: absolute; */
-    /* width: calc(100%-40px); */
-    height: 54px;
-    background: black;
+    padding: 10px;
     display: flex;
-    gap: 35px;
-    padding: 0 35px;
-
-    border: white solid 1px;
-    border-radius: 15px;
-    margin: 25px auto;
+    flex-direction: column;
 }
 
-.rank {
-    color: white;
-    line-height: 54px;
+.content-box>.txt-info-box>.line1 {
     text-align: center;
-    font-size: 28px;
+    margin-bottom: 5px;
 }
 
-.ranking-wrap>.ranking-list>.page>.rank-box>img {
-    width: 36px;
-    height: 54px;
-    /* padding: 1.5px; */
+.content-box>.txt-info-box>.line2 {
+    display: flex;
+    /* position: absolute; */
 }
 
-.rank-box .content-name {
-    font-size: 18px;
-    color: white;
-    line-height: 54px;
+.content-box>.txt-info-box>.line2>.rank-diff {
+    display: flex;
+    /* position: absolute;
+    left: 10px; */
+    margin-right: auto
+}
+
+.content-box>.txt-info-box>.line2>.rank-diff>.rank-diff-num {
+    padding-top: 5px;
+}
+
+.content-box>.txt-info-box>.line2>.rank-diff>.updown-arrow {
+    /* padding-bottom: 20px; */
+
+}
+
+.content-box>.txt-info-box>.line2>.plus-btn-wrap {
+    /* position: absolute;
+    right: 10px; */
+}
+
+.content-box>.txt-info-box>.content-title {
     text-align: center;
 }
 
-.page2,
-.page3,
-.page4 {
-    display: none;
+.rank-diff-wrap {
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
+
+.content-box>.img-box>a>img {
+    width: 200px;
+    aspect-ratio: 1/1.485;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.more-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
