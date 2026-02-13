@@ -120,6 +120,24 @@
     right: 10px; */
 }
 
+.content-box:hover .plus-btn:hover {
+    /* scale: ; */
+    transition: 0.3s;
+    /* transform: translateY(-5px); */
+    transform: scale(1.1, 1.1);
+}
+
+.close-btn:hover {
+    transition: 0.3s;
+    transform: scale(1.2, 1.2);
+}
+
+.more-btn:hover {
+    transition: 0.3s;
+    transform: scale(1.2, 1.2);
+}
+
+
 .content-box>.txt-info-box>.content-title {
     text-align: center;
 }
