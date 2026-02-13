@@ -124,7 +124,11 @@
     text-align: center;
 }
 
-
+.rank-diff-wrap {
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
 
 .content-box>.img-box>a>img {
     width: 200px;

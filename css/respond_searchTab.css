@@ -1,0 +1,113 @@
+/* ipad */
+@media screen and (max-width:1280px) {
+    .search-wrap>.main-search-tab>.default-txt {
+        font-size: 15px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .top-contents-wrap>.title {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        /* text-align: center; */
+    }
+
+    .more-btn {
+        width: 20px;
+        height: 20px;
+    }
+
+    .top-contents {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .content-box {}
+
+    .content-box>.img-box {
+        text-align: center;
+    }
+
+    /* .content-box>.img-box>a>img {
+        width: 190px;
+        aspect-ratio: 1/1.485;
+        object-fit: cover;
+        border-radius: 10px;
+
+    } */
+}
+
+@media screen and (max-width:980px) {
+    .search-wrap>.main-search-tab>.default-txt {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .top-contents-wrap>.title {
+        color: white;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        /* text-align: center; */
+    }
+
+    .more-btn {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .top-contents {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .content-box>.img-box {
+        text-align: center;
+    }
+
+    /* .content-box>.img-box>a>img {
+        width: 180px;
+        aspect-ratio: 1/1.485;
+        object-fit: cover;
+        border-radius: 10px;
+
+    } */
+}
+
+/* monile */
+@media screen and (max-width:768px) {
+
+    .more-btn {
+        width: 18px;
+        height: 18px;
+    }
+
+    .top-contents {
+        display: grid;
+        grid-template-columns: repeat(2, 0.65fr);
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .content-box>.img-box {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .top-contents {
+        display: grid;
+        grid-template-columns: repeat(1, 0.65fr);
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .content-box>.img-box {
+        text-align: center;
+    }
+}
