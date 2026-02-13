@@ -674,7 +674,8 @@ section .pager-btn>.active>a {
 
 .content-img>img {
     width: 80px;
-    height: 120px;
+    /* height: 120px; */
+    aspect-ratio: 1/1.5;
     border-radius: 5px;
 }
 
@@ -707,8 +708,10 @@ section .pager-btn>.active>a {
 }
 
 .review-info>.user-head>.user-right>.rating-num {
+    font-size: 1.2rem;
     text-align: center;
     line-height: 30px;
+    padding-bottom: 4px;
 }
 
 .review-info>.user-bottom {
