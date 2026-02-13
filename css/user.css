@@ -24,10 +24,6 @@
     margin-bottom: 30px;
 }
 
-.signup-form>div:nth-child(4) {
-    margin: 20px 0 30px;
-}
-
 .user-form>div>label {
     font-weight: 600;
 }
@@ -50,6 +46,22 @@
 
 .user-form .user-input::placeholder {
     color: #999;
+    font-weight: 600;
+}
+
+.user-form .user-btn {
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.user-form .user-btn>a {
+    display: block;
+    height: 50px;
+    background: #1399FF;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
     font-weight: 600;
 }
 
@@ -114,35 +126,6 @@
     border-color: #fff;
 }
 
-.signup-form>.tel-email-change>a {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    color: #BBB;
-    align-items: center;
-    text-indent: 20px;
-}
-
-.tel-email-change>img {
-    width: 20px;
-}
-
-.user-form .user-btn {
-    margin: 0 auto;
-    margin-top: 30px;
-    color: #fff;
-}
-
-.user-form .user-btn>a {
-    display: block;
-    height: 50px;
-    background: #1399FF;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 10px;
-    font-weight: 600;
-}
-
 /* .login-form .signup-btn>a {
     background: #E9E9E9;
     color: #666;
@@ -168,6 +151,23 @@
     margin: 20px 0;
 }
 
+.signup-form>div:nth-child(4) {
+    margin: 20px 0 30px;
+}
+
+.signup-form>.tel-email-change>a {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    color: #BBB;
+    align-items: center;
+    text-indent: 20px;
+}
+
+.tel-email-change>img {
+    width: 20px;
+}
+
 .account-form .line{
     border-top: 1px solid #333;
     padding-top: 10px;
@@ -185,13 +185,14 @@
     justify-content: center;
     gap: 80px;
     margin-bottom: 80px;
+    text-align: center;
 }
 
 .profile-btn>a {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
-    width: 340px;
+    max-width: 340px;
     height: 50px;
     text-align: center;
     line-height: 50px;
@@ -199,6 +200,12 @@
     font-weight: 600;
     background: #E9E9E9;
     color: #666;
+}
+
+.profile-input-wrap{
+    max-width: 200px;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .profile-form .profile-name {
@@ -226,12 +233,10 @@
 }
 
 .profile-form>div {
-    display: flex;
-    flex-direction: column;
     margin: 20px 0;
 }
 
-.profile-form>div>span {
+.profile-form>div>p {
     font-weight: 600;
 }
 
@@ -248,6 +253,8 @@
     border-radius: 50%;
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: #333 url(../images/profile/profile-edit.png) no-repeat center center;
 }
 
@@ -255,6 +262,7 @@
     display: block;
     width: 200px;
     height: 200px;
+    margin: 0 auto;
     border-radius: 50%;
     background: #333 url(../images/profile/profile-plus.png) no-repeat center center;
 }
@@ -290,6 +298,7 @@
     font-weight: 600;
     font-size: 0.88em;
     display: none;
+    text-align: left;
 }
 
 .profile-playlist>a {
@@ -299,4 +308,16 @@
 
 .profile-playlist>a>span {
     font-weight: 600;
+}
+
+@media screen and (max-width:1000px){
+    .profile-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width:550px) {
+    .profile-setuplist {
+        grid-template-columns: 1fr;
+    }
 }
