@@ -9,11 +9,12 @@
     border-radius: 0 0 10px 10px;
     /* padding-top: 65px; */
     position: relative;
-    z-index: 0;
+    z-index: 100000;
     padding: 80px 80px 40px 80px;
 
     /* overflow: scroll; */
     /* overflow: hidden; */
+    display: none;
 }
 
 .close-btn {
@@ -107,7 +108,7 @@
 }
 
 .content-box>.txt-info-box>.line2>.rank-diff>.rank-diff-num {
-    padding-top: 5px;
+    padding-top: 10px;
 }
 
 .content-box>.txt-info-box>.line2>.rank-diff>.updown-arrow {
