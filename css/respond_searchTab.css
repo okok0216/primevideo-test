@@ -13,12 +13,12 @@
         /* text-align: center; */
     }
 
-    .more-btn {
+    .search-wrap .more-btn {
         width: 20px;
         height: 20px;
     }
 
-    .top-contents {
+    .search-wrap .top-contents {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
@@ -46,20 +46,20 @@
         color: white;
     }
 
-    .top-contents-wrap>.title {
+    .search-wrap .top-contents-wrap>.title {
         color: white;
         font-size: 1rem;
         margin-bottom: 20px;
         /* text-align: center; */
     }
 
-    .more-btn {
+    .search-wrap .more-btn {
         width: 20px;
         height: 20px;
     }
 
 
-    .top-contents {
+    .search-wrap .top-contents {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 13px;
@@ -81,12 +81,12 @@
 /* monile */
 @media screen and (max-width:768px) {
 
-    .more-btn {
+    .search-wrap .more-btn {
         width: 18px;
         height: 18px;
     }
 
-    .top-contents {
+    .search-wrap .top-contents {
         display: grid;
         grid-template-columns: repeat(2, 0.65fr);
         justify-content: center;
@@ -100,7 +100,7 @@
 
 @media screen and (max-width:480px) {
 
-    .top-contents {
+    .search-wrap .top-contents {
         display: grid;
         grid-template-columns: repeat(1, 0.65fr);
         justify-content: center;
