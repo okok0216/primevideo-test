@@ -1,5 +1,6 @@
 body {
-    background: #000000;
+    /* background: #000000; */
+    background-color: #16181D;
     color: #fff;
 }
 
@@ -32,7 +33,7 @@ body::after {
 }
 
 .inner {
-    background: rgba(255, 0, 0, 0.2);
+    /* background: rgba(255, 0, 0, 0.2); */
     max-width: 1780px;
     margin: 0 auto;
     /* padding-top: 84px; */
@@ -312,7 +313,7 @@ header>.inner {
 
 /* -------------------main공통----------------------- */
 main {
-    background: #16181d;
+    background: #16181D;
     padding: 50px 0 100px;
     margin-top: 50px;
 }
@@ -336,6 +337,7 @@ section .inner {
 
 section .list {
     display: flex;
+    align-items: center;
 }
 
 section .pager-btn {
@@ -361,6 +363,14 @@ section .pager-btn>.active>a {
     opacity: 1;
 }
 
+.more-btn>a {
+    position: absolute;
+    display: flex;
+    left: 120px;
+    top: -55px;
+    align-items: center;
+}
+
 /* ----종목배너---- */
 .sports-game-list {
     gap: 20px;
@@ -369,13 +379,203 @@ section .pager-btn>.active>a {
 .sports-game-list>li {
     border-radius: 20px;
     flex: 0 0 230px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
 }
 
 .sports-game-list>li img {
     border-radius: 20px;
 }
 
-/* --------실시간 라이브------- */
+/* --------실시간 중계------- */
+.sports-live-wrap {
+    position: relative;
+}
+
+.sports-live-list {
+    gap: 16px;
+    width: calc(100% * 4 / 3);
+}
+
+.sports-live-list>li {
+    background-color: #000;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    flex: 1;
+}
+
+
+.sports-live-list>li:hover {
+    /* transform: translate(0, -10px); */
+}
+
+.sports-live-list>li>.img-box {
+    overflow: hidden;
+    aspect-ratio: 1/0.5;
+}
+
+.sports-live-list>li>.onair::after {
+    content: "LIVE";
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 25px;
+    background: red;
+    color: #fff;
+    padding: 2px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.sports-live-list>li>.open img {
+    filter: brightness(30%);
+    border-radius: 8px;
+}
+
+
+.sports-live-list>li>.text-box {
+    padding: 15px 25px 25px;
+    position: relative;
+    line-height: 2;
+}
+
+.sports-live-list>li>.text-box>h3 {
+    font-size: 1.5em;
+}
+
+.sports-live-list>li>.text-box>p {
+    font-size: 1.25em;
+}
+
+.sports-live-list>li .control-btn {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    gap: 10px;
+}
+
+.sports-live-list>li .control-btn img {
+    width: 30px;
+}
+
+/* ---------------------팀------------------------- */
+.sports-brand-wrap {
+    position: relative;
+}
+
+.sports-brand-list {
+    gap: 12px;
+}
+
+.sports-brand-list>li {
+    flex: 0 0 230px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+/* ------------------하이라이트---------------------- */
+.highlight-list-wrap {
+    position: relative;
+}
+
+.highlight-list {
+    /* 100% * 배너의개수 / 보고싶은개수 */
+    width: calc(100% * 10 / 6);
+    gap: 20px;
+}
+
+.highlight-list>li img {
+    border-radius: 20px;
+}
+
+.highlight-list>li {
+    flex: 1;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+/* -------------------추천영화---------------------- */
+.rec-movie-wrap {
+    position: relative;
+}
+
+.rec-movie-list {
+    width: calc(100% * 10 / 6);
+    gap: 20px;
+}
+
+.rec-movie-list>li img {
+    border-radius: 20px;
+}
+
+.rec-movie-list>li {
+    flex: 1;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.rec-movie-wrap>.more-btn>a {
+    left: 100px;
+}
+
+/* -------------------오리지널 시리즈----------------- */
+.original-wrap {
+    position: relative;
+}
+
+.original-list {
+    width: calc(100% * 10 / 5.3);
+    gap: 30px;
+    display: flex;
+}
+
+.original-list>li>a img {
+    aspect-ratio: 1/1.486;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.original {
+    background: url(../images/logo-icon/check.png) no-repeat left center;
+    text-indent: 35px;
+}
+
+/* ---------------------추천 시리즈------------------ */
+.rec-series-wrap {
+    position: relative;
+}
+
+.rec-series-list {
+    width: calc(100% * 10 / 6);
+    gap: 20px;
+}
+
+.rec-series-list>li img {
+    border-radius: 20px;
+}
+
+.rec-series-list>li {
+    flex: 1;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
 
 /* -------------------footer----------------------- */
 footer {
