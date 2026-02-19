@@ -316,8 +316,15 @@ header>.inner {
 
 /* ******************main*************************** */
 main {
-    background: #16181d;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(22, 24, 29, 1) 5%,
+            rgba(22, 24, 29, 1) 80%,
+            rgba(0, 0, 0, 1) 100%);
+
     margin-top: 104px;
+
 }
 
 .no-margin {
