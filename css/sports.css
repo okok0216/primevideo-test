@@ -164,7 +164,21 @@ header>.inner {
 
 /* -------------------main-slider----------------------- */
 .main-slider-wrap {
-    margin-top: 104px;
+    padding-top: 104px;
+    background-color: #000;
+}
+
+.main-slider-wrap::after {
+    content: "";
+    display: block;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+19,000000+32,000000+100&1+0,0.7+19,0.6+32,0+100 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 19%, rgba(0, 0, 0, 0.6) 32%, rgba(0, 0, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    left: 0;
+    /* border: 3px solid green; */
 }
 
 .main-slider-wrap .inner {
@@ -177,7 +191,7 @@ header>.inner {
     width: calc(300% + 60px);
     gap: 20px;
     margin-left: calc(-100% - 20px);
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 .main-slider-list>li {
@@ -185,7 +199,7 @@ header>.inner {
     height: 660px;
     overflow: hidden;
     position: relative;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     /* 사진마다 비율 맞추기 */
     flex: 1;
 }
@@ -279,7 +293,7 @@ header>.inner {
 .main-slider-wrap .pager-btn {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    padding: 40px 0;
     gap: 10px;
 }
 
@@ -582,6 +596,12 @@ footer {
     letter-spacing: 0.1em;
     position: relative;
     padding-top: 30px;
+    /* background: linear-gradient(to top,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 1) 100%);
+    letter-spacing: 0.1em; */
+    background-color: #000;
 }
 
 footer::before {
@@ -594,9 +614,9 @@ footer::before {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     position: absolute;
-    /* z-index: 10; */
     top: -30%;
     left: 0;
+    z-index: -10;
 }
 
 footer>.inner {
