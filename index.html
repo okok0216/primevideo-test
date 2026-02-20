@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>프라임비디오</title>
+    <link rel="shortcut icon" href="./images/prime-favicon.png">
     <link rel="stylesheet" href="./css/pretendard-font.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/respond.css">
+    <link rel="stylesheet" href="./css/respond_searchTab.css">
+    <link rel="stylesheet" href="./css/style_searchTab.css">
 </head>
 
 <body>
@@ -18,7 +21,7 @@
                 <h1 class="logo"><a href="#"><img src="./images/logo-icon/primevideoLOGO.png" alt="프라임비디오"></a></h1>
                 <nav>
                     <ul class="main-menu">
-                        <li><a href="#">홈</a></li>
+                        <li class="mainmenu-home"><a href="#">홈</a></li>
                         <li><a href="#">영화</a></li>
                         <li><a href="#">TV프로그램</a></li>
                         <li><a href="#">스포츠</a></li>
@@ -42,61 +45,31 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="mgnb-list">
-                        <li><a href="#"><img src="./images/logo-icon/lyra-icon-search.png" alt="검색"></a></li>
-                        <li><a href="#"><img src="./images/logo-icon/lyra-icon-bookmark.png" alt="위시리스트"></a></li>
-                        <li>
-                            <a href="#"><img src="./images/logo-icon/lyra-icon-User.png" alt="마이페이지"></a>
-                            <ul class="profile-submenu">
-                                <li>
-                                    <a href="#">
-                                        <img src="./images/logo-icon/lyra-icon-Exchange.png" alt="프로필변경">
-                                        <span>프로필변경</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./images/logo-icon/lyra-icon-slightly-smiling-face.png" alt="프로필관리">
-                                        <span>프로필관리</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./images/logo-icon/lyra-icon-user-information.png" alt="계정">
-                                        <span>계정</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./images/logo-icon/lyra-icon-logout-box-r-line.png" alt="로그아웃">
-                                        <span>로그아웃</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
                 </nav>
             </div>
             <ul class="gnb-list">
-                <li><a href="#"><img src="./images/logo-icon/lyra-icon-search.png" alt="검색"></a></li>
-                <li><a href="#"><img src="./images/logo-icon/lyra-icon-bookmark.png" alt="위시리스트"></a></li>
+                <li class="gnb-home"><a href="#"><img src="./images/logo-icon/lyra-icon-home.png"
+                            alt="홈"><span>홈</span></a></li>
+                <li><a href="#"><img src="./images/logo-icon/lyra-icon-search.png" alt="검색"><span>검색</span></a></li>
+                <li><a href="#"><img src="./images/logo-icon/lyra-icon-bookmark.png" alt="위시리스트"><span>위시리스트</span></a>
+                </li>
                 <li>
-                    <a href="#"><img src="./images/logo-icon/lyra-icon-User.png" alt="마이페이지"></a>
+                    <a href="#"><img src="./images/logo-icon/lyra-icon-User.png" alt="마이페이지"><span>마이페이지</span></a>
                     <ul class="profile-submenu">
                         <li>
-                            <a href="#">
+                            <a href="./page/user/profile-sel.html">
                                 <img src="./images/logo-icon/lyra-icon-Exchange.png" alt="프로필변경">
                                 <span>프로필변경</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./page/user/profile-setup.html">
                                 <img src="./images/logo-icon/lyra-icon-slightly-smiling-face.png" alt="프로필관리">
                                 <span>프로필관리</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="./page/user/account.html">
                                 <img src="./images/logo-icon/lyra-icon-user-information.png" alt="계정">
                                 <span>계정</span>
                             </a>
@@ -110,9 +83,243 @@
                     </ul>
                 </li>
             </ul>
-            <p class="ham-btn"><a href="#">ham</a></p>
+            <p class="bell-btn"><a href="#"><img src="./images/logo-icon/lyra-icon-Bell.png" alt="알림"></a></p>
         </div>
+
     </header>
+
+    <div class="search-wrap">
+        <div class="close-btn">
+            <img src="" alt="">
+            <img src="./images/search-icon/close_btn.png" alt="닫기 버튼">
+        </div>
+        <!-- main / search tab -->
+        <div class="main-search-tab">
+            <div class="search-icon">
+                <img src="./images/search-icon/search_icon.png" alt="검색 아이콘">
+            </div>
+            <div class="default-txt">
+                <p>작품, 인물, 장르를 검색해 보세요</p>
+            </div>
+        </div>
+        <!-- main / ranking wrap -->
+        <div class="top-contents-wrap">
+            <h2 class="title">지금 뜨는 콘텐츠</h2>
+            <ul class="top-contents">
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-1.webp" alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">신의 악단</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-2.webp" alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">만약에 우리</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-3.webp" alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">미스트롯4</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-4.webp" alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">어쩔수가없다</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-5.webp" alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">쇼미더머니12</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <!-- <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-6.webp"
+                                alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">신의 악단</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                    class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-7.webp"
+                                alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">신의 악단</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                    class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-8.webp"
+                                alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">신의 악단</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                    class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-9.webp"
+                                alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">신의 악단</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                    class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="content-box">
+                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-10.webp"
+                                alt="content"></a>
+                    </div>
+                    <div class="txt-info-box">
+                        <div class="line1">
+                            <p class="content-title">신의 악단</p>
+                        </div>
+
+                        <div class="line2">
+                            <div class="rank-diff">
+                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                    class="updown-arrow">
+                                <p class="rank-diff-num">00</p>
+                            </div>
+                            <div class="plus-btn-wrap">
+                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            </div>
+                        </div>
+                    </div>
+
+                </li> -->
+            </ul>
+            <div class="more-btn-wrap">
+                <img src="./images/search-icon/search-more-btn.png" alt="" class="more-btn">
+            </div>
+        </div>
+
+
+    </div>
+
     <div class="main-slider-wrap">
         <div class="inner">
             <ul class="main-slider-list">
@@ -211,6 +418,20 @@
                 <div class="ranking-list-wrap">
                     <ul class="ranking-list list">
                         <li><a href="#"><img src="./images/rank/rank-1.jpg" alt="랭킹사진"><strong>1</strong></a></li>
+                        <li class="active">
+                            <a href="#"><img src="./images/rank/rank-2.jpg" alt="랭킹사진"><strong>2</strong></a>
+                            <div class="text-box">
+                                <h3 class="rank-title">콘텐츠 제목</h3>
+                                <ul class="rank-icon-list">
+                                    <li><a href="#"><img src="./images/card-icon/rank-btn_play.png" alt="재생"></a></li>
+                                    <li><a href="#"><img src="./images/card-icon/rank-btn_plus.png" alt="위시리스트추가"></a>
+                                    </li>
+                                </ul>
+                                <p class="rank-info"><span>00&plus;</span><span>시간 에피소드</span><img
+                                        src="./images/card-icon/card-icon-star.png" alt="별점"><span
+                                        class="rank-review">0.0</span></p>
+                            </div>
+                        </li>
                         <li><a href="#"><img src="./images/rank/rank-2.jpg" alt="랭킹사진"><strong>2</strong></a></li>
                         <li><a href="#"><img src="./images/rank/rank-3.jpg" alt="랭킹사진"><strong>3</strong></a></li>
                         <li><a href="#"><img src="./images/rank/rank-4.jpg" alt="랭킹사진"><strong>4</strong></a></li>
@@ -280,7 +501,24 @@
                 <div class="playing-list-wrap">
                     <ul class="playing-list list movie-list">
                         <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a></li>
+                        <li>
+                            <a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a>
+                        </li>
+                        <li class="active">
+                            <a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a>
+                            <div class="text-box">
+                                <ul class="movie-icon-list">
+                                    <li><a href="#"><img src="./images/card-icon/btn_play.png" alt="재생하기"></a></li>
+                                    <li><a href="#"><img src="./images/card-icon/btn_trash.png" alt="삭제하기"></a></li>
+                                </ul>
+                                <div class="movie-title-box">
+                                    <h3>콘텐츠 제목</h3>
+                                    <p><img src="./images/card-icon/card-icon-star.png" alt="별점"><span
+                                            class="rank-review">0.0</span></p>
+                                </div>
+                                <p class="movie-info">설명</p>
+                            </div>
+                        </li>
                         <li><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
                         <!-- <li><a href="#"><img src="./images/movie-video/movie-5.jpg" alt="movieimage"></a></li>
@@ -877,6 +1115,17 @@
                             </div>
                         </li>
                     </ul>
+                    <ul class="arrow-btn">
+                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
+                                    alt="arrowleft"></a></li>
+                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
+                                    alt="arrowright"></a></li>
+                    </ul>
+                    <ul class="pager-btn">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -1016,8 +1265,6 @@
                         <li>
                             <div class="img-box"><img src="./images/sports/live1.png" alt="실시간중계"></div>
                             <div class="text-box">
-                                <h3>Grizzlies vs Magic</h3>
-                                <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
                                     </li>
@@ -1026,13 +1273,13 @@
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
                                     </li>
                                 </ul>
+                                <h3>Grizzlies vs Magic</h3>
+                                <p>01.19(월)오후5:00</p>
                             </div>
                         </li>
                         <li>
                             <div class="img-box"><img src="./images/sports/live2.png" alt="실시간중계"></div>
                             <div class="text-box">
-                                <h3>Grizzlies vs Magic</h3>
-                                <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
                                     </li>
@@ -1041,13 +1288,13 @@
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
                                     </li>
                                 </ul>
+                                <h3>Grizzlies vs Magic</h3>
+                                <p>01.19(월)오후5:00</p>
                             </div>
                         </li>
                         <li>
                             <div class="img-box"><img src="./images/sports/live3.png" alt="실시간중계"></div>
                             <div class="text-box">
-                                <h3>Grizzlies vs Magic</h3>
-                                <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
                                     </li>
@@ -1056,13 +1303,13 @@
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
                                     </li>
                                 </ul>
+                                <h3>Grizzlies vs Magic</h3>
+                                <p>01.19(월)오후5:00</p>
                             </div>
                         </li>
                         <li>
                             <div class="img-box"><img src="./images/sports/live4.png" alt="실시간중계"></div>
                             <div class="text-box">
-                                <h3>Grizzlies vs Magic</h3>
-                                <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
                                     </li>
@@ -1071,13 +1318,13 @@
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
                                     </li>
                                 </ul>
+                                <h3>Grizzlies vs Magic</h3>
+                                <p>01.19(월)오후5:00</p>
                             </div>
                         </li>
                         <li>
                             <div class="img-box"><img src="./images/sports/live5.png" alt="실시간중계"></div>
                             <div class="text-box">
-                                <h3>Grizzlies vs Magic</h3>
-                                <p>01.19(월)오후5:00</p>
                                 <ul class="control-btn list">
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_play.png" alt="플레이"></a>
                                     </li>
@@ -1086,6 +1333,8 @@
                                     <li><a href="#"><img src="./images/sports/sports-btn/sport_info.png" alt="상세"></a>
                                     </li>
                                 </ul>
+                                <h3>Grizzlies vs Magic</h3>
+                                <p>01.19(월)오후5:00</p>
                             </div>
                         </li>
                     </ul>

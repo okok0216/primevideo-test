@@ -41,11 +41,13 @@ body::after {
     max-width: 1780px;
     margin: 0 auto;
     /* background: rgba(255, 0, 0, 0.2); */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .mgnb-list,
-.ham-btn {
+.bell-btn,
+.gnb-home,
+.gnb-list>li>a>span {
     display: none;
 }
 
@@ -120,8 +122,9 @@ header>.inner {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: #1D2632;
+    background: #1d2632a1;
     display: none;
+    backdrop-filter: blur(10px);
 }
 
 .sub-menu {
@@ -148,15 +151,24 @@ header>.inner {
     display: block;
 }
 
+.gnb-list .gnb-bell {
+    display: none;
+}
+
+/* 검색창 추가
+.search-wrap {
+    z-index: 10000;
+    justify-content: center;
+} */
+
 .profile-submenu {
     position: absolute;
-    background: #262626;
-    border-radius: 5px;
-    width: 130px;
+    background: #212121;
+    border-radius: 3px;
+    width: 170px;
     left: 50%;
     top: 44px;
     transform: translateX(-50%);
-    overflow: hidden;
     display: none;
     z-index: 1000;
 }
@@ -164,17 +176,30 @@ header>.inner {
 .profile-submenu>li>a {
     display: flex;
     gap: 10px;
-    padding: 10px;
+    padding: 15px 20px;
     align-items: center;
 }
 
 .profile-submenu>li:last-child>a {
-    background: #666;
+    background: #4f4f4f;
 }
 
 /* ******************main-slider******************** */
 .main-slider-wrap {
     margin-top: 104px;
+    overflow-x: hidden;
+}
+
+.main-slider-wrap::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+19,000000+32,000000+100&1+0,0.7+19,0.6+32,0+100 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 19%, rgba(0, 0, 0, 0.6) 32%, rgba(0, 0, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: absolute;
+    left: 0;
 }
 
 .main-slider-wrap .inner {
@@ -247,7 +272,7 @@ header>.inner {
     display: block;
     width: 28px;
     height: 28px;
-    background: url(../images/logo-icon/check.png);
+    background: url(../images/logo-icon/check.png) no-repeat center center;
 }
 
 .main-slider-list>li .text-box .genre-wrap {
@@ -276,7 +301,7 @@ header>.inner {
 
 .main-slider-list>li .scope-wrap>p {
     font-size: 1.5rem;
-    text-align: right;
+    text-align: center;
 }
 
 .main-slider-wrap .pager-btn {
@@ -306,6 +331,10 @@ header>.inner {
     z-index: 100;
 }
 
+section .arrow-btn {
+    display: none;
+}
+
 .arrow-btn>.left-btn>a {
     left: -50px;
 }
@@ -316,15 +345,9 @@ header>.inner {
 
 /* ******************main*************************** */
 main {
-
-    background: linear-gradient(to top,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(22, 24, 29, 1) 5%,
-            rgba(22, 24, 29, 1) 80%,
-            rgba(0, 0, 0, 1) 100%);
-
-    margin-top: 104px;
-
+    background: #16181d;
+    padding: 50px 0 100px;
+    margin-top: 50px;
 }
 
 .no-margin {
@@ -333,6 +356,7 @@ main {
 
 section {
     padding: 30px 0;
+    overflow-x: hidden;
 }
 
 section .inner {
@@ -383,6 +407,11 @@ section .pager-btn>.active>a {
     padding: 0 20px;
     position: relative;
     /* padding-left: 40px; */
+    transition: 0.3s;
+}
+
+.ranking-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .ranking-list>li>a img {
@@ -390,6 +419,7 @@ section .pager-btn>.active>a {
     aspect-ratio: 1/1.486;
     object-fit: cover;
     border-radius: 30px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .ranking-list>li>a strong {
@@ -400,6 +430,77 @@ section .pager-btn>.active>a {
     text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.6);
     line-height: 0.8;
     color: #EFEFEF;
+    z-index: 10;
+}
+
+.ranking-list>li.active {
+    width: 24.7%;
+    display: none;
+}
+
+.ranking-list>li.active:hover {
+    transform: none;
+}
+
+.ranking-list>li.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 40px);
+    border-radius: 30px;
+    height: 50%;
+    bottom: 0;
+    left: 20px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.ranking-list>li.active>a img {
+    aspect-ratio: 1 / 0.56;
+    position: relative;
+}
+
+.ranking-list>li.active>.text-box {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    z-index: 10;
+}
+
+.ranking-list>li.active>.text-box h3 {
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.ranking-list>li.active>.text-box .rank-icon-list {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.ranking-list>li.active>.text-box .rank-icon-list img {
+    width: 40px;
+}
+
+.ranking-list>li.active>.text-box .rank-info {
+    display: flex;
+    align-items: center;
+}
+
+.ranking-list>li.active>.text-box .rank-info span {
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.ranking-list>li.active>.text-box .rank-info .rank-review {
+    border: none;
+    padding: 5px;
+    margin: 0;
 }
 
 .ranking-list-wrap .pager-btn {
@@ -420,14 +521,62 @@ section .pager-btn>.active>a {
 }
 
 .movie-list>li {
-    width: 288px;
+    width: 270px;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.movie-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .movie-list>li>a img {
     /* 너비 높이 비율 */
     aspect-ratio: 1.78/1;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 20px;
+}
+
+.movie-list>li.active {
+    width: 415px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position: absolute;
+    left: 240px;
+    top: -12px;
+    z-index: 10;
+    display: none;
+}
+
+.movie-list>li.active:hover {
+    transform: none;
+}
+
+.movie-list>li.active>a img {
+    border-radius: 20px 20px 0 0;
+}
+
+.movie-list>li.active .text-box {
+    background: #16181d;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+}
+
+.movie-list>li.active .text-box>.movie-icon-list {
+    display: flex;
+    gap: 20px;
+}
+
+.movie-list>li.active .text-box>.movie-title-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.movie-list>li.active .text-box>.movie-title-box h3 {
+    display: inline-block;
 }
 
 .more-btn>a {
@@ -453,11 +602,17 @@ section .pager-btn>.active>a {
     width: 248px;
 }
 
+.original-list>li:hover>a img {
+    transform: translate(0, -10px);
+}
+
 .original-list>li>a img {
     /* 너비 높이 비율 */
     aspect-ratio: 1/1.36;
     object-fit: cover;
     border-radius: 30px;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .original-wrap .title {
@@ -466,6 +621,18 @@ section .pager-btn>.active>a {
 }
 
 /* 회원 추천 */
+.review-list-wrap {
+    position: relative;
+}
+
+.review-list>li {
+    transition: 0.3s;
+}
+
+.review-list>li:hover {
+    transform: translate(0, -10px);
+}
+
 .review-list-wrap>.review-list {
     display: flex;
     gap: 21px;
@@ -477,6 +644,7 @@ section .pager-btn>.active>a {
     height: 340px;
     border-radius: 15px;
     background: black;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 .content-info {
@@ -506,7 +674,8 @@ section .pager-btn>.active>a {
 
 .content-img>img {
     width: 80px;
-    height: 120px;
+    /* height: 120px; */
+    aspect-ratio: 1/1.5;
     border-radius: 5px;
 }
 
@@ -539,8 +708,10 @@ section .pager-btn>.active>a {
 }
 
 .review-info>.user-head>.user-right>.rating-num {
+    font-size: 1.2rem;
     text-align: center;
     line-height: 30px;
+    padding-bottom: 4px;
 }
 
 .review-info>.user-bottom {
@@ -571,6 +742,13 @@ section .pager-btn>.active>a {
 .sport-brand-list>li {
     /* grow shrink width */
     flex: 0 0 230px;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.sport-brand-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .sport-event-list {
@@ -581,6 +759,13 @@ section .pager-btn>.active>a {
 
 .sport-event-list>li {
     position: relative;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.sport-event-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .sport-event-list>li .text-box {
@@ -618,6 +803,13 @@ section .pager-btn>.active>a {
     background: #000;
     border-radius: 15px;
     position: relative;
+    transition: 0.3s;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.sport-real-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .sport-real-list>li>.img-box {
@@ -636,7 +828,7 @@ section .pager-btn>.active>a {
     padding: 2px 16px;
     border-radius: 8px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .sport-real-list>li>.text-box {
@@ -676,6 +868,8 @@ section .pager-btn>.active>a {
 
 .open-banner-list>li {
     position: relative;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
 }
 
 .open-banner-list>li .text-box {
@@ -688,23 +882,40 @@ section .pager-btn>.active>a {
 }
 
 .open-banner-list .text-box>h3 {
-    font-size: 30px;
+    font-size: 1.88em;
 }
 
 .open-banner-list>li .text-box .text {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .open-banner-list>li .text-box p {
-    font-size: 22px;
+    font-size: 1.38em;
 }
+
 
 
 
 /* ******************footer************************* */
 footer {
     letter-spacing: 0.1em;
-    padding: 30px 0;
+    position: relative;
+    padding-top: 30px;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+68,000000+81,000000+100&0+0,0.6+68,0.7+81,1+100 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 68%, rgba(0, 0, 0, 0.7) 81%, rgba(0, 0, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: absolute;
+    /* z-index: 10; */
+    top: -30%;
+    left: 0;
 }
 
 footer>.inner {
@@ -720,7 +931,7 @@ footer>.inner {
 
 .footer-menu-list {
     display: flex;
-    font-size: 14px;
+    font-size: 0.88em;
     font-weight: 600;
     gap: 20px;
     margin-top: 5px;
@@ -753,7 +964,7 @@ footer>.inner {
 }
 
 address {
-    font-size: 14px;
+    font-size: 0.88em;
     line-height: 2;
 }
 
