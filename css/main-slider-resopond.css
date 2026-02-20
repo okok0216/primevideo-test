@@ -1,0 +1,75 @@
+/* --------------메인슬라이더--------------- */
+@media screen and (max-width:480px) {
+
+    .main-slider-list>li {
+        height: 480px;
+        /* flex: 0 0 80%; */
+        /* width: 80%; */
+        border-radius: 10px;
+        border: 1px solid green;
+    }
+
+    .main-slider-list>li>a>img {
+        height: 100%;
+        /* width: 100%; */
+        object-fit: cover;
+    }
+
+    .main-slider-list>li .text-box {
+        left: 5%;
+        bottom: 5%;
+    }
+
+    .main-slider-list>li .text-box .prime {
+        display: flex;
+        font-weight: 500;
+    }
+
+    .main-slider-list>li .text-box .prime::before {
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+    }
+
+    .main-slider-list>li .scope-wrap {
+        display: none;
+    }
+
+    .main-slider-list>li .text-box .play-btn {
+        display: none;
+    }
+
+    .main-slider-list>li .text-box .genre-wrap {
+        font-size: 1em;
+        gap: 10px;
+    }
+
+    .main-slider-list>li .text-box .genre-wrap::after {
+        content: "9.4";
+        font-weight: 600;
+        padding-left: 20px;
+        background-image: url(../images/rating-star.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 14px 14px;
+    }
+
+    .main-slider-list>li .text-box .genre-wrap .year {
+        font-weight: 500;
+    }
+
+    .main-slider-wrap .pager-btn {
+        margin: 20px 0;
+    }
+
+    .main-slider-wrap .pager-btn>li>a {
+        width: 8px;
+        height: 8px;
+    }
+
+    .main-slider-wrap .pager-btn>li.active>a {
+        width: 15px;
+    }
+
+
+}
