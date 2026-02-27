@@ -39,6 +39,9 @@
         font-size: 2em;
     }
 
+    .movie-list {
+        width: calc(100% * 18 / 5);
+    }
     .movie-list>li {
         width: 185px;
     }
