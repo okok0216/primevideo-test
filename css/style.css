@@ -335,24 +335,7 @@ header>.inner {
     width: 30px;
 }
 
-.arrow-btn>li>a {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-}
 
-section .arrow-btn {
-    display: none;
-}
-
-.arrow-btn>.left-btn>a {
-    left: -50px;
-}
-
-.arrow-btn>.right-btn>a {
-    right: -50px;
-}
 
 /* ******************main*************************** */
 main {

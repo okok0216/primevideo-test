@@ -27,13 +27,13 @@ let swiper = new Swiper(".ranking-list-wrap", {
 });
 
 
+//main swiper 자동
 const slider = document.querySelector(".main-slider-list");
 const slides = document.querySelectorAll(".main-slider-list > li");
 const container = document.querySelector(".main-slider-wrap .inner");
 
 const gap = 20;
 
-// 🔥 1️⃣ 앞뒤 복제
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
 
@@ -42,7 +42,7 @@ slider.insertBefore(lastClone, slides[0]);
 
 const allSlides = document.querySelectorAll(".main-slider-list > li");
 
-let index = 1; // ⭐ 0이 아니라 1부터 시작
+let index = 1; 
 
 function moveSlide(animate = true) {
     const slideWidth = allSlides[0].offsetWidth;
@@ -70,7 +70,7 @@ let autoSlide = setInterval(() => {
     moveSlide(true);
 }, 4000);
 
-// 🔥 2️⃣ 끝 도달 시 순간이동 처리
+
 slider.addEventListener("transitionend", () => {
     if (index === allSlides.length - 1) {
         index = 1;
@@ -83,5 +83,5 @@ slider.addEventListener("transitionend", () => {
     }
 });
 
-// 리사이즈 대응
+
 window.addEventListener("resize", () => moveSlide(false));
