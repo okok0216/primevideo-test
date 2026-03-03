@@ -892,15 +892,17 @@ section .pager-btn>.active>a {
     font-size: 1.38em;
 }
 
-section .swiper{
+section .swiper {
     padding-top: 10px;
 }
-section .swiper-pagination-bullets.swiper-pagination-horizontal{
+
+section .swiper-pagination-bullets.swiper-pagination-horizontal {
     right: 0;
     top: 20px;
     position: absolute;
     text-align: right;
 }
+
 .movie-pagination .swiper-pagination-bullet {
     width: 0.5em;
     height: 0.5em;
@@ -908,16 +910,19 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal{
     opacity: 0.8;
     border-radius: 16px;
 }
+
 .movie-pagination .swiper-pagination-bullet-active {
     width: 1em;
     opacity: 1;
 }
+
 .movie-button-next .swiper-button-next svg,
 .movie-button-prev .swiper-button-prev svg {
     color: #fff;
 }
 
 .swiper-horizontal {
+
     &.swiper-rtl .swiper-button-prev,
     &.swiper-rtl~.swiper-button-prev,
     &~.swiper-button-next,
@@ -926,7 +931,9 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal{
         right: -50px;
     }
 }
+
 .swiper-horizontal {
+
     .swiper-button-next,
     .swiper-button-prev,
     ~.swiper-button-next,
@@ -936,7 +943,9 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal{
         top: var(--swiper-navigation-top-offset, 50%);
     }
 }
+
 .swiper-horizontal {
+
     &.swiper-rtl .swiper-button-next,
     &.swiper-rtl~.swiper-button-next,
     &~.swiper-button-prev,
