@@ -484,10 +484,10 @@
         <section class="playing-wrap">
             <div class="inner">
                 <h2 class="title">계속 시청하기</h2>
-                <div class="playing-list-wrap">
-                    <ul class="playing-list list movie-list">
-                        <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
-                        <li>
+                <div class="playing-list-wrap swiper">
+                    <ul class="playing-list list movie-list swiper-wrapper">
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide">
                             <a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a>
                         </li>
                         <li class="active">
@@ -505,8 +505,8 @@
                                 <p class="movie-info">설명</p>
                             </div>
                         </li>
-                        <li><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
                         <!-- <li><a href="#"><img src="./images/movie-video/movie-5.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-6.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-7.jpg" alt="movieimage"></a></li>
@@ -534,6 +534,9 @@
                         <li><a href="#">3</a></li>
                     </ul> -->
                 </div>
+                <div class="movie-pagination playing-pagination"></div>
+                <div class="movie-button-next playing-button-next swiper-button-next"></div>
+                <div class="movie-button-prev playing-button-prev swiper-button-prev"></div>
             </div>
         </section>
 
@@ -557,86 +560,66 @@
         <section class="rec-movie-wrap">
             <div class="inner">
                 <h2 class="title">추천 영화</h2>
-                <div class="rec-movie-list-wrap">
-                    <ul class="rec-movie-list list movie-list">
-                        <li><a href="#"><img src="./images/movie-video/movie-19.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-20.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-21.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-23.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-24.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-25.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-26.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-27.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-28.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-29.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-31.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-32.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-33.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-34.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-35.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-36.jpg" alt="movieimage"></a></li>
+                <div class="rec-movie-list-wrap swiper">
+                    <ul class="rec-movie-list list movie-list swiper-wrapper">
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-19.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-20.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-21.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-23.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-24.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-25.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-26.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-27.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-28.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-29.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-31.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-32.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-33.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-34.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-35.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-36.jpg" alt="movieimage"></a></li>
                     </ul>
                     <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png"
                                 alt="morearrow"></a></p>
-                    <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a>
-                        </li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a>
-                        </li>
-                    </ul>
-                    <ul class="pager-btn">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                    </ul>
                 </div>
+                <div class="movie-pagination rec-movie-pagination"></div>
+                <div class="movie-button-next rec-movie-button-next swiper-button-next"></div>
+                <div class="movie-button-prev rec-movie-button-prev swiper-button-prev"></div>
             </div>
         </section>
 
         <section class="rec-tv-wrap">
             <div class="inner">
                 <h2 class="title">추천 TV프로그램</h2>
-                <div class="rec-tv-list-wrap">
-                    <ul class="rec-tv-list list movie-list">
-                        <li><a href="#"><img src="./images/movie-video/movie-37.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-39.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-40.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-19.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-10.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-11.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-12.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-13.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-14.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
+                <div class="rec-tv-list-wrap swiper">
+                    <ul class="rec-tv-list list movie-list swiper-wrapper">
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-37.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-39.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-40.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-19.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-10.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-11.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-12.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-13.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-14.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
                     </ul>
                     <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png"
                                 alt="morearrow"></a></p>
-                    <ul class="arrow-btn">
-                        <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
-                                    alt="arrowleft"></a>
-                        </li>
-                        <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
-                                    alt="arrowright"></a>
-                        </li>
-                    </ul>
-                    <ul class="pager-btn">
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                    </ul>
                 </div>
+                <div class="movie-pagination rec-tv-pagination"></div>
+                <div class="movie-button-next rec-tv-button-next swiper-button-next"></div>
+                <div class="movie-button-prev rec-tv-button-prev swiper-button-prev"></div>
             </div>
         </section>
 
