@@ -26,6 +26,18 @@ let swiper = new Swiper(".ranking-list-wrap", {
     },
 });
 
+const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+        el: ".main-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".main-slider-wrap .swiper-button-next",
+        prevEl: ".main-slider-wrap .swiper-button-prev",
+    },
+});
 
 //main swiper 자동
 const slider = document.querySelector(".main-slider-list");
@@ -42,7 +54,7 @@ slider.insertBefore(lastClone, slides[0]);
 
 const allSlides = document.querySelectorAll(".main-slider-list > li");
 
-let index = 1; 
+let index = 1;
 
 function moveSlide(animate = true) {
     const slideWidth = allSlides[0].offsetWidth;
