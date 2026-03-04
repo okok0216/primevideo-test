@@ -1033,20 +1033,35 @@ footer>.inner {
     display: flex;
     padding: 10px;
     gap: 5px;
-    background: #1d2632 url(../images/logo-icon/footer-langicon-Arrow.png) no-repeat 90% center;
+    background: #1d2632 url(../images/logo-icon/footer-langicon-Arrow2.png) no-repeat 92% center;
     border-radius: 10px;
     align-items: center;
 }
 
 .lang-wrap>.lang {
     position: absolute;
+    width: 100%;
+    top: 50px;
+    opacity: 0;
+}
+.lang-wrap>.lang a{
     background: #0e1319;
     line-height: 2;
-    border-radius: 10px;
+    display: block;
     width: 100%;
     padding: 10px 20px;
-    top: 50px;
-    display: none;
+}
+.lang-wrap>.lang>li:first-child a {
+    border-radius: 10px 10px 0 0;
+}
+.lang-wrap>.lang>li:last-child a {
+    border-radius: 0 0 10px 10px;
+}
+.lang-wrap>.lang.active {
+    opacity: 1;
+}
+.lang-wrap>a.active{
+    background-image: url(../images/logo-icon/footer-langicon-Arrow.png);
 }
 
 address {
