@@ -916,7 +916,6 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
     left: 50%;
     transform: translateX(-50%);
     bottom: 00px;
-    /* padding-bottom 안에서 위치 */
     z-index: 30;
     width: fit-content;
     display: flex;
