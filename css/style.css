@@ -991,7 +991,8 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
 .main-swiper .swiper-button-prev {
     color: white;
     z-index: 10000;
-    top:300px;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 .main-swiper .swiper-button-next { right: 20px; left: auto; }
