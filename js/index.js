@@ -27,7 +27,9 @@ let swiper = new Swiper(".ranking-list-wrap", {
 });
 
 let mainSwiper = new Swiper(".main-swiper", {
-    slidesPerView: 1.2,
+    slidesPerView: 1.1,
+    centeredSlides: true,   
+    spaceBetween: 20,       
     loop: true,
     pagination: {
         el: ".main-pagination",
@@ -38,6 +40,7 @@ let mainSwiper = new Swiper(".main-swiper", {
         prevEl: ".main-button-prev",
     },
     autoplay: {
-        delay: 4000
+        delay: 4000,
+        disableOnInteraction: false
     }
 });
