@@ -986,45 +986,16 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
     color: #fff;
 }
 
-.main-swiper-horizontal {
 
-    &.swiper-rtl .swiper-button-prev,
-    &.swiper-rtl~.swiper-button-prev,
-    &~.swiper-button-next,
-    .swiper-button-next {
-        left: auto;
-        right: 20px;
-    }
-}
-
-.main-swiper-horizontal {
-
-    .swiper-button-next,
-    .swiper-button-prev,
-    ~.swiper-button-next,
-    ~.swiper-button-prev {
-        margin-left: 0;
-        margin-top: 0;
-        top: var(--swiper-navigation-top-offset, 50%);
-    }
-}
-
-.main-swiper-horizontal {
-
-    &.swiper-rtl .swiper-button-next,
-    &.swiper-rtl~.swiper-button-next,
-    &~.swiper-button-prev,
-    .swiper-button-prev {
-        left: 0px;
-        right: auto;
-    }
-}
-
-.swiper-button-next,
-.swiper-button-prev {
+.main-swiper .swiper-button-next,
+.main-swiper .swiper-button-prev {
     color: white;
     z-index: 10000;
+    top:300px;
 }
+
+.main-swiper .swiper-button-next { right: 20px; left: auto; }
+.main-swiper .swiper-button-prev { left: 20px; right: auto; }
 
 /* ******************footer************************* */
 footer {
