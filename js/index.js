@@ -193,12 +193,18 @@ let mainSwiper = new Swiper(".main-swiper", {
     // }
 });
 
-let slides = document.querySelectorAll(".preview-video")
-console.log(slides)
-slides.forEach(slide => {
+let slides = document.querySelectorAll(".main-swiper .swiper-slide");
+console.log(slides);
 
-    slide.addEventListener("mouseenter", () => {
-        slide.play();
-    });
-
-});
+slides.forEach(s => {
+    s.addEventListener("mouseenter", () => {
+        let video = s.children[0]
+        console.log(video)
+        video.play();
+    })
+    s.addEventListener("mouseleave", () => {
+        let video = s.children[0];
+        video.pause();
+        video.currentTime = 0;
+    })
+})

@@ -891,7 +891,7 @@ section .pager-btn>.active>a {
 }
 
 /* swiper 플러그인 */
-section .swiper{
+section .swiper {
     padding-top: 10px;
 }
 
@@ -943,8 +943,10 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
 .movie-button-prev .swiper-button-prev svg {
     color: #fff;
 }
-section{
+
+section {
     .swiper-horizontal {
+
         &.swiper-rtl .swiper-button-prev,
         &.swiper-rtl~.swiper-button-prev,
         &~.swiper-button-next,
@@ -953,7 +955,9 @@ section{
             right: -50px;
         }
     }
+
     .swiper-horizontal {
+
         .swiper-button-next,
         .swiper-button-prev,
         ~.swiper-button-next,
@@ -963,7 +967,9 @@ section{
             top: var(--swiper-navigation-top-offset, 50%);
         }
     }
+
     .swiper-horizontal {
+
         &.swiper-rtl .swiper-button-next,
         &.swiper-rtl~.swiper-button-next,
         &~.swiper-button-prev,
@@ -972,11 +978,13 @@ section{
             right: auto;
         }
     }
+
     .swiper-button-next,
     .swiper-button-prev {
         color: white;
         opacity: 0;
     }
+
     .swiper-button-next,
     .swiper-button-prev {
         &.swiper-button-disabled {
@@ -984,10 +992,12 @@ section{
         }
     }
 }
+
 section:hover .swiper-button-next,
 section:hover .swiper-button-prev {
     opacity: 1;
 }
+
 section:hover .swiper-button-next,
 section:hover .swiper-button-prev {
     &.swiper-button-disabled {
@@ -1038,10 +1048,12 @@ body::after {
     opacity: 0;
     transition: 0.4s;
     pointer-events: none;
+
 }
 
 .swiper-slide:hover .preview-video {
     opacity: 1;
+    z-index: 1;
 }
 
 /* ******************footer************************* */
