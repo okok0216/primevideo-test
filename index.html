@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/respond.css">
     <link rel="stylesheet" href="./css/main-slider-resopond.css">
     <link rel="stylesheet" href="./css/style_searchTab.css">
+
 </head>
 
 <body>
@@ -348,10 +349,13 @@
     </div>
 
     <div class="main-slider-wrap">
-        <div class="inner swiper">
+        <div class="inner swiper main-swiper">
             <ul class="main-slider-list swiper-wrapper">
                 <li class="swiper-slide">
-                    <a href="#"><img src="./images/F1-THE-MOVIE-poster.jpg" alt="F1movie"></a>
+                    <video class="preview-video">
+                        <source src="./video/superbad.mp4" type="video/mp4">
+                    </video>
+                    <a href="./page/main/main.html"><img src="./images/F1-THE-MOVIE-poster.jpg" alt="F1movie"></a>
                     <div class="text-box">
                         <p class="movie-title-img"><img src="./images/F1THEMOVIE.png" alt="F1movie Title"></p>
                         <a href="#" class="play-btn">재생</a>
@@ -369,7 +373,10 @@
                     </div>
                 </li>
                 <li class="swiper-slide">
-                    <a href="#"><img src="./images/malcom.jpg" alt="malcom"></a>
+                    <video class="preview-video">
+                        <source src="./video/superbad.mp4" type="video/mp4">
+                    </video>
+                    <a href="./page/main/main.html"><img src="./images/malcom.jpg" alt="malcom"></a>
                     <div class="text-box">
                         <p class="movie-title-img"><img src="./images/malcom-title.png" alt="malcom Title"></p>
                         <a href="#" class="play-btn">재생</a>
@@ -387,7 +394,11 @@
                     </div>
                 </li>
                 <li class="swiper-slide">
-                    <a href="#"><img src="./images/made-in-korea-poster.png" alt="made-in-korea"></a>
+                    <video class="preview-video">
+                        <source src="./video/superbad.mp4" type="video/mp4">
+                    </video>
+                    <a href="./page/main/main.html"><img src="./images/made-in-korea-poster.png"
+                            alt="made-in-korea"></a>
                     <div class="text-box">
                         <p class="movie-title-img"><img src="./images/made-in-korea.png" alt="made-in-korea Title"></p>
                         <a href="#" class="play-btn">재생</a>
@@ -405,7 +416,10 @@
                     </div>
                 </li>
                 <li class="swiper-slide">
-                    <a href="#"><img src="./images/super-bad4-poster.jpg" alt="superbad4"></a>
+                    <video class="preview-video">
+                        <source src="./video/superbad.mp4" type="video/mp4">
+                    </video>
+                    <a href="./page/main/main.html"><img src="./images/super-bad4-poster.jpg" alt="superbad4"></a>
                     <div class="text-box">
                         <p class="movie-title-img"><img src="./images/superbad4.png" alt="superbad4 Title"></p>
                         <a href="#" class="play-btn">재생</a>
@@ -610,9 +624,9 @@
                                     alt="movieimage"></a></li>
                     </ul>
                 </div>
-                <div class="original-pagination"></div>
-                <div class="original-button-next swiper-button-next"></div>
-                <div class="original swiper-button-prev"></div>
+                <div class="movie-pagination original-pagination"></div>
+                <div class="movie-button-next original-button-next swiper-button-next"></div>
+                <div class="movie-button-prev original swiper-button-prev"></div>
             </div>
         </section>
 
@@ -1192,9 +1206,9 @@
                     </ul> -->
 
                 </div>
-                <div class="review-pagination"></div>
-                <div class="review-button-next swiper-button-next"></div>
-                <div class="review-button-prev swiper-button-prev"></div>
+                <div class="movie-pagination review-pagination"></div>
+                <div class="movie-button-next review-button-next swiper-button-next"></div>
+                <div class="movie-button-prev review-button-prev swiper-button-prev"></div>
             </div>
         </section>
 
