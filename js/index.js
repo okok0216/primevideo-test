@@ -174,6 +174,10 @@ let rectvSwiper = new Swiper(".rec-tv-list-wrap", {
     },
 });
 
+let mainSwiper = new Swiper(".main-swiper", {
+    slidesPerView: 1.06,
+    centeredSlides: true,
+    spaceBetween: 20,
 // 오리지널 swiper
 let originalSwiper = new Swiper(".original-wrap .original-list-wrap", {
     slidesPerView: 3,
@@ -255,167 +259,27 @@ const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
         clickable: true,
     },
     navigation: {
-        nextEl: ".main-slider-wrap .swiper-button-next",
-        prevEl: ".main-slider-wrap .swiper-button-prev",
+        nextEl: ".main-button-next",
+        prevEl: ".main-button-prev",
     },
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false
+    // }
 });
 
-//main swiper 자동
-const slider = document.querySelector(".main-slider-list");
-const slides = document.querySelectorAll(".main-slider-list > li");
-const container = document.querySelector(".main-slider-wrap .inner");
+let slides = document.querySelectorAll(".main-swiper .swiper-slide");
+console.log(slides);
 
-const gap = 20;
-
-const firstClone = slides[0].cloneNode(true);
-const lastClone = slides[slides.length - 1].cloneNode(true);
-
-slider.appendChild(firstClone);
-slider.insertBefore(lastClone, slides[0]);
-
-const allSlides = document.querySelectorAll(".main-slider-list > li");
-
-let index = 1;
-
-function moveSlide(animate = true) {
-    const slideWidth = allSlides[0].offsetWidth;
-    const containerWidth = container.offsetWidth;
-
-    const centerOffset = (containerWidth - slideWidth) / 2;
-    const moveAmount = (slideWidth + gap) * index;
-
-    if (!animate) {
-        slider.style.transition = "none";
-    } else {
-        slider.style.transition = "transform 0.6s ease";
-    }
-
-    slider.style.transform =
-        `translateX(${centerOffset - moveAmount}px)`;
-}
-
-// 초기 위치
-moveSlide(false);
-
-// 자동 슬라이드
-let autoSlide = setInterval(() => {
-    index++;
-    moveSlide(true);
-}, 4000);
-
-
-slider.addEventListener("transitionend", () => {
-    if (index === allSlides.length - 1) {
-        index = 1;
-        moveSlide(false);
-    }
-
-    if (index === 0) {
-        index = allSlides.length - 2;
-        moveSlide(false);
-    }
-});
-
-
-window.addEventListener("resize", () => moveSlide(false));
-
-// ================검색창================
-let searchBtn = document.querySelector(".search-btn");
-let searchTab = document.querySelector(".search-wrap");
-let searchCloseBtn = searchTab.querySelector(".close-btn");
-searchBtn.addEventListener("click", e => {
-    console.log("isclicked", e);
-    searchTab.style.display = "block";
-    // searchTab.style.top = "50%";
+slides.forEach(s => {
+    s.addEventListener("mouseenter", () => {
+        let video = s.children[0]
+        console.log(video)
+        video.play();
+    })
+    s.addEventListener("mouseleave", () => {
+        let video = s.children[0];
+        video.pause();
+        video.currentTime = 0;
+    })
 })
-searchCloseBtn.addEventListener("click", e => {
-    searchTab.style.display = "none";
-})
-
-//검색창 커서
-let searchInput = document.querySelector(".searchInput");
-searchInput.addEventListener("focus", function () {
-    this.type = "text";
-    this.classList.add("active");
-    this.previousElementSibling.style.display = "none";
-})
-searchInput.addEventListener("blur", function () {
-    this.classList.remove("active");
-    this.previousElementSibling.style.display = "block";
-    this.type = "reset";
-    this.value = "";
-})
-
-
-// ----footer lang선택----------------------------------------
-// .lang-wrap click event 
-let langWrap = document.querySelector(".lang-wrap>a");
-let lang = document.querySelector(".lang");
-let langA = document.querySelectorAll(".lang>li a");
-let langWrapA = document.querySelector(".lang-wrap>a span");
-
-function langToggle(){//lang active클래스 붙이는 공통함수
-    lang.classList.toggle('active');
-    langWrap.classList.toggle('active');
-}
-
-// .lang-wrap click event 
-langWrap.addEventListener("click", (e)=>{
-    e.preventDefault();//a의 기본 이벤트 막기
-    langToggle();
-});
-
-// .lang click event
-langA.forEach((a)=>{
-    a.addEventListener("click", (e)=>{
-        e.preventDefault();//a의 기본 이벤트 막기
-        langWrapA.innerText = a.innerText;
-        langToggle();
-    });
-});
-
-// ----공통함수----------------------------------------
-// 윈도우의 너비값 체크할 함수
-let wWidth;
-function siteInit() {
-    wWidth = window.innerWidth;
-}
-// 윈도우의 너비가 변경되면 윈도우의 너비값 다시 받기
-window.addEventListener("resize", () => {
-    siteInit();
-    subMenu.classList.remove("active");
-});
-
-// ----nav submenu----------------------------------------
-let header = document.querySelector("header");
-let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
-let subMenu = document.querySelector(".submenu-wrap");
-
-mainMenuGenre.addEventListener("mouseenter", ()=>{
-    if (wWidth > 640) {
-        subMenu.classList.add("active");
-    }
-});
-mainMenuGenre.addEventListener("mouseleave", () => {
-    if (wWidth > 640) {
-        subMenu.classList.remove("active");
-    }
-});
-
-// ----gnb usermenu----------------------------------------
-let profileMenu = document.querySelector(".profile-submenu");
-let gnbProfile = document.querySelector(".gnb-profile");
-
-gnbProfile.addEventListener("click", ()=>{
-    // 서브메뉴가 보이는지 체크하기
-    if (wWidth > 640) {
-        let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
-        if (isOpen) {
-            profileMenu.style.height = 0;
-        } else {
-            let profileHeight = profileMenu.scrollHeight;
-            profileMenu.style.height = profileHeight + "px";
-        }
-    }
-});
-
