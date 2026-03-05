@@ -51,7 +51,8 @@
             <ul class="gnb-list">
                 <li class="gnb-home"><a href="#"><img src="./images/logo-icon/lyra-icon-home.png"
                             alt="홈"><span>홈</span></a></li>
-                <li><a href="#"><img src="./images/logo-icon/lyra-icon-search.png" alt="검색"><span>검색</span></a></li>
+                <li class="search-btn"><a href="#"><img src="./images/logo-icon/lyra-icon-search.png"
+                            alt="검색"><span>검색</span></a></li>
                 <li><a href="./page/user/wish-list.html"><img src="./images/logo-icon/lyra-icon-bookmark.png"
                             alt="위시리스트"><span>위시리스트</span></a>
                 </li>
@@ -95,116 +96,141 @@
             <img src="./images/search-icon/close_btn.png" alt="닫기 버튼">
         </div>
         <!-- main / search tab -->
+        <!-- <form class="search-form">
+            <div class="search-form-wrap">
+                <p><img src="./images/search-icon/search_icon.png" alt="검색 아이콘"></p>
+                <label for="default-txt">작품, 인물, 장르를 검색해 보세요</label>
+                <input type="text" id="default-txt">
+            </div>
+        </form> -->
         <div class="main-search-tab">
             <div class="search-icon">
                 <img src="./images/search-icon/search_icon.png" alt="검색 아이콘">
             </div>
-            <div class="default-txt">
-                <p>작품, 인물, 장르를 검색해 보세요</p>
+            <div class="input-wrap">
+                <label for="searchInput">작품, 인물, 장르를 검색해 보세요</label>
+                <input type="text" id="searchInput" class="searchInput">
             </div>
+            <!-- <input type="reset"> -->
+            <!-- <input type="text" id="searchInput" class="searchInput" placeholder="작품, 인물, 장르를 검색해 보세요"> -->
+            <!-- <div class="default-txt">
+                <p>작품, 인물, 장르를 검색해 보세요</p>
+            </div> -->
         </div>
         <!-- main / ranking wrap -->
         <div class="top-contents-wrap">
             <h2 class="title">지금 뜨는 콘텐츠</h2>
-            <ul class="top-contents">
-                <li class="content-box">
-                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-1.webp" alt="content"></a>
-                    </div>
-                    <div class="txt-info-box">
-                        <div class="line1">
-                            <p class="content-title">신의 악단</p>
-                        </div>
 
-                        <div class="line2">
-                            <div class="rank-diff">
-                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
-                                <p class="rank-diff-num">00</p>
-                            </div>
-                            <div class="plus-btn-wrap">
-                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
-                            </div>
+            <div class="top-contents-list-wrap">
+                <ul class="top-contents">
+                    <li class="content-box">
+                        <div class="img-box"><a href="#"><img src="./images/search-contents/rank-1.webp"
+                                    alt="content"></a>
                         </div>
+                        <div class="txt-info-box">
+                            <div class="line1">
+                                <p class="content-title">신의 악단</p>
+                            </div>
 
-                    </div>
-                </li>
-                <li class="content-box">
-                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-2.webp" alt="content"></a>
-                    </div>
-                    <div class="txt-info-box">
-                        <div class="line1">
-                            <p class="content-title">만약에 우리</p>
-                        </div>
+                            <div class="line2">
+                                <div class="rank-diff">
+                                    <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                        class="updown-arrow">
+                                    <p class="rank-diff-num">00</p>
+                                </div>
+                                <div class="plus-btn-wrap">
+                                    <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                                </div>
+                            </div>
 
-                        <div class="line2">
-                            <div class="rank-diff">
-                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
-                                <p class="rank-diff-num">00</p>
-                            </div>
-                            <div class="plus-btn-wrap">
-                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
-                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="content-box">
-                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-3.webp" alt="content"></a>
-                    </div>
-                    <div class="txt-info-box">
-                        <div class="line1">
-                            <p class="content-title">미스트롯4</p>
+                    </li>
+                    <li class="content-box">
+                        <div class="img-box"><a href="#"><img src="./images/search-contents/rank-2.webp"
+                                    alt="content"></a>
                         </div>
+                        <div class="txt-info-box">
+                            <div class="line1">
+                                <p class="content-title">만약에 우리</p>
+                            </div>
 
-                        <div class="line2">
-                            <div class="rank-diff">
-                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
-                                <p class="rank-diff-num">00</p>
-                            </div>
-                            <div class="plus-btn-wrap">
-                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            <div class="line2">
+                                <div class="rank-diff">
+                                    <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                        class="updown-arrow">
+                                    <p class="rank-diff-num">00</p>
+                                </div>
+                                <div class="plus-btn-wrap">
+                                    <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="content-box">
-                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-4.webp" alt="content"></a>
-                    </div>
-                    <div class="txt-info-box">
-                        <div class="line1">
-                            <p class="content-title">어쩔수가없다</p>
+                    </li>
+                    <li class="content-box">
+                        <div class="img-box"><a href="#"><img src="./images/search-contents/rank-3.webp"
+                                    alt="content"></a>
                         </div>
+                        <div class="txt-info-box">
+                            <div class="line1">
+                                <p class="content-title">미스트롯4</p>
+                            </div>
 
-                        <div class="line2">
-                            <div class="rank-diff">
-                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
-                                <p class="rank-diff-num">00</p>
-                            </div>
-                            <div class="plus-btn-wrap">
-                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            <div class="line2">
+                                <div class="rank-diff">
+                                    <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                        class="updown-arrow">
+                                    <p class="rank-diff-num">00</p>
+                                </div>
+                                <div class="plus-btn-wrap">
+                                    <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li class="content-box">
-                    <div class="img-box"><a href="#"><img src="./images/search-contents/rank-5.webp" alt="content"></a>
-                    </div>
-                    <div class="txt-info-box">
-                        <div class="line1">
-                            <p class="content-title">쇼미더머니12</p>
+                    </li>
+                    <li class="content-box">
+                        <div class="img-box"><a href="#"><img src="./images/search-contents/rank-4.webp"
+                                    alt="content"></a>
                         </div>
+                        <div class="txt-info-box">
+                            <div class="line1">
+                                <p class="content-title">어쩔수가없다</p>
+                            </div>
 
-                        <div class="line2">
-                            <div class="rank-diff">
-                                <img src="./images/search-icon/search-rank-arrow.png" alt="arrow" class="updown-arrow">
-                                <p class="rank-diff-num">00</p>
-                            </div>
-                            <div class="plus-btn-wrap">
-                                <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                            <div class="line2">
+                                <div class="rank-diff">
+                                    <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                        class="updown-arrow">
+                                    <p class="rank-diff-num">00</p>
+                                </div>
+                                <div class="plus-btn-wrap">
+                                    <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                                </div>
                             </div>
                         </div>
+                    </li>
+                    <li class="content-box">
+                        <div class="img-box"><a href="#"><img src="./images/search-contents/rank-5.webp"
+                                    alt="content"></a>
+                        </div>
+                        <div class="txt-info-box">
+                            <div class="line1">
+                                <p class="content-title">쇼미더머니12</p>
+                            </div>
 
-                    </div>
-                </li>
-                <!-- <li class="content-box">
+                            <div class="line2">
+                                <div class="rank-diff">
+                                    <img src="./images/search-icon/search-rank-arrow.png" alt="arrow"
+                                        class="updown-arrow">
+                                    <p class="rank-diff-num">00</p>
+                                </div>
+                                <div class="plus-btn-wrap">
+                                    <img src="./images/search-icon/plus-btn.png" alt="plus-btn" class="plus-btn">
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <!-- <li class="content-box">
                     <div class="img-box"><a href="#"><img src="./images/search-contents/rank-6.webp"
                                 alt="content"></a>
                     </div>
@@ -311,9 +337,10 @@
                         </div>
                     </div>
                 </li> -->
-            </ul>
+                </ul>
+            </div>
             <div class="more-btn-wrap">
-                <img src="./images/search-icon/search-more-btn.png" alt="" class="more-btn">
+                <a href="#"><img src="./images/search-icon/search-more-btn.png" alt="" class="more-btn"></a>
             </div>
         </div>
 
@@ -456,24 +483,42 @@
                 <h2 class="title">최근 추가된 콘텐츠</h2>
                 <div class="new-contents-list-wrap swiper">
                     <ul class="new-contents-list list movie-list swiper-wrapper">
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-1.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-2.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-3.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-4.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-5.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-6.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-7.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-8.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-9.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-10.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-11.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-12.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-13.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-14.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-1.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-2.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-3.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-4.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-5.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-6.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-7.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-8.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-9.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-10.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-11.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-12.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-13.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-14.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg"
+                                    alt="movieimage"></a></li>
                     </ul>
                 </div>
                 <div class="movie-pagination new-contents-pagination"></div>
@@ -487,7 +532,8 @@
                 <h2 class="title">계속 시청하기</h2>
                 <div class="playing-list-wrap swiper">
                     <ul class="playing-list list movie-list swiper-wrapper">
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg"
+                                    alt="movieimage"></a></li>
                         <li class="swiper-slide">
                             <a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a>
                         </li>
@@ -506,8 +552,10 @@
                                 <p class="movie-info">설명</p>
                             </div>
                         </li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-30.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-38.jpg"
+                                    alt="movieimage"></a></li>
                         <!-- <li><a href="#"><img src="./images/movie-video/movie-5.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-6.jpg" alt="movieimage"></a></li>
                         <li><a href="#"><img src="./images/movie-video/movie-7.jpg" alt="movieimage"></a></li>
@@ -544,17 +592,27 @@
         <section class="original-wrap">
             <div class="inner">
                 <h2 class="title">오리지널 시리즈</h2>
-                <div class="original-list-wrap">
-                    <ul class="original-list list">
-                        <li><a href="#"><img src="./images/original/original-01.png" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/original/original-02.png" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/original/original-03.png" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/original/original-04.png" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/original/original-05.png" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/original/original-06.png" alt="movieimage"></a></li>
-                        <li><a href="#"><img src="./images/original/original-07.png" alt="movieimage"></a></li>
+                <div class="original-list-wrap swiper">
+                    <ul class="original-list list swiper-wrapper">
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-01.png"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-02.png"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-03.png"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-04.png"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-05.png"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-06.png"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/original/original-07.png"
+                                    alt="movieimage"></a></li>
                     </ul>
                 </div>
+                <div class="original-pagination"></div>
+                <div class="original-button-next swiper-button-next"></div>
+                <div class="original swiper-button-prev"></div>
             </div>
         </section>
 
@@ -563,24 +621,42 @@
                 <h2 class="title">추천 영화</h2>
                 <div class="rec-movie-list-wrap swiper">
                     <ul class="rec-movie-list list movie-list swiper-wrapper">
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-19.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-20.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-21.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-22.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-23.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-24.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-25.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-26.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-27.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-28.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-29.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-30.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-31.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-32.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-33.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-34.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-35.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-36.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-19.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-20.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-21.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-22.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-23.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-24.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-25.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-26.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-27.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-28.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-29.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-30.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-31.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-32.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-33.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-34.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-35.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-36.jpg"
+                                    alt="movieimage"></a></li>
                     </ul>
                     <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png"
                                 alt="morearrow"></a></p>
@@ -596,24 +672,42 @@
                 <h2 class="title">추천 TV프로그램</h2>
                 <div class="rec-tv-list-wrap swiper">
                     <ul class="rec-tv-list list movie-list swiper-wrapper">
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-37.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-38.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-39.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-40.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-19.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-10.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-11.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-12.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-13.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-14.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg" alt="movieimage"></a></li>
-                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg" alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-37.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-38.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-39.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-40.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-19.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-10.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-11.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-12.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-13.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-14.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-15.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-16.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-17.jpg"
+                                    alt="movieimage"></a></li>
+                        <li class="swiper-slide"><a href="#"><img src="./images/movie-video/movie-18.jpg"
+                                    alt="movieimage"></a></li>
                     </ul>
                     <p class="more-btn"><a href="#"><span>더보기</span><img src="./images/logo-icon/more-Arrow.png"
                                 alt="morearrow"></a></p>
@@ -627,9 +721,9 @@
         <section class="review-wrap">
             <div class="inner">
                 <h2 class="title">회원 추천</h2>
-                <div class="review-list-wrap">
-                    <ul class="review-list">
-                        <li class="review-card">
+                <div class="review-list-wrap swiper">
+                    <ul class="review-list swiper-wrapper">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-1.jpg" alt="리뷰1">
@@ -664,7 +758,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-2.jpg" alt="리뷰1">
@@ -699,7 +793,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-3.jpg" alt="리뷰1">
@@ -734,7 +828,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-4.jpg" alt="리뷰1">
@@ -769,7 +863,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-5.jpg" alt="리뷰1">
@@ -804,7 +898,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-6.webp" alt="리뷰1">
@@ -839,7 +933,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-7.webp" alt="리뷰1">
@@ -874,7 +968,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-8.webp" alt="리뷰1">
@@ -909,7 +1003,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-9.webp" alt="리뷰1">
@@ -944,7 +1038,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-10.webp" alt="리뷰1">
@@ -979,7 +1073,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-11.webp" alt="리뷰1">
@@ -1014,7 +1108,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-12.webp" alt="리뷰1">
@@ -1049,7 +1143,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="review-card">
+                        <li class="review-card swiper-slide">
                             <div class="content-info">
                                 <div class="content-img">
                                     <img src="./images/review-card/review-poster-13.webp" alt="리뷰1">
@@ -1085,18 +1179,22 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="arrow-btn">
+                    <!-- <ul class="arrow-btn">
                         <li class="left-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-01.png"
                                     alt="arrowleft"></a></li>
                         <li class="right-btn"><a href="#"><img src="./images/logo-icon/arrow-icon-02.png"
                                     alt="arrowright"></a></li>
                     </ul>
                     <ul class="pager-btn">
-                        <li class="active"><a href="#">1</a></li>
+                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
-                    </ul>
+                    </ul> -->
+
                 </div>
+                <div class="review-pagination"></div>
+                <div class="review-button-next swiper-button-next"></div>
+                <div class="review-button-prev swiper-button-prev"></div>
             </div>
         </section>
 
