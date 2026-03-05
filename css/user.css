@@ -42,6 +42,7 @@
 
 .user-form .user-input:focus {
     outline: none;
+    background: #333333b2;
 }
 
 .user-form .user-input::placeholder {
@@ -198,8 +199,8 @@
     line-height: 50px;
     border-radius: 10px;
     font-weight: 600;
-    background: #E9E9E9;
-    color: #666;
+    background: #4F4F4F;
+    color: #fff;
 }
 
 .profile-input-wrap{
@@ -218,12 +219,13 @@
     margin-top: 5px;
     color: white;
     border: none;
-    width: 180px;
+    width: 100%;
     font-weight: 600;
 }
 
 .profile-form .profile-name:focus {
     outline: none;
+    background: #333333b2;
 }
 
 .profile-form .profile-name::placeholder {
@@ -256,6 +258,9 @@
     left: 50%;
     transform: translateX(-50%);
     background: #333 url(../images/profile/profile-edit.png) no-repeat center center;
+}
+.profile-list>.profile>a:hover::after {
+    background-color: #333333b2;
 }
 
 .profile-list>.profileplus>a>.profile-plus {
@@ -319,5 +324,51 @@
 @media screen and (max-width:550px) {
     .profile-setuplist {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ***************playing-record*************** */
+.playing-record-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playing-record-list>li {
+    width: 40%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.playing-record-list>li>a{
+    width: 100%;
+    background: #333;
+    display: flex;
+    gap: 10em;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+.playing-record-list>li .trash-btn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width:1280px) {
+    .playing-record-list>li {
+        width: 60%;
+    }
+}
+@media screen and (max-width:980px) {
+    .playing-record-list>li>a {
+        flex-direction: column;
+        align-items: start;
+        gap: 1em;
+        padding: 10px;
+    }
+}
+@media screen and (max-width:640px) {
+    .playing-record-list>li {
+        width: 100%;
     }
 }
