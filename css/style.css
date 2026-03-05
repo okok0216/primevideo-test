@@ -111,10 +111,6 @@ header>.inner {
 }
 
 /* submenu */
-.main-menu>li:hover>.submenu-wrap {
-    display: block;
-}
-
 .submenu-wrap {
     position: absolute;
     top: 65px;
@@ -906,7 +902,7 @@ section .pager-btn>.active>a {
 
 /* swiper 플러그인 */
 section .swiper {
-    padding-top: 10px;
+    padding: 10px 5px;
 }
 
 section .swiper-pagination-bullets.swiper-pagination-horizontal {

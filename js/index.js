@@ -32,8 +32,8 @@ let rankingSwiper = new Swiper(".ranking-list-wrap", {
 
 // 최근 추가된 콘텐츠 swiper
 let newcontentSwiper = new Swiper(".new-contents-list-wrap", {
-    slidesPerView: 1.8,
-    slidesPerGroup: 1.8,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     spaceBetween: 20,
     pagination: {
         el: ".new-contents-pagination",
@@ -44,8 +44,8 @@ let newcontentSwiper = new Swiper(".new-contents-list-wrap", {
     },
     breakpoints: {
         640: {
-            slidesPerView: 1.8,
-            slidesPerGroup: 1.8,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         768: {
             slidesPerView: 3,
@@ -68,8 +68,8 @@ let newcontentSwiper = new Swiper(".new-contents-list-wrap", {
 
 // 계속 시청하기 swiper
 let playingSwiper = new Swiper(".playing-list-wrap", {
-    slidesPerView: 1.8,
-    slidesPerGroup: 1.8,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     spaceBetween: 20,
     pagination: {
         el: ".playing-pagination",
@@ -80,8 +80,8 @@ let playingSwiper = new Swiper(".playing-list-wrap", {
     },
     breakpoints: {
         640: {
-            slidesPerView: 1.8,
-            slidesPerGroup: 1.8,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         768: {
             slidesPerView: 3,
@@ -104,8 +104,8 @@ let playingSwiper = new Swiper(".playing-list-wrap", {
 
 // 추천영화 swiper
 let recmovieSwiper = new Swiper(".rec-movie-list-wrap", {
-    slidesPerView: 1.8,
-    slidesPerGroup: 1.8,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     spaceBetween: 20,
     pagination: {
         el: ".rec-movie-pagination",
@@ -116,8 +116,8 @@ let recmovieSwiper = new Swiper(".rec-movie-list-wrap", {
     },
     breakpoints: {
         640: {
-            slidesPerView: 1.8,
-            slidesPerGroup: 1.8,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         768: {
             slidesPerView: 3,
@@ -140,8 +140,8 @@ let recmovieSwiper = new Swiper(".rec-movie-list-wrap", {
 
 // 추천TV프로그램 swiper
 let rectvSwiper = new Swiper(".rec-tv-list-wrap", {
-    slidesPerView: 1.8,
-    slidesPerGroup: 1.8,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     spaceBetween: 20,
     pagination: {
         el: ".rec-tv-pagination",
@@ -152,8 +152,8 @@ let rectvSwiper = new Swiper(".rec-tv-list-wrap", {
     },
     breakpoints: {
         640: {
-            slidesPerView: 1.8,
-            slidesPerGroup: 1.8,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         768: {
             slidesPerView: 3,
