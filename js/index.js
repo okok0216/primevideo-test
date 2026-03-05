@@ -27,9 +27,9 @@ let swiper = new Swiper(".ranking-list-wrap", {
 });
 
 let mainSwiper = new Swiper(".main-swiper", {
-    slidesPerView: 1.1,
-    centeredSlides: true,   
-    spaceBetween: 20,       
+    slidesPerView: 1.06,
+    centeredSlides: true,
+    spaceBetween: 20,
     loop: true,
     pagination: {
         el: ".main-pagination",
@@ -39,8 +39,18 @@ let mainSwiper = new Swiper(".main-swiper", {
         nextEl: ".main-button-next",
         prevEl: ".main-button-prev",
     },
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-    }
+    // autoplay: {
+    //     delay: 4000,
+    //     disableOnInteraction: false
+    // }
+});
+
+let slides = document.querySelectorAll(".preview-video")
+console.log(slides)
+slides.forEach(slide => {
+
+    slide.addEventListener("mouseenter", () => {
+        slide.play();
+    });
+
 });
