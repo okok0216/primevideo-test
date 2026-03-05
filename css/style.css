@@ -599,11 +599,11 @@ section .pager-btn>.active>a {
 }
 
 /* 오리지널 시리즈 */
-.original-list {
+/* .original-list {
     /* 100% * 배너의개수 / 보고싶은개수 */
     /* width: calc(100% * 7 / 7);
     gap: 8px; */
-}
+/* }  */
 
 .original-list>li {
     width: 248px;
@@ -925,32 +925,6 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
     opacity: 1;
 }
 
-.original-pagination .swiper-pagination-bullet {
-    width: 0.5em;
-    height: 0.5em;
-    background: #fff;
-    opacity: 0.8;
-    border-radius: 16px;
-}
-
-.original-pagination .swiper-pagination-bullet-active {
-    width: 1em;
-    opacity: 1;
-}
-
-.review-pagination .swiper-pagination-bullet {
-    width: 0.5em;
-    height: 0.5em;
-    background: #fff;
-    opacity: 0.8;
-    border-radius: 16px;
-}
-
-.review-pagination .swiper-pagination-bullet-active {
-    width: 1em;
-    opacity: 1;
-}
-
 .main-slider-wrap .main-pagination {
     position: absolute;
     bottom: 0px;
@@ -964,12 +938,6 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
 .movie-button-prev .swiper-button-prev svg {
     color: #fff;
 }
-
-.review-button-next .swiper-button-next svg,
-.review-button-prev .swiper-button-prev svg {
-    color: #fff;
-}
-
 
 section {
     .swiper-horizontal {
@@ -1005,18 +973,6 @@ section {
             right: auto;
         }
     }
-.swiper-horizontal {
-
-    &.swiper-rtl .swiper-button-prev,
-    &.swiper-rtl~.swiper-button-prev,
-    &~.swiper-button-next,
-    .swiper-button-next {
-        left: auto;
-        right: -50px;
-    }
-}
-
-.swiper-horizontal {
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -1025,13 +981,6 @@ section {
     }
 
     .swiper-button-next,
-}
-
-.swiper-horizontal {
-
-    &.swiper-rtl .swiper-button-next,
-    &.swiper-rtl~.swiper-button-next,
-    &~.swiper-button-prev,
     .swiper-button-prev {
         &.swiper-button-disabled {
             opacity: 0;
