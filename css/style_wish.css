@@ -35,6 +35,11 @@ body {
     color: #000;
 }
 
+.genre-list>.genre-btn.active {
+    background: #fff;
+    color: #000;
+}
+
 /* .main-menu>li>a:hover {
     color: #00A8E1;
 } */

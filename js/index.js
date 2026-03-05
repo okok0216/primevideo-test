@@ -354,20 +354,20 @@ let lang = document.querySelector(".lang");
 let langA = document.querySelectorAll(".lang>li a");
 let langWrapA = document.querySelector(".lang-wrap>a span");
 
-function langToggle(){//lang active클래스 붙이는 공통함수
+function langToggle() {//lang active클래스 붙이는 공통함수
     lang.classList.toggle('active');
     langWrap.classList.toggle('active');
 }
 
 // .lang-wrap click event 
-langWrap.addEventListener("click", (e)=>{
+langWrap.addEventListener("click", (e) => {
     e.preventDefault();//a의 기본 이벤트 막기
     langToggle();
 });
 
 // .lang click event
-langA.forEach((a)=>{
-    a.addEventListener("click", (e)=>{
+langA.forEach((a) => {
+    a.addEventListener("click", (e) => {
         e.preventDefault();//a의 기본 이벤트 막기
         langWrapA.innerText = a.innerText;
         langToggle();
@@ -391,7 +391,7 @@ let header = document.querySelector("header");
 let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
 let subMenu = document.querySelector(".submenu-wrap");
 
-mainMenuGenre.addEventListener("mouseenter", ()=>{
+mainMenuGenre.addEventListener("mouseenter", () => {
     if (wWidth > 640) {
         subMenu.classList.add("active");
     }
@@ -406,7 +406,7 @@ mainMenuGenre.addEventListener("mouseleave", () => {
 let profileMenu = document.querySelector(".profile-submenu");
 let gnbProfile = document.querySelector(".gnb-profile");
 
-gnbProfile.addEventListener("click", ()=>{
+gnbProfile.addEventListener("click", () => {
     // 서브메뉴가 보이는지 체크하기
     if (wWidth > 640) {
         let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";

@@ -129,7 +129,8 @@ header>.inner {
     overflow: hidden;
     transition: 0.5s;
 }
-.submenu-wrap.active{
+
+.submenu-wrap.active {
     height: 100px;
 }
 
@@ -138,10 +139,12 @@ header>.inner {
     gap: 40px;
     font-weight: 600;
 }
-.sub-menu:first-child{
+
+.sub-menu:first-child {
     margin-bottom: 20px;
     padding: 20px 200px 0 200px;
 }
+
 .sub-menu:last-child {
     padding: 0 200px 20px 200px;
 }
@@ -765,7 +768,7 @@ section .pager-btn>.active>a {
 .sport-event-list {
     width: calc(100% * 8 / 3.5);
     gap: var(--gap16);
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .sport-event-list>li {
@@ -797,7 +800,7 @@ section .pager-btn>.active>a {
 
 .sport-brand-wrap .pager-btn,
 .sport-event-wrap .pager-btn {
-    top: -20px;
+    top: -12px;
 }
 
 /* 실시간 중계 */
@@ -1009,18 +1012,6 @@ section {
             right: auto;
         }
     }
-.swiper-horizontal {
-
-    &.swiper-rtl .swiper-button-prev,
-    &.swiper-rtl~.swiper-button-prev,
-    &~.swiper-button-next,
-    .swiper-button-next {
-        left: auto;
-        right: -50px;
-    }
-}
-
-.swiper-horizontal {
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -1029,13 +1020,6 @@ section {
     }
 
     .swiper-button-next,
-}
-
-.swiper-horizontal {
-
-    &.swiper-rtl .swiper-button-next,
-    &.swiper-rtl~.swiper-button-next,
-    &~.swiper-button-prev,
     .swiper-button-prev {
         &.swiper-button-disabled {
             opacity: 0;
@@ -1117,23 +1101,28 @@ footer>.inner {
     top: 50px;
     opacity: 0;
 }
-.lang-wrap>.lang a{
+
+.lang-wrap>.lang a {
     background: #0e1319;
     line-height: 2;
     display: block;
     width: 100%;
     padding: 10px 20px;
 }
+
 .lang-wrap>.lang>li:first-child a {
     border-radius: 10px 10px 0 0;
 }
+
 .lang-wrap>.lang>li:last-child a {
     border-radius: 0 0 10px 10px;
 }
+
 .lang-wrap>.lang.active {
     opacity: 1;
 }
-.lang-wrap>a.active{
+
+.lang-wrap>a.active {
     background-image: url(../images/logo-icon/footer-langicon-Arrow.png);
 }
 
