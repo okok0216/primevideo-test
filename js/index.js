@@ -174,6 +174,79 @@ let rectvSwiper = new Swiper(".rec-tv-list-wrap", {
     },
 });
 
+// 오리지널 swiper
+let originalSwiper = new Swiper(".original-wrap .original-list-wrap", {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 8,
+    pagination: {
+        el: ".original-pagination",
+    },
+    navigation: {
+        nextEl: ".original-button-next",
+        prevEl: ".original-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        768: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+        980: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+        },
+        1280: {
+            slidesPerView: 6,
+            slidesPerGroup: 6,
+        },
+        1300: {
+            slidesPerView: 7,
+            slidesPerGroup: 7,
+        },
+    },
+});
+
+// 회원추천 swiper
+let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
+    slidesPerView: 1.5,
+    slidesPerGroup: 1.5,
+    spaceBetween: 15,
+    pagination: {
+        el: ".review-pagination",
+    },
+    navigation: {
+        nextEl: ".review-button-next",
+        prevEl: ".review-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.5,
+            slidesPerGroup: 1.5,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        980: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+        1300: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+        },
+    },
+});
+
+
 const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
     slidesPerView: 1,
     loop: true,
@@ -245,6 +318,34 @@ slider.addEventListener("transitionend", () => {
 
 
 window.addEventListener("resize", () => moveSlide(false));
+
+// ================검색창================
+let searchBtn = document.querySelector(".search-btn");
+let searchTab = document.querySelector(".search-wrap");
+let searchCloseBtn = searchTab.querySelector(".close-btn");
+searchBtn.addEventListener("click", e => {
+    console.log("isclicked", e);
+    searchTab.style.display = "block";
+    // searchTab.style.top = "50%";
+})
+searchCloseBtn.addEventListener("click", e => {
+    searchTab.style.display = "none";
+})
+
+//검색창 커서
+let searchInput = document.querySelector(".searchInput");
+searchInput.addEventListener("focus", function () {
+    this.type = "text";
+    this.classList.add("active");
+    this.previousElementSibling.style.display = "none";
+})
+searchInput.addEventListener("blur", function () {
+    this.classList.remove("active");
+    this.previousElementSibling.style.display = "block";
+    this.type = "reset";
+    this.value = "";
+})
+
 
 // ----footer lang선택----------------------------------------
 // .lang-wrap click event 
