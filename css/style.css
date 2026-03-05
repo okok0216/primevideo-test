@@ -762,7 +762,7 @@ section .pager-btn>.active>a {
 .sport-event-list {
     width: calc(100% * 8 / 3.5);
     gap: var(--gap16);
-    margin-top: 35px;
+    margin-top: 20px;
 }
 
 .sport-event-list>li {
@@ -794,7 +794,7 @@ section .pager-btn>.active>a {
 
 .sport-brand-wrap .pager-btn,
 .sport-event-wrap .pager-btn {
-    top: -20px;
+    top: -12px;
 }
 
 /* 실시간 중계 */
