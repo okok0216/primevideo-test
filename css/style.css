@@ -116,15 +116,21 @@ header>.inner {
 }
 
 .submenu-wrap {
-    padding: 20px 200px;
     position: absolute;
-    top: 60px;
+    top: 65px;
     left: 0;
     width: 100%;
     z-index: 100;
     background: #1d2632a1;
-    display: none;
+    /* display: none; */
     backdrop-filter: blur(10px);
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.submenu-wrap.active{
+    height: 100px;
 }
 
 .sub-menu {
@@ -132,9 +138,12 @@ header>.inner {
     gap: 40px;
     font-weight: 600;
 }
-
-.submenu-wrap>.sub-menu:first-child {
+.sub-menu:first-child{
     margin-bottom: 20px;
+    padding: 20px 200px 0 200px;
+}
+.sub-menu:last-child {
+    padding: 0 200px 20px 200px;
 }
 
 .gnb-list {
@@ -145,10 +154,6 @@ header>.inner {
 
 .gnb-list>li {
     padding: 10px 0;
-}
-
-.gnb-list>li:hover .profile-submenu {
-    display: block;
 }
 
 .gnb-list .gnb-bell {
@@ -173,8 +178,11 @@ header>.inner {
     left: 50%;
     top: 44px;
     transform: translateX(-50%);
-    display: none;
+    /* display: none; */
     z-index: 1000;
+    height: 0;
+    overflow: hidden;
+    /* transition: 0.5s; */
 }
 
 .profile-submenu>li>a {
@@ -1079,20 +1087,35 @@ footer>.inner {
     display: flex;
     padding: 10px;
     gap: 5px;
-    background: #1d2632 url(../images/logo-icon/footer-langicon-Arrow.png) no-repeat 90% center;
+    background: #1d2632 url(../images/logo-icon/footer-langicon-Arrow2.png) no-repeat 92% center;
     border-radius: 10px;
     align-items: center;
 }
 
 .lang-wrap>.lang {
     position: absolute;
+    width: 100%;
+    top: 50px;
+    opacity: 0;
+}
+.lang-wrap>.lang a{
     background: #0e1319;
     line-height: 2;
-    border-radius: 10px;
+    display: block;
     width: 100%;
     padding: 10px 20px;
-    top: 50px;
-    display: none;
+}
+.lang-wrap>.lang>li:first-child a {
+    border-radius: 10px 10px 0 0;
+}
+.lang-wrap>.lang>li:last-child a {
+    border-radius: 0 0 10px 10px;
+}
+.lang-wrap>.lang.active {
+    opacity: 1;
+}
+.lang-wrap>a.active{
+    background-image: url(../images/logo-icon/footer-langicon-Arrow.png);
 }
 
 address {
