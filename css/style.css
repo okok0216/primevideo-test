@@ -1086,13 +1086,6 @@ footer::before {
     top: -30%;
     left: 0;
 }
-    section:hover .swiper-button-next,
-    section:hover .swiper-button-prev {
-        &.swiper-button-disabled {
-            opacity: .35;
-        }
-    }
-}
 
 /* ******************footer************************* */
 footer {
