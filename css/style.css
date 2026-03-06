@@ -169,8 +169,12 @@ header>.inner {
     justify-content: center;
     display: none;
     position: fixed;
-    /* position: absolute; */
     top: 0;
+    /* position: absolute; */
+    /* top: 80px; */
+    /* height: 0; */
+    /* height: fit-content; */
+    /* overflow: auto; */
 }
 
 .profile-submenu {

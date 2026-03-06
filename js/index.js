@@ -393,7 +393,6 @@ let searchCloseBtn = searchTab.querySelector(".close-btn");
 searchBtn.addEventListener("click", e => {
     console.log("isclicked", e);
     searchTab.style.display = "block";
-    // searchTab.style.top = "50%";
 })
 searchCloseBtn.addEventListener("click", e => {
     searchTab.style.display = "none";
