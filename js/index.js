@@ -246,9 +246,12 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
     },
 });
 
+// ================메인슬라이더================
 
 const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
-    slidesPerView: 1,
+    slidesPerView: 1.06,
+    centeredSlides: true,
+    spaceBetween: 20,
     loop: true,
     pagination: {
         el: ".main-pagination",
@@ -282,40 +285,40 @@ slides.forEach(s => {
 
 // ================검색창================
 let searchBtn = document.querySelector(".search-btn");
-    let searchTab = document.querySelector(".search-wrap");
-    let searchCloseBtn = searchTab.querySelector(".close-btn");
-    searchBtn.addEventListener("click", e => {
-        console.log("isclicked", e);
-        searchTab.style.display = "block";
-        // searchTab.style.top = "50%";
-    })
+let searchTab = document.querySelector(".search-wrap");
+let searchCloseBtn = searchTab.querySelector(".close-btn");
+searchBtn.addEventListener("click", e => {
+    console.log("isclicked", e);
+    searchTab.style.display = "block";
+    // searchTab.style.top = "50%";
+})
 searchCloseBtn.addEventListener("click", e => {
-        searchTab.style.display = "none";
-    })
+    searchTab.style.display = "none";
+})
 
 //검색창 커서
 let searchInput = document.querySelector(".searchInput");
-    searchInput.addEventListener("focus", function () {
-        this.type = "text";
-        this.classList.add("active");
-        this.previousElementSibling.style.display = "none";
-    })
+searchInput.addEventListener("focus", function () {
+    this.type = "text";
+    this.classList.add("active");
+    this.previousElementSibling.style.display = "none";
+})
 searchInput.addEventListener("blur", function () {
-        this.classList.remove("active");
-        this.previousElementSibling.style.display = "block";
-        this.type = "reset";
-        this.value = "";
-    })
+    this.classList.remove("active");
+    this.previousElementSibling.style.display = "block";
+    this.type = "reset";
+    this.value = "";
+})
 
 
 // ----footer lang선택----------------------------------------
 // .lang-wrap click event 
 let langWrap = document.querySelector(".lang-wrap>a");
-    let lang = document.querySelector(".lang");
-    let langA = document.querySelectorAll(".lang>li a");
-    let langWrapA = document.querySelector(".lang-wrap>a span");
+let lang = document.querySelector(".lang");
+let langA = document.querySelectorAll(".lang>li a");
+let langWrapA = document.querySelector(".lang-wrap>a span");
 
-    function langToggle(){//lang active클래스 붙이는 공통함수
+function langToggle() {//lang active클래스 붙이는 공통함수
     lang.classList.toggle('active');
     langWrap.classList.toggle('active');
 }
