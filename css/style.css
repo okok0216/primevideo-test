@@ -12,7 +12,7 @@ body {
 body::before {
     content: "";
     display: block;
-    width: 62px;
+    width: 20px;
     height: 100%;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
     background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
@@ -25,7 +25,7 @@ body::before {
 body::after {
     content: "";
     display: block;
-    width: 62px;
+    width: 20px;
     height: 100%;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
@@ -33,6 +33,12 @@ body::after {
     position: fixed;
     top: 0;
     right: 0;
+}
+
+body::before,
+body::after {
+    z-index: 10;
+    pointer-events: none;
 }
 
 .inner {
@@ -369,7 +375,7 @@ section {
     padding: 30px 0;
     overflow-x: hidden;
     position: relative;
-    z-index: 20;
+    /* z-index: 20; */
 }
 
 section .inner {
@@ -410,8 +416,8 @@ section .pager-btn>.active>a {
 /* 실시간 랭킹 */
 .ranking-list {
     /* 100% * 배너의개수 / 보고싶은개수 */
-    width: calc(100% * 10 / 5 + 80px);
-    /* margin: 0 -20px; */
+    /* width: calc(100% * 10 / 5 + 80px); */
+    margin: 0 -20px;
 }
 
 .ranking-list>li {
@@ -906,8 +912,8 @@ section .pager-btn>.active>a {
 }
 
 /* swiper 플러그인 */
-section .swiper {
-    padding: 10px 5px;
+.swiper {
+    overflow: visible;
 }
 
 section .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -927,30 +933,6 @@ section .swiper-pagination-bullets.swiper-pagination-horizontal {
 
 .movie-pagination .swiper-pagination-bullet-active {
     width: 1em;
-    opacity: 1;
-}
-
-.main-slider-wrap .main-pagination {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 00px;
-    z-index: 30;
-    width: fit-content;
-    display: flex;
-    gap: 10px;
-}
-
-.main-pagination .swiper-pagination-bullet {
-    width: 0.9em;
-    height: 0.9em;
-    background: #fff;
-    opacity: 0.8;
-    border-radius: 16px;
-}
-
-.main-pagination .swiper-pagination-bullet-active {
-    width: 1.5em;
     opacity: 1;
 }
 
@@ -1020,6 +1002,31 @@ section:hover .swiper-button-prev {
     }
 }
 
+/* ---main-slider swiper--- */
+.main-slider-wrap .main-pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 00px;
+    z-index: 30;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+}
+
+.main-pagination .swiper-pagination-bullet {
+    width: 0.9em;
+    height: 0.9em;
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 16px;
+}
+
+.main-pagination .swiper-pagination-bullet-active {
+    width: 1.5em;
+    opacity: 1;
+}
+
 .main-button-next .swiper-button-next svg,
 .main-button-prev .swiper-button-prev svg {
     color: #fff;
@@ -1044,12 +1051,6 @@ section:hover .swiper-button-prev {
     left: 10px;
     right: auto;
     z-index: 20;
-}
-
-body::before,
-body::after {
-    z-index: 1;
-    pointer-events: none;
 }
 
 .preview-video {
