@@ -338,6 +338,11 @@ langA.forEach((a) => {
     });
 });
 
+lang.addEventListener("mouseleave", ()=>{
+    langWrap.classList.remove("active");
+    lang.classList.remove("active");
+});
+
 // ----공통함수----------------------------------------
 // 윈도우의 너비값 체크할 함수
 let wWidth;
@@ -373,14 +378,16 @@ let gnbProfile = document.querySelector(".gnb-profile");
 
 gnbProfile.addEventListener("click", () => {
     // 서브메뉴가 보이는지 체크하기
-    if (wWidth > 640) {
-        let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
-        if (isOpen) {
-            profileMenu.style.height = 0;
-        } else {
-            let profileHeight = profileMenu.scrollHeight;
-            profileMenu.style.height = profileHeight + "px";
-        }
+    let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
+    if (isOpen) {
+        profileMenu.style.height = 0;
+    } else {
+        let profileHeight = profileMenu.scrollHeight;
+        profileMenu.style.height = profileHeight + "px";
     }
+});
+
+gnbProfile.addEventListener("mouseleave", () => {
+    profileMenu.style.height = 0;
 });
 
