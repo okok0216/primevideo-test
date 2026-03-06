@@ -246,6 +246,7 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
     },
 });
 
+// ================메인슬라이더================
 
 const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
     slidesPerView: 1.06,
