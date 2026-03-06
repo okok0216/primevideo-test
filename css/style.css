@@ -167,14 +167,10 @@ header>.inner {
 .search-wrap {
     z-index: 1000;
     justify-content: center;
-    display: none;
     position: fixed;
-    top: 0;
-    /* position: absolute; */
-    /* top: 80px; */
-    /* height: 0; */
-    /* height: fit-content; */
-    /* overflow: auto; */
+    top: -120%;
+    height: fit-content;
+    transition: 0.8s;
 }
 
 .profile-submenu {
@@ -185,11 +181,9 @@ header>.inner {
     left: 50%;
     top: 44px;
     transform: translateX(-50%);
-    /* display: none; */
     z-index: 1000;
     height: 0;
     overflow: hidden;
-    /* transition: 0.5s; */
 }
 
 .profile-submenu>li>a {
