@@ -263,7 +263,6 @@ const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
     },
     // autoplay: {
     //     delay: 4000,
-    //     disableOnInteraction: false
     // }
 });
 
@@ -288,12 +287,13 @@ let searchBtn = document.querySelector(".search-btn");
 let searchTab = document.querySelector(".search-wrap");
 let searchCloseBtn = searchTab.querySelector(".close-btn");
 searchBtn.addEventListener("click", e => {
-    console.log("isclicked", e);
-    searchTab.style.display = "block";
-    // searchTab.style.top = "50%";
+    //console.log("isclicked", e);
+    searchTab.style.top = 0;
+    searchBtn.style.display = "none";
 })
 searchCloseBtn.addEventListener("click", e => {
-    searchTab.style.display = "none";
+    searchTab.style.top = `-${120}%`;
+    searchBtn.style.display = "block";
 })
 
 //검색창 커서
