@@ -246,9 +246,12 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
     },
 });
 
+// ================메인슬라이더================
 
 const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
-    slidesPerView: 1,
+    slidesPerView: 1.06,
+    centeredSlides: true,
+    spaceBetween: 20,
     loop: true,
     pagination: {
         el: ".main-pagination",
@@ -286,16 +289,11 @@ let searchTab = document.querySelector(".search-wrap");
 let searchCloseBtn = searchTab.querySelector(".close-btn");
 searchBtn.addEventListener("click", e => {
     console.log("isclicked", e);
-    // searchTab.style.display = "block";
-    // searchTab.style.height = "500px";
+    searchTab.style.display = "block";
     // searchTab.style.top = "50%";
-    //searchTab.style.height = searchTab.scrollHeight + "px";
-    console.log(searchTab.scrollHeight);
-
 })
 searchCloseBtn.addEventListener("click", e => {
-    // searchTab.style.display = "none";
-    searchTab.style.height = 0;
+    searchTab.style.display = "none";
 })
 
 //검색창 커서
