@@ -367,7 +367,6 @@ const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
     },
     // autoplay: {
     //     delay: 4000,
-    //     disableOnInteraction: false
     // }
 });
 
