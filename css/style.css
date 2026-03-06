@@ -602,7 +602,7 @@ section .pager-btn>.active>a {
 /* 오리지널 시리즈 */
 /* .original-list {
     /* 100% * 배너의개수 / 보고싶은개수 */
-    /* width: calc(100% * 7 / 7);
+/* width: calc(100% * 7 / 7);
     gap: 8px; */
 /* }  */
 
@@ -794,7 +794,7 @@ section .pager-btn>.active>a {
 
 .sport-brand-wrap .pager-btn,
 .sport-event-wrap .pager-btn {
-    top: -12px;
+    top: -20px;
 }
 
 /* 실시간 중계 */
