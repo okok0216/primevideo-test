@@ -2,7 +2,9 @@
     /* width: 1458px; */
     width: max(75%, 500px);
     /* height: max(65%, 500px); */
-    height: fit-content;
+    /* height: fit-content; */
+    height: 0;
+    overflow: hidden;
     /* height: 650px; */
     background: black;
     opacity: 95%;
@@ -18,7 +20,8 @@
 
     /* overflow: scroll; */
     /* overflow: hidden; */
-    display: none;
+    /* display: none; */
+    transition: 0.5s;
 }
 
 .close-btn {
