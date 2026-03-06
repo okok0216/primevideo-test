@@ -376,8 +376,12 @@ console.log(slides);
 slides.forEach(s => {
     s.addEventListener("mouseenter", () => {
         let video = s.children[0]
-        console.log(video)
-        video.play();
+        console.log(video);
+
+        timer = setTimeout(() => {
+            video.play();
+        }, 500);
+
     })
     s.addEventListener("mouseleave", () => {
         let video = s.children[0];
