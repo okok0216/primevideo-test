@@ -254,11 +254,34 @@ header>.inner {
 }
 
 .main-slider-list>li>a>img {
-    width: 100%;
+    width: 150%;
     height: 660px;
     object-fit: cover;
     display: block;
-    position: relative;
+}
+
+.main-slider-list>li.slide1>a>img {
+    object-position: center 20%;
+}
+
+.main-slider-list>li.slide2>a>img {
+    object-position: center 20%;
+}
+
+.main-slider-list>li.slide3>a>img {
+    object-position: center 25%;
+}
+
+.main-slider-list>li.slide4>a>img {
+    object-position: center 85%;
+}
+
+.main-slider-list>li.slide5>a>img {
+    object-position: center 40%;
+}
+
+.main-slider-list>li.slide6>a>img {
+    object-position: center 10%;
 }
 
 .main-slider-list>li .text-box {
