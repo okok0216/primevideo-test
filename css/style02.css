@@ -331,6 +331,38 @@ section .inner {
     font-weight: bold;
 }
 
+.information-list>.white-text {
+    color: #AAB1A9;
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.information-list>.white-text:hover {
+    color: #00A8E1;
+}
+
+.information-list>.white-text::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    background: #00a8e1;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+
+
+.information-list>.white-text:hover::after {
+    width: 100%;
+}
+
 .information-list>.blue-text {
     color: #AAB1A9;
     position: relative;
@@ -406,8 +438,25 @@ section .inner {
     display: flex;
     gap: 10px;
     padding: 10px;
+}
 
+.tab-title-list>a {
+    color: inherit;
+}
 
+.tab-title-list>.active>a {
+    color: #fff;
+}
+
+.tab-content {
+    position: absolute;
+    opacity: 0;
+}
+
+.tab-content.active {
+    position: relative;
+    z-index: 100;
+    opacity: 1;
 }
 
 .collection {}
