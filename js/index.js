@@ -384,3 +384,77 @@ gnbProfile.addEventListener("click", () => {
     }
 });
 
+스포츠
+let spbrandSwiper = new Swiper(".sport-brand-wrap", {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 10,
+    pagination: {
+        el: ".spbrand-pagination"
+    },
+    navigation: {
+        nextEl: ".spbrand-button-next",
+        prevEl: ".spbrand-button-prev",
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.5,
+            slidesPerGroup: 1.5,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        980: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+        1300: {
+            slidesPerView: 5,
+            slidesPerGroup: 5,
+        },
+    },
+})
+
+
+//실시간
+// let liveSwiper = new Swiper(".sport-real-wrap", {
+//     slidesPerView: 1.5,
+//     slidesPerGroup: 1.5,
+//     spaceBetween: 15,
+//     pagination: {
+//         el: ".live-pagination"
+//     },
+//     navigation: {
+//         nextEl: ".live-button-next",
+//         prevEl: ".live-button-prev"
+//     },
+//     breakpoints: {
+//         640: {
+//             slidesPerView: 1.5,
+//             slidesPerGroup: 1.5,
+//         },
+//         768: {
+//             slidesPerView: 2,
+//             slidesPerGroup: 2,
+//         },
+//         980: {
+//             slidesPerView: 3,
+//             slidesPerGroup: 3,
+//         },
+//         1280: {
+//             slidesPerView: 4,
+//             slidesPerGroup: 4,
+//         },
+//         1300: {
+//             slidesPerView: 5,
+//             slidesPerGroup: 5,
+//         },
+//     },
+// })
+
+//오픈예정

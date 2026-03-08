@@ -871,7 +871,7 @@ section .pager-btn>.active>a {
 }
 
 /* 공개예정 */
-.open-banner-wrap {
+/* .open-banner-wrap {
     position: relative;
 }
 
@@ -893,6 +893,51 @@ section .pager-btn>.active>a {
     transform: translateY(-50%);
     line-height: 1.5;
     font-weight: 500;
+}
+
+.open-banner-list .text-box>h3 {
+    font-size: 1.88em;
+}
+
+.open-banner-list>li .text-box .text {
+    font-size: 1.25em;
+}
+
+.open-banner-list>li .text-box p {
+    font-size: 1.38em;
+} */
+
+/* 공개예정 */
+.open-banner-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.open-banner-list {
+    gap: 0;
+}
+
+.open-banner-list>li {
+    width: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
+}
+
+.open-banner-list>li .img-box img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.open-banner-list>li .text-box {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
 .open-banner-list .text-box>h3 {
