@@ -23,17 +23,123 @@
 
 let movieList = [
     {
+        imgUrl: "./images/rank/rank-1.jpg",//이미지링크
+        title: "Show Me The Money 12", //제목
+        option: ["TV프로그램"], //옵션
+        genre: [""], //장르
+        seriese: 12, //몇부작
+        season: 12, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 3, //리뷰 별
+        info: "날 것의 랩 배틀, 되살아난 배틀의 심장 힙합 씬의 뉴 아이콘이 탄생한다! HIP HOP NEVER DIE Mnet X TVING 공동 제작 프로젝트 <쇼미더머니12>" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-2.jpg",//이미지링크
         title: "친애하는 X", //제목
         option: ["TV프로그램"], //옵션
         genre: ["드라마", "미스터리·스릴러"], //장르
         seriese: 12, //몇부작
-        seasons: 1, //시즌
-        age: ["모든 연령"],
-        time: "1h",
-
-
-
-
-
-    }
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 4, //리뷰 별
+        info: "지옥에서 벗어나 가장 높은 곳으로 올라가기 위해 가면을 쓴 여자 '백아진' 그리고 그녀에게 잔혹하게 짓밟힌 X들의 이야기" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-3.jpg",//이미지링크
+        title: "환승연애4", //제목
+        option: ["TV프로그램"], //옵션
+        genre: [""], //장르
+        seriese: 21, //몇부작
+        season: 4, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 4, //리뷰 별
+        info: "다양한 이유로 이별한 커플들이 한 집에 모여 지나간 연애를 되짚고 새로운 인연을 마주하며 자신만의 사랑을 찾아가는 연애 리얼리티 프로그램" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-4.jpg",//이미지링크
+        title: "응답하라 1988", //제목
+        option: ["TV프로그램"], //옵션
+        genre: ["드라마", "로맨스", "코미디"], //장르
+        seriese: 20, //몇부작
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 4, //리뷰 별
+        info: "쌍팔년도 쌍문동, 한 골목 다섯 가족의 왁자지껄 코믹 가족극" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-5.jpg",//이미지링크
+        title: "Show Me The Money 12", //제목
+        option: ["TV프로그램"], //옵션
+        genre: [""], //장르
+        seriese: 12, //몇부작
+        season: 12, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 3, //리뷰 별
+        info: "날 것의 랩 배틀, 되살아난 배틀의 심장 힙합 씬의 뉴 아이콘이 탄생한다! HIP HOP NEVER DIE Mnet X TVING 공동 제작 프로젝트 <쇼미더머니12>" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-6.jpg",//이미지링크
+        title: "러브 미", //제목
+        option: ["TV프로그램"], //옵션
+        genre: ["드라마", "로맨스"], //장르
+        seriese: 12, //몇부작
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 4, //리뷰 별
+        info: "내 인생만 애틋했던, 조금은 이기적이라 어쩌면 더 평범한 가족이 각자의 사랑을 시작하며 성장하는 이야기를 그린 드라마" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-7.jpg",//이미지링크
+        title: "스프링 피버", //제목
+        option: ["TV프로그램"], //옵션
+        genre: ["드라마", "로맨스"], //장르
+        seriese: 12, //몇부작
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 3, //리뷰 별
+        info: "찬바람 쌩쌩부는 교사 윤봄과 불타는 심장을 가진 남자 선재규의 얼어붙은 마음도 녹일 봄날의 핫!핑크빛 로맨스" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-8.jpg",//이미지링크
+        title: "판사 이한영", //제목
+        option: ["TV프로그램"], //옵션
+        genre: ["드라마", "판타지"], //장르
+        seriese: 14, //몇부작
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 3, //리뷰 별
+        info: "거대 로펌의 노예로 살다가 10년 전으로 회귀한 적폐 판사 이한영이 새로운 선택으로 거악을 응징하는 정의 구현 회귀 드라마" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-9.jpg",//이미지링크
+        title: "야구기인 임찬규", //제목
+        option: ["TV프로그램"], //옵션
+        genre: ["코미디"], //장르
+        seriese: 9, //몇부작
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 3, //리뷰 별
+        info: "야구계 대표 기인 임찬규가 시즌 내내 품어왔던 기상천외한 버킷리스트 대방출 리얼 버라이어티. 낭만 투수 임찬규의 본격 비시즌 소원 성취 프로젝트!" //소개글
+    },
+    {
+        imgUrl: "./images/rank/rank-10.jpg",//이미지링크
+        title: "언더커버 미쓰홍", //제목
+        option: ["TV프로그램"], //옵션
+        genre: ["드라마", "코미디"], //장르
+        seriese: 16, //몇부작
+        season: 1, //시즌
+        age: ["모든 연령"], //시청연령
+        time: "1h", //재생시간
+        review: 3, //리뷰 별
+        info: "1990년대 세기말, 30대 엘리트 증권감독관 홍금보가 수상한 자금의 흐름이 포착된 증권사에 20살 말단 사원으로 위장취업하며 벌어지는 좌충우돌 레트로 오피스 코미디" //소개글
+    },
 ]
