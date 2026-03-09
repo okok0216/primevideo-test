@@ -247,11 +247,26 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
 });
 //--------------스포츠------------------
 
+// 스포츠
+let spbrandSwiper = new Swiper(".sport-brand-wrap", {
+    slidesPerView: 8,
+    slidesPerGroup: 8,
+    spaceBetween: 12,
+    pagination: {
+        el: ".spbrand-pagination"
+    },
+    navigation: {
+        nextEl: ".spbrand-button-next",
+        prevEl: ".spbrand-button-prev",
+    }
+})
+
+
 //스포츠이벤트
 let spEventSwiper = new Swiper(".sport-event-wrap", {
     slidesPerView: 4,
-    slidesPerGroup: 3,
-    // spaceBetween: 15,
+    slidesPerGroup: 4,
+    spaceBetween: 16,
     pagination: {
         el: ".sport-event-pagination"
     },
@@ -266,14 +281,14 @@ let spEventSwiper = new Swiper(".sport-event-wrap", {
 let opBannerSwiper = new Swiper(".open-banner-wrap", {
     slidesPerView: 4,
     slidesPerGroup: 4,
-    // spaceBetween: 10,
+    spaceBetween: 16,
     pagination: {
         el: ".open-banner-pagination"
     },
     navigation: {
         nextEl: ".open-banner-button-next",
         prevEl: ".open-banner-button-prev",
-    }
+    },
     // breakpoints: {
     //     640: {
     //         slidesPerView: 1.5,
@@ -301,7 +316,7 @@ let opBannerSwiper = new Swiper(".open-banner-wrap", {
 
 //실시간
 let liveSwiper = new Swiper(".sport-real-wrap", {
-    slidesPerView: 3,
+    slidesPerView: 3.5,
     slidesPerGroup: 1.5,
     spaceBetween: 15,
     pagination: {
@@ -473,17 +488,4 @@ gnbProfile.addEventListener("click", () => {
     }
 });
 
-// 스포츠
-let spbrandSwiper = new Swiper(".sport-brand-wrap", {
-    slidesPerView: 7,
-    slidesPerGroup: 7,
-    // spaceBetween: 10,
-    pagination: {
-        el: ".spbrand-pagination"
-    },
-    navigation: {
-        nextEl: ".spbrand-button-next",
-        prevEl: ".spbrand-button-prev",
-    }
-})
 
