@@ -475,8 +475,8 @@ gnbProfile.addEventListener("click", () => {
 
 // 스포츠
 let spbrandSwiper = new Swiper(".sport-brand-wrap", {
-    slidesPerView: 2,
-    slidesPerGroup: 2,
+    slidesPerView: 7,
+    slidesPerGroup: 7,
     // spaceBetween: 10,
     pagination: {
         el: ".spbrand-pagination"
