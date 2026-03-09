@@ -19,6 +19,8 @@ tabTitles.forEach((tab, id) => {
 })
 
 var swiper = new Swiper(".similar-content-wrap", {
+    slidesPerView: 8,
+    slidesPerGroup: 8,
     pagination: {
         el: ".similar-pagination",
         type: "progressbar",
@@ -30,6 +32,8 @@ var swiper = new Swiper(".similar-content-wrap", {
 });
 
 var swiper = new Swiper(".review-wrap", {
+    slidesPerView: 4.5,
+    slidesPerGroup: 4.5,
     pagination: {
         el: ".review-pagination",
         type: "progressbar",

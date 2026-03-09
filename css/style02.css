@@ -616,23 +616,7 @@ section .inner {
 /* 너비 배경 스크롤색 스크롤모양 을 설정*/
 /* ::-webkit-scrollbar-track 배경 */
 /* ::-webkit-scrollbar-thumb 스크롤바 */
-.similar-content {
-    overflow-x: scroll;
-}
 
-.similar-content::-webkit-scrollbar {
-    height: 3px;
-}
-
-::-webkit-scrollbar-track {
-    background: #313131;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #606060;
-    border-radius: 10px;
-}
 
 
 /* .relative-video-list>li:hover .text-box p::after {
@@ -713,28 +697,6 @@ section .inner {
 
 .review::-webkit-scrollbar {
     height: 3px;
-}
-
-::-webkit-scrollbar-track {
-    background: #313131;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #606060;
-    border-radius: 10px;
-}
-
-
-
-::-webkit-scrollbar-track {
-    background: #313131;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #606060;
-    border-radius: 10px;
 }
 
 .review-wrap {
@@ -1086,36 +1048,15 @@ section .inner {
     color: #AAB1A9;
 }
 
-
-.similar-swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.similar-button-next .similar-button-next svg,
-.similar-button-prev .similar-button-prev svg {
-    color: #fff;
-}
-
-
-.similar-swiper .similar-button-next,
-.similar-swiper .similar-button-prev {
+.similar-button-next,
+.similar-button-prev {
     color: white;
-    top: 50%;
-    transform: translateY(-50%);
-
 }
 
-.similar-swiper .similar-button-next {
-    right: 10px;
-    left: auto;
-    z-index: 20;
-}
+.review-button-next,
+.review-button-prev {
+    color: white;
 
-.similar-swiper .swiper-button-prev {
-    left: 10px;
-    right: auto;
-    z-index: 20;
 }
 
 /* footer */
