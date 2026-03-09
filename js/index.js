@@ -484,7 +484,8 @@ mainMenuGenre.addEventListener("mouseleave", () => {
 let profileMenu = document.querySelector(".profile-submenu");
 let gnbProfile = document.querySelector(".gnb-profile");
 
-gnbProfile.addEventListener("click", () => {
+gnbProfile.addEventListener("click", (e) => {
+    e.preventDefault();//a의 기본 이벤트 막기
     // 서브메뉴가 보이는지 체크하기
     let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
     if (isOpen) {
