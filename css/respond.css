@@ -15,8 +15,21 @@
 
     /* header */
     /* main-slider-wrap */
-    .main-slider-list>li {
-        height: 50vw;
+    .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+    }
+
+    .swiper-slide>.preview-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transform: scale(1.2);
     }
 
     .main-slider-list>li>a>img {
@@ -39,9 +52,12 @@
         font-size: 2em;
     }
 
+
+
     .movie-list {
         width: calc(100% * 18 / 5);
     }
+
     .movie-list>li {
         width: 185px;
     }
@@ -137,6 +153,23 @@
 
     header {
         padding: 10px 0;
+    }
+
+    .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 460px;
+        overflow: hidden;
+    }
+
+    .swiper-slide>.preview-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transform: scale(1.4);
     }
 
     .main-slider-list>li .text-box .dscrib,
@@ -294,6 +327,23 @@
         transform: none;
     }
 
+    .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 360px;
+        overflow: hidden;
+    }
+
+    .swiper-slide>.preview-video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transform: scale(1.4);
+    }
+
     .main-slider-list>li .text-box {
         left: 10%;
         bottom: 10%;
@@ -382,26 +432,47 @@
 }
 
 @media screen and (max-width:480px) {
-    .ranking-list {
-        width: calc(100% * 10 / 2);
+
+    .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 380px;
+        overflow: hidden;
     }
 
-    .original-list {
-        width: calc(100% * 7 / 2);
+    .swiper-slide>.preview-video {
+        display: none;
     }
 
-    /* review-wrap */
-    .review-card {
-
-        width: calc(100% / 2 + 146px);
-
+    .swiper-slide>a>img {
+        display: block;
     }
+}
 
-    .sport-event-list {
-        width: calc(100% * 8 / 1.2);
-    }
+.dscrib {
+    display: none;
+}
 
-    .sport-real-list {
-        width: calc(100% * 5 / 1.2);
-    }
+.ranking-list {
+    width: calc(100% * 10 / 2);
+}
+
+.original-list {
+    width: calc(100% * 7 / 2);
+}
+
+/* review-wrap */
+.review-card {
+
+    width: calc(100% / 2 + 146px);
+
+}
+
+.sport-event-list {
+    width: calc(100% * 8 / 1.2);
+}
+
+.sport-real-list {
+    width: calc(100% * 5 / 1.2);
+}
 }
