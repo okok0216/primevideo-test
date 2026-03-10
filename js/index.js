@@ -245,6 +245,110 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
         },
     },
 });
+//--------------스포츠------------------
+
+// 스포츠
+let spbrandSwiper = new Swiper(".sport-brand-wrap", {
+    slidesPerView: 8,
+    slidesPerGroup: 8,
+    spaceBetween: 12,
+    pagination: {
+        el: ".spbrand-pagination"
+    },
+    navigation: {
+        nextEl: ".spbrand-button-next",
+        prevEl: ".spbrand-button-prev",
+    }
+})
+
+
+//스포츠이벤트
+let spEventSwiper = new Swiper(".sport-event-wrap", {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 16,
+    pagination: {
+        el: ".sport-event-pagination"
+    },
+    navigation: {
+        nextEl: ".sport-event-button-next",
+        prevEl: ".sport-event-button-prev",
+    }
+})
+
+
+// 공개예정
+let opBannerSwiper = new Swiper(".open-banner-wrap", {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 16,
+    pagination: {
+        el: ".open-banner-pagination"
+    },
+    navigation: {
+        nextEl: ".open-banner-button-next",
+        prevEl: ".open-banner-button-prev",
+    },
+    // breakpoints: {
+    //     640: {
+    //         slidesPerView: 1.5,
+    //         slidesPerGroup: 1.5,
+    //     },
+    //     768: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //     },
+    //     980: {
+    //         slidesPerView: 3,
+    //         slidesPerGroup: 3,
+    //     },
+    //     1280: {
+    //         slidesPerView: 4,
+    //         slidesPerGroup: 4,
+    //     },
+    //     1300: {
+    //         slidesPerView: 5,
+    //         slidesPerGroup: 5,
+    //     },
+    // },
+})
+
+
+//실시간
+let liveSwiper = new Swiper(".sport-real-wrap", {
+    slidesPerView: 3.5,
+    slidesPerGroup: 1.5,
+    spaceBetween: 15,
+    pagination: {
+        el: ".live-pagination"
+    },
+    navigation: {
+        nextEl: ".live-button-next",
+        prevEl: ".live-button-prev"
+    }
+    // breakpoints: {
+    //     640: {
+    //         slidesPerView: 1.5,
+    //         slidesPerGroup: 1.5,
+    //     },
+    //     768: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //     },
+    //     980: {
+    //         slidesPerView: 3,
+    //         slidesPerGroup: 3,
+    //     },
+    //     1280: {
+    //         slidesPerView: 4,
+    //         slidesPerGroup: 4,
+    //     },
+    //     1300: {
+    //         slidesPerView: 5,
+    //         slidesPerGroup: 5,
+    //     },
+    // },
+});
 
 // ================메인슬라이더================
 
@@ -272,8 +376,12 @@ console.log(slides);
 slides.forEach(s => {
     s.addEventListener("mouseenter", () => {
         let video = s.children[0]
-        console.log(video)
-        video.play();
+        console.log(video);
+
+        timer = setTimeout(() => {
+            video.play();
+        }, 500);
+
     })
     s.addEventListener("mouseleave", () => {
         let video = s.children[0];
@@ -338,7 +446,7 @@ langA.forEach((a) => {
     });
 });
 
-lang.addEventListener("mouseleave", ()=>{
+lang.addEventListener("mouseleave", () => {
     langWrap.classList.remove("active");
     lang.classList.remove("active");
 });
@@ -391,4 +499,5 @@ gnbProfile.addEventListener("click", (e) => {
 gnbProfile.addEventListener("mouseleave", () => {
     profileMenu.style.height = 0;
 });
+
 
