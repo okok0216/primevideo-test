@@ -245,6 +245,110 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
         },
     },
 });
+//--------------스포츠------------------
+
+// 스포츠
+let spbrandSwiper = new Swiper(".sport-brand-wrap", {
+    slidesPerView: 8,
+    slidesPerGroup: 8,
+    spaceBetween: 12,
+    pagination: {
+        el: ".spbrand-pagination"
+    },
+    navigation: {
+        nextEl: ".spbrand-button-next",
+        prevEl: ".spbrand-button-prev",
+    }
+})
+
+
+//스포츠이벤트
+let spEventSwiper = new Swiper(".sport-event-wrap", {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 16,
+    pagination: {
+        el: ".sport-event-pagination"
+    },
+    navigation: {
+        nextEl: ".sport-event-button-next",
+        prevEl: ".sport-event-button-prev",
+    }
+})
+
+
+// 공개예정
+let opBannerSwiper = new Swiper(".open-banner-wrap", {
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 16,
+    pagination: {
+        el: ".open-banner-pagination"
+    },
+    navigation: {
+        nextEl: ".open-banner-button-next",
+        prevEl: ".open-banner-button-prev",
+    },
+    // breakpoints: {
+    //     640: {
+    //         slidesPerView: 1.5,
+    //         slidesPerGroup: 1.5,
+    //     },
+    //     768: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //     },
+    //     980: {
+    //         slidesPerView: 3,
+    //         slidesPerGroup: 3,
+    //     },
+    //     1280: {
+    //         slidesPerView: 4,
+    //         slidesPerGroup: 4,
+    //     },
+    //     1300: {
+    //         slidesPerView: 5,
+    //         slidesPerGroup: 5,
+    //     },
+    // },
+})
+
+
+//실시간
+let liveSwiper = new Swiper(".sport-real-wrap", {
+    slidesPerView: 3.5,
+    slidesPerGroup: 1.5,
+    spaceBetween: 15,
+    pagination: {
+        el: ".live-pagination"
+    },
+    navigation: {
+        nextEl: ".live-button-next",
+        prevEl: ".live-button-prev"
+    }
+    // breakpoints: {
+    //     640: {
+    //         slidesPerView: 1.5,
+    //         slidesPerGroup: 1.5,
+    //     },
+    //     768: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //     },
+    //     980: {
+    //         slidesPerView: 3,
+    //         slidesPerGroup: 3,
+    //     },
+    //     1280: {
+    //         slidesPerView: 4,
+    //         slidesPerGroup: 4,
+    //     },
+    //     1300: {
+    //         slidesPerView: 5,
+    //         slidesPerGroup: 5,
+    //     },
+    // },
+});
 
 // ================메인슬라이더================
 
@@ -286,112 +390,39 @@ slides.forEach(s => {
     })
 })
 
-// ================검색창================
-let searchBtn = document.querySelector(".search-btn");
-let searchTab = document.querySelector(".search-wrap");
-let searchCloseBtn = searchTab.querySelector(".close-btn");
-searchBtn.addEventListener("click", e => {
-    //console.log("isclicked", e);
-    searchTab.style.top = 0;
-    searchBtn.style.display = "none";
-})
-searchCloseBtn.addEventListener("click", e => {
-    searchTab.style.top = `-${120}%`;
-    searchBtn.style.display = "block";
-})
+// ----영상 popup----------------------------------------
+let rankListLi = document.querySelectorAll(".ranking-list li");
+let rankList = document.querySelector(".ranking-list");
 
-//검색창 커서
-let searchInput = document.querySelector(".searchInput");
-searchInput.addEventListener("focus", function () {
-    this.type = "text";
-    this.classList.add("active");
-    this.previousElementSibling.style.display = "none";
-})
-searchInput.addEventListener("blur", function () {
-    this.classList.remove("active");
-    this.previousElementSibling.style.display = "block";
-    this.type = "reset";
-    this.value = "";
-})
-
-
-// ----footer lang선택----------------------------------------
-// .lang-wrap click event 
-let langWrap = document.querySelector(".lang-wrap>a");
-let lang = document.querySelector(".lang");
-let langA = document.querySelectorAll(".lang>li a");
-let langWrapA = document.querySelector(".lang-wrap>a span");
-
-function langToggle() {//lang active클래스 붙이는 공통함수
-    lang.classList.toggle('active');
-    langWrap.classList.toggle('active');
-}
-
-// .lang-wrap click event 
-langWrap.addEventListener("click", (e) => {
-    e.preventDefault();//a의 기본 이벤트 막기
-    langToggle();
-});
-
-// .lang click event
-langA.forEach((a) => {
-    a.addEventListener("click", (e) => {
+rankListLi.forEach((list, id) => {
+    list.addEventListener("click", (e) => {
         e.preventDefault();//a의 기본 이벤트 막기
-        langWrapA.innerText = a.innerText;
-        langToggle();
+        
+        rankListLi.forEach((l, i) => {
+            l.style.transition = "none";
+            if(id !== i){
+                l.classList.remove("active");
+            }
+            setTimeout(() => {
+                l.style.transition = "0.3s";
+            }, 300);
+        });
+
+        const clickedLi = e.target.closest(".swiper-slide");
+        clickedLi.classList.toggle("active");
+
+        let startTime = null;
+        function syncSwiper(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let progress = timestamp - startTime;
+
+            s.update(); // 현재 늘어나고 있는 너비에 맞춰 옆 슬라이드들 위치를 계속 재조정
+
+            if (progress < 300) { // CSS transition 시간(400ms)과 일치시킴
+                requestAnimationFrame(rankingSwiper);
+            }
+        }
+        requestAnimationFrame(rankingSwiper);
     });
-});
-
-lang.addEventListener("mouseleave", () => {
-    langWrap.classList.remove("active");
-    lang.classList.remove("active");
-});
-
-// ----공통함수----------------------------------------
-// 윈도우의 너비값 체크할 함수
-let wWidth;
-function siteInit() {
-    wWidth = window.innerWidth;
-}
-siteInit();
-// 윈도우의 너비가 변경되면 윈도우의 너비값 다시 받기
-window.addEventListener("resize", () => {
-    siteInit();
-    subMenu.classList.remove("active");
-});
-
-// ----nav submenu----------------------------------------
-let header = document.querySelector("header");
-let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
-let subMenu = document.querySelector(".submenu-wrap");
-
-mainMenuGenre.addEventListener("mouseenter", () => {
-    if (wWidth > 640) {
-        subMenu.classList.add("active");
-    }
-});
-mainMenuGenre.addEventListener("mouseleave", () => {
-    if (wWidth > 640) {
-        subMenu.classList.remove("active");
-    }
-});
-
-// ----gnb usermenu----------------------------------------
-let profileMenu = document.querySelector(".profile-submenu");
-let gnbProfile = document.querySelector(".gnb-profile");
-
-gnbProfile.addEventListener("click", () => {
-    // 서브메뉴가 보이는지 체크하기
-    let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
-    if (isOpen) {
-        profileMenu.style.height = 0;
-    } else {
-        let profileHeight = profileMenu.scrollHeight;
-        profileMenu.style.height = profileHeight + "px";
-    }
-});
-
-gnbProfile.addEventListener("mouseleave", () => {
-    profileMenu.style.height = 0;
 });
 
