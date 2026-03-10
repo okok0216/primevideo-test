@@ -287,7 +287,7 @@
     }
 
     .gnb-list .profile-submenu {
-        display: none;
+        /* display: none; */
         right: 0;
         left: unset;
         top: -200px;
