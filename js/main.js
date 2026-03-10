@@ -19,6 +19,8 @@ tabTitles.forEach((tab, id) => {
 })
 
 var swiper = new Swiper(".similar-content-wrap", {
+    slidesPerView: 8,
+    slidesPerGroup: 8,
     pagination: {
         el: ".similar-pagination",
         type: "progressbar",
@@ -30,6 +32,8 @@ var swiper = new Swiper(".similar-content-wrap", {
 });
 
 var swiper = new Swiper(".review-wrap", {
+    slidesPerView: 4.5,
+    slidesPerGroup: 4,
     pagination: {
         el: ".review-pagination",
         type: "progressbar",
@@ -40,6 +44,47 @@ var swiper = new Swiper(".review-wrap", {
     },
 });
 
+let slides = document.querySelectorAll(".main-hero>.main-slider");
+console.log(slides);
+
+slides.forEach(s => {
+    s.addEventListener("mouseenter", () => {
+        let video = s.children[0]
+        console.log(video);
+
+        timer = setTimeout(() => {
+            video.play();
+        }, 500);
+
+    })
+    s.addEventListener("mouseleave", () => {
+        let video = s.children[0];
+        video.pause();
+        video.currentTime = 0;
+    })
+})
+
+const collectionCards = document.querySelectorAll(".collection-card");
+
+collectionCards.forEach((card) => {
+    const video = card.querySelector(".preview-video");
+
+    card.addEventListener("mouseenter", () => {
+        if (video) {
+            video.currentTime = 0;
+            video.play();
+        }
+    });
+
+    card.addEventListener("mouseleave", () => {
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+});
+
+//헤더 고정,배경 바꾸기
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
     const logoHeight = document.querySelector(".logo").offsetHeight;
@@ -77,4 +122,31 @@ stars.forEach((star, id) => {
             }
         })
     })
+})
+
+let profileMenu = document.querySelector(".profile-submenu");
+let gnbProfile = document.querySelector(".gnb-profile");
+
+gnbProfile.addEventListener("click", () => {
+    // 서브메뉴가 보이는지 체크하기
+    let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
+    if (isOpen) {
+        profileMenu.style.height = 0;
+    } else {
+        let profileHeight = profileMenu.scrollHeight;
+        profileMenu.style.height = profileHeight + "px";
+    }
+});
+
+
+//시즌별로 탭
+gnbProfile.addEventListener("mouseleave", () => {
+    profileMenu.style.height = 0;
+});
+
+let movieList = document.querySelector(".movie-list-wrap")
+let mList = document.querySelectorAll(".movie-list>info")
+
+movieList.addEventListener("click", () => {
+    mList.classList.add("active");
 })
