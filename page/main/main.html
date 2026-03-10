@@ -31,18 +31,38 @@
                 </nav>
             </div>
             <ul class="gnb-list">
-                <li><a href="#"><img src="../../images/logo-icon/lyra-icon-search.png" alt="검색"></a></li>
-                <li><a href="#"><img src="../../images/logo-icon/lyra-icon-bookmark.png" alt="즐겨찾기"></a></li>
-                <li><a href="#"><img src="../../images/logo-icon/lyra-icon-User.png" alt="로그인"></a>
+                <li class="search-btn"><a href="#"><img src="../../images/logo-icon/lyra-icon-search.png"
+                            alt="검색"><span></span></a></li>
+                <li><a href="./page/user/wish-list.html"><img src="../../images/logo-icon/lyra-icon-bookmark.png"
+                            alt="위시리스트"><span></span></a>
+                </li>
+                <li class="gnb-profile">
+                    <a href="#"><img src="../../images/logo-icon/lyra-icon-User.png" alt="마이페이지"><span></span></a>
                     <ul class="profile-submenu">
-                        <li><a href="#"><img src="../../images/logo-icon/lyra-icon-Exchange.png"
-                                    alt="프로필변경"><span>프로필변경</span></a></li>
-                        <li><a href="#"><img src="../../images/logo-icon/lyra-icon-slightly-smiling-face.png"
-                                    alt="프로필관리"><span>프로필관리</span></a></li>
-                        <li><a href="#"><img src="../../images/logo-icon/lyra-icon-user-information.png"
-                                    alt="계정"><span>계정</span></a></li>
-                        <li><a href="#"><img src="../../images/logo-icon/lyra-icon-logout-box-r-line.png"
-                                    alt="로그아웃"><span>로그아웃</span></a></li>
+                        <li>
+                            <a href="./page/user/profile-sel.html">
+                                <img src="../../images/logo-icon/lyra-icon-Exchange.png" alt="프로필변경">
+                                <span>프로필변경</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./page/user/profile-setup.html">
+                                <img src="../../images/logo-icon/lyra-icon-slightly-smiling-face.png" alt="프로필관리">
+                                <span>프로필관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./page/user/account.html">
+                                <img src="../../images/logo-icon/lyra-icon-user-information.png" alt="계정">
+                                <span>계정</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../images/logo-icon/lyra-icon-logout-box-r-line.png" alt="로그아웃">
+                                <span>로그아웃</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -51,7 +71,10 @@
     <!-- main-hero -->
     <div class="hero">
         <ul class="main-hero">
-            <li>
+            <li class="main-slider">
+                <video class="preview-video">
+                    <source src="../../video/Minions.mp4" type="video/mp4">
+                </video>
                 <img src="../../images/super-bad4-poster.jpg" alt="superbad4">
                 <div class="inner">
                     <div class="text-box">
@@ -100,19 +123,20 @@
                         <li class="blue-text"><a href="#">세부 정보</a></li>
                     </ul>
                     <div class="movie-list-wrap"><a href="#">슈퍼 배드 4<img
-                                src="../../images/logo-icon/footer-langicon-Arrow.png" alt="arrow"></a></div>
+                                src="../../images/logo-icon/footer-langicon-Arrow.png" alt="arrow"></a>
+                    </div>
                     <ul class="movie-list">
-                        <li><a href="#">
+                        <li class="info active"><a href="#">
                                 슈퍼 배드 4 <img src="../../images/logo-icon/footer-langicon-Arrow.png" alt="arrow">
                         </li>
                         </a>
-                        <li><a href="#">
+                        <li class="info"><a href="#">
                                 슈퍼 배드 3</li>
                         </a>
-                        <li><a href="#">
+                        <li class="info"><a href="#">
                                 슈퍼 배드 2</li>
                         </a>
-                        <li><a href="#">
+                        <li class="info"><a href="#">
                                 슈퍼 배드 1</li>
                         </a>
                     </ul>
@@ -126,46 +150,51 @@
                         <h1>Mimions 컬렌션 살펴보기</h1>
                         <div class="movie-collection-wrap">
                             <ul class="movie-collection-list">
-                                <li>
+                                <li class="collection-card">
                                     <a href="#">
-                                        <div class="img-box">
+                                        <div class="media-box">
                                             <img src="../../images/sub-page/main-poster01.png" alt="poster01">
+                                            <video class="preview-video" src="../../video/superbad.mp4"></video>
                                         </div>
                                         <div class="text-box">
                                             <p>DESPICABLE ME</p>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="collection-card">
                                     <a href="#">
-                                        <div class="img-box">
+                                        <div class="media-box">
                                             <img src="../../images/sub-page/main-poster02.png" alt="poster02">
+                                            <video class="preview-video" src="../../video/superbad2.mp4"></video>
                                         </div>
                                         <div class="text-box">
                                             <p>슈퍼 배드 2</p>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="collection-card">
                                     <a href="#">
-                                        <div class="img-box">
+                                        <div class="media-box">
                                             <img src="../../images/sub-page/main-poster03.png" alt="poster03">
+                                            <video class="preview-video" src="../../video/minions2.mp4"></video>
                                         </div>
                                         <div class="text-box">
                                             <p>미니언즈</p>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="collection-card">
                                     <a href="#">
-                                        <div class="img-box">
+                                        <div class="media-box">
                                             <img src="../../images/sub-page/main-poster04.png" alt="poster04">
+                                            <video class="preview-video"
+                                                src="../../video/Despicable Me 2 - Minions in the Beach.mp4"></video>
                                         </div>
                                         <div class="text-box">
                                             <p>슈퍼 배드 3</p>
                                         </div>
                                     </a>
-                                </li>
+                                </li class="collection-card">
                             </ul>
                         </div>
                     </div>
