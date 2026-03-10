@@ -124,11 +124,13 @@ let searchCloseBtn = searchTab.querySelector(".search-close-btn");
 searchBtn.addEventListener("click", e => {
     //console.log("isclicked", e);
     searchTab.style.top = 0;
-    searchBtn.style.display = "none";
+    // searchBtn.style.display = "none";
+    searchBtn.style.opacity = `${50}%`
 })
 searchCloseBtn.addEventListener("click", e => {
     searchTab.style.top = `-${120}%`;
-    searchBtn.style.display = "block";
+    // searchBtn.style.display = "block";
+    searchBtn.style.opacity = `${100}%`
 })
 
 //검색창 커서
@@ -174,5 +176,37 @@ gnbProfile.addEventListener("click", () => {
             profileMenu.style.height = profileHeight + "px";
         }
     }
+});
+
+// ----footer lang선택----------------------------------------
+// .lang-wrap click event 
+let langWrap = document.querySelector(".lang-wrap>a");
+let lang = document.querySelector(".lang");
+let langA = document.querySelectorAll(".lang>li a");
+let langWrapA = document.querySelector(".lang-wrap>a span");
+
+function langToggle() {//lang active클래스 붙이는 공통함수
+    lang.classList.toggle('active');
+    langWrap.classList.toggle('active');
+}
+
+// .lang-wrap click event 
+langWrap.addEventListener("click", (e) => {
+    e.preventDefault();//a의 기본 이벤트 막기
+    langToggle();
+});
+
+// .lang click event
+langA.forEach((a) => {
+    a.addEventListener("click", (e) => {
+        e.preventDefault();//a의 기본 이벤트 막기
+        langWrapA.innerText = a.innerText;
+        langToggle();
+    });
+});
+
+lang.addEventListener("mouseleave", () => {
+    langWrap.classList.remove("active");
+    lang.classList.remove("active");
 });
 
