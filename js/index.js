@@ -262,7 +262,7 @@ let spbrandSwiper = new Swiper(".sport-brand-wrap", {
 })
 
 
-//스포츠이벤트
+//중계 예정
 let spEventSwiper = new Swiper(".sport-event-wrap", {
     slidesPerView: 4,
     slidesPerGroup: 4,
