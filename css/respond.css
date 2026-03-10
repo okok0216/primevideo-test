@@ -39,6 +39,10 @@
         font-size: 2em;
     }
 
+    .ranking-list>li.active {
+        width: 50% !important;
+    }
+
     .movie-list {
         width: calc(100% * 18 / 5);
     }
@@ -77,8 +81,17 @@
 }
 
 @media screen and (max-width:980px) {
+    .sub-menu:first-child {
+        padding: 20px 100px 0 200px;
+    }
+    .sub-menu:last-child {
+        padding: 0 100px 20px 200px;
+    }
     .ranking-list {
         width: calc(100% * 10 / 3)
+    }
+    .ranking-list>li.active {
+        width: 66% !important;
     }
 
     .movie-list {
@@ -138,7 +151,13 @@
     header {
         padding: 10px 0;
     }
+    .sub-menu:first-child {
+        padding: 20px 100px 0 100px;
+    }
 
+    .sub-menu:last-child {
+        padding: 0 100px 20px 100px;
+    }
     .main-slider-list>li .text-box .dscrib,
     .main-slider-list>li .text-box .prime,
     .main-slider-list>li .scope-wrap>p {
@@ -316,6 +335,10 @@
 
     .ranking-list>li {
         padding: 0 10px;
+    }
+
+    .ranking-list>li.active {
+        width: 102% !important;
     }
 
     .ranking-list>li>a strong {

@@ -282,113 +282,39 @@ slides.forEach(s => {
     })
 })
 
-// ================검색창================
-let searchBtn = document.querySelector(".search-btn");
-let searchTab = document.querySelector(".search-wrap");
-let searchCloseBtn = searchTab.querySelector(".close-btn");
-searchBtn.addEventListener("click", e => {
-    //console.log("isclicked", e);
-    searchTab.style.top = 0;
-    searchBtn.style.display = "none";
-})
-searchCloseBtn.addEventListener("click", e => {
-    searchTab.style.top = `-${120}%`;
-    searchBtn.style.display = "block";
-})
+// ----영상 popup----------------------------------------
+let rankListLi = document.querySelectorAll(".ranking-list li");
+let rankList = document.querySelector(".ranking-list");
 
-//검색창 커서
-let searchInput = document.querySelector(".searchInput");
-searchInput.addEventListener("focus", function () {
-    this.type = "text";
-    this.classList.add("active");
-    this.previousElementSibling.style.display = "none";
-})
-searchInput.addEventListener("blur", function () {
-    this.classList.remove("active");
-    this.previousElementSibling.style.display = "block";
-    this.type = "reset";
-    this.value = "";
-})
-
-
-// ----footer lang선택----------------------------------------
-// .lang-wrap click event 
-let langWrap = document.querySelector(".lang-wrap>a");
-let lang = document.querySelector(".lang");
-let langA = document.querySelectorAll(".lang>li a");
-let langWrapA = document.querySelector(".lang-wrap>a span");
-
-function langToggle() {//lang active클래스 붙이는 공통함수
-    lang.classList.toggle('active');
-    langWrap.classList.toggle('active');
-}
-
-// .lang-wrap click event 
-langWrap.addEventListener("click", (e) => {
-    e.preventDefault();//a의 기본 이벤트 막기
-    langToggle();
-});
-
-// .lang click event
-langA.forEach((a) => {
-    a.addEventListener("click", (e) => {
+rankListLi.forEach((list, id) => {
+    list.addEventListener("click", (e) => {
         e.preventDefault();//a의 기본 이벤트 막기
-        langWrapA.innerText = a.innerText;
-        langToggle();
+        
+        rankListLi.forEach((l, i) => {
+            l.style.transition = "none";
+            if(id !== i){
+                l.classList.remove("active");
+            }
+            setTimeout(() => {
+                l.style.transition = "0.3s";
+            }, 300);
+        });
+
+        const clickedLi = e.target.closest(".swiper-slide");
+        clickedLi.classList.toggle("active");
+
+        let startTime = null;
+        function syncSwiper(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let progress = timestamp - startTime;
+
+            s.update(); // 현재 늘어나고 있는 너비에 맞춰 옆 슬라이드들 위치를 계속 재조정
+
+            if (progress < 300) { // CSS transition 시간(400ms)과 일치시킴
+                requestAnimationFrame(rankingSwiper);
+            }
+        }
+        requestAnimationFrame(rankingSwiper);
     });
-});
-
-lang.addEventListener("mouseleave", ()=>{
-    langWrap.classList.remove("active");
-    lang.classList.remove("active");
-});
-
-// ----공통함수----------------------------------------
-// 윈도우의 너비값 체크할 함수
-let wWidth;
-function siteInit() {
-    wWidth = window.innerWidth;
-}
-siteInit();
-// 윈도우의 너비가 변경되면 윈도우의 너비값 다시 받기
-window.addEventListener("resize", () => {
-    siteInit();
-    subMenu.classList.remove("active");
-});
-
-// ----nav submenu----------------------------------------
-let header = document.querySelector("header");
-let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
-let subMenu = document.querySelector(".submenu-wrap");
-
-mainMenuGenre.addEventListener("mouseenter", () => {
-    if (wWidth > 640) {
-        subMenu.classList.add("active");
-    }
-});
-mainMenuGenre.addEventListener("mouseleave", () => {
-    if (wWidth > 640) {
-        subMenu.classList.remove("active");
-    }
-});
-
-// ----gnb usermenu----------------------------------------
-let profileMenu = document.querySelector(".profile-submenu");
-let gnbProfile = document.querySelector(".gnb-profile");
-
-gnbProfile.addEventListener("click", (e) => {
-    e.preventDefault();//a의 기본 이벤트 막기
-    // 서브메뉴가 보이는지 체크하기
-    let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
-    if (isOpen) {
-        profileMenu.style.height = 0;
-    } else {
-        let profileHeight = profileMenu.scrollHeight;
-        profileMenu.style.height = profileHeight + "px";
-    }
-});
-
-gnbProfile.addEventListener("mouseleave", () => {
-    profileMenu.style.height = 0;
 });
 

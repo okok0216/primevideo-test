@@ -371,7 +371,7 @@ header>.inner {
     text-indent: -9999999px;
 }
 
-.main-slider-wrap .pager-btn>li.active>a {
+.main-slider-wrap .pager-btn>l>li.active>a {
     width: 30px;
 }
 
@@ -425,7 +425,7 @@ section .pager-btn>li>a {
     text-indent: -99999px;
 }
 
-section .pager-btn>.active>a {
+section .pager-btn>li.active>a {
     width: 14px;
     opacity: 1;
 }
@@ -435,21 +435,34 @@ section .pager-btn>.active>a {
     /* 100% * 배너의개수 / 보고싶은개수 */
     /* width: calc(100% * 10 / 5 + 80px); */
     margin: 0 -20px;
+    max-width: 100%;
+    width: max-content !important;
 }
 
 .ranking-list>li {
-    width: 10%;
+    /* width: 10% !important; */
     padding: 0 20px;
     position: relative;
     /* padding-left: 40px; */
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .ranking-list>li:hover {
     transform: translate(0, -10px);
 }
 
-.ranking-list>li>a img {
+.ranking-list>li>div.expand {
+    display: none;
+}
+.ranking-list>li.active>div.expand {
+    display: block;
+}
+.ranking-list>li.active>div.default {
+    display: none;
+}
+
+.ranking-list>li>div>a img {
     /* 너비 높이 비율 */
     aspect-ratio: 1/1.486;
     object-fit: cover;
@@ -457,7 +470,7 @@ section .pager-btn>.active>a {
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
-.ranking-list>li>a strong {
+.ranking-list>li>div>a strong {
     position: absolute;
     bottom: 0;
     left: -10px;
@@ -469,15 +482,19 @@ section .pager-btn>.active>a {
 }
 
 .ranking-list>li.active {
-    width: 24.7%;
-    display: none;
+    width: 40% !important;
+    /* display: none; */
+    /* position: absolute;
+    top: 0; */
+    height: 100%;
+    transition: none;
 }
 
 .ranking-list>li.active:hover {
     transform: none;
 }
 
-.ranking-list>li.active::after {
+.ranking-list>li.active>div.expand>a::after {
     content: "";
     display: block;
     position: absolute;
@@ -491,39 +508,42 @@ section .pager-btn>.active>a {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.ranking-list>li.active>a img {
-    aspect-ratio: 1 / 0.56;
+.ranking-list>li.active>div.expand>a img {
+    aspect-ratio: 1.43 / 1;
     position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-.ranking-list>li.active>.text-box {
+.ranking-list>li.active .text-box {
     position: absolute;
     bottom: 20px;
     left: 100px;
     z-index: 10;
 }
 
-.ranking-list>li.active>.text-box h3 {
+.ranking-list>li.active .text-box h3 {
     font-size: 45px;
     font-weight: 500;
 }
 
-.ranking-list>li.active>.text-box .rank-icon-list {
+.ranking-list>li.active .text-box .rank-icon-list {
     display: flex;
     gap: 20px;
     margin: 20px 0;
 }
 
-.ranking-list>li.active>.text-box .rank-icon-list img {
+.ranking-list>li.active .text-box .rank-icon-list img {
     width: 40px;
 }
 
-.ranking-list>li.active>.text-box .rank-info {
+.ranking-list>li.active .text-box .rank-info {
     display: flex;
     align-items: center;
 }
 
-.ranking-list>li.active>.text-box .rank-info span {
+.ranking-list>li.active .text-box .rank-info span {
     font-size: 16px;
     font-weight: 600;
     border: 1px solid #fff;
@@ -532,10 +552,16 @@ section .pager-btn>.active>a {
     margin-right: 20px;
 }
 
-.ranking-list>li.active>.text-box .rank-info .rank-review {
+.ranking-list>li.active .text-box .rank-info .rank-review {
     border: none;
     padding: 5px;
     margin: 0;
+}
+.rank-icon-list img {
+    transition: 0.3s;
+}
+.rank-icon-list img:hover{
+    transform: scale(1.1);
 }
 
 .ranking-list-wrap .pager-btn {
@@ -573,7 +599,7 @@ section .pager-btn>.active>a {
     border-radius: 20px;
 }
 
-.movie-list>li.active {
+.movie-list>l>li.active {
     width: 415px;
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -584,33 +610,33 @@ section .pager-btn>.active>a {
     display: none;
 }
 
-.movie-list>li.active:hover {
+.movie-list>l>li.active:hover {
     transform: none;
 }
 
-.movie-list>li.active>a img {
+.movie-list>l>li.active>a img {
     border-radius: 20px 20px 0 0;
 }
 
-.movie-list>li.active .text-box {
+.movie-list>l>li.active .text-box {
     background: #16181d;
     border-radius: 0 0 20px 20px;
     padding: 20px;
 }
 
-.movie-list>li.active .text-box>.movie-icon-list {
+.movie-list>l>li.active .text-box>.movie-icon-list {
     display: flex;
     gap: 20px;
 }
 
-.movie-list>li.active .text-box>.movie-title-box {
+.movie-list>l>li.active .text-box>.movie-title-box {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 10px 0;
 }
 
-.movie-list>li.active .text-box>.movie-title-box h3 {
+.movie-list>l>li.active .text-box>.movie-title-box h3 {
     display: inline-block;
 }
 
