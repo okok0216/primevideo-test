@@ -496,7 +496,7 @@ section .inner {
 
 .movie-collection-wrap {
     margin-top: 30px;
-    overflow: visible;
+    /* overflow: visible; */
 }
 
 .movie-collection-list {
@@ -747,12 +747,12 @@ section .inner {
 }
 
 .similar-content-list {
-    width: calc(100% * 15 / 7);
+    /* width: calc(100% * 15 / 7); */
 }
 
 .similar-content-list>li .text-box {
 
-    width: calc(100% * 15 / 7);
+    /* width: calc(100% * 15 / 7); */
 }
 
 .similar-content-list>li>a {
@@ -909,16 +909,6 @@ section .inner {
     z-index: 100;
 }
 
-
-
-.review-wrap .arrow-btn>.left-btn>a {
-    left: -45px;
-}
-
-.review-wrap .arrow-btn>.right-btn>a {
-    right: -45px;
-}
-
 .write-review {
     display: flex;
     gap: 40px;
@@ -1039,7 +1029,7 @@ section .inner {
 }
 
 .director {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .director::-webkit-scrollbar {
@@ -1093,7 +1083,7 @@ section .inner {
 }
 
 .cast {
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .cast::-webkit-scrollbar {
