@@ -42,8 +42,8 @@ let liveSwiper = new Swiper(".sports-live-wrap", {
 
 //하이라이트
 let highLightSwiper = new Swiper(".highlight-list-wrap", {
-  slidesPerView: 3,
-  slidesPerGroup: 1,
+  slidesPerView: 6,
+  slidesPerGroup: 4,
   spaceBetween: 15,
   pagination: {
     el: ".highlight-pagination"
@@ -51,5 +51,19 @@ let highLightSwiper = new Swiper(".highlight-list-wrap", {
   navigation: {
     nextEl: ".highlight-button-next",
     prevEl: ".highlight-button-prev"
+  }
+})
+
+//추천영화 
+let recMovieSwiper = new Swiper(".rec-movie-wrap", {
+  slidesPerView: 6,
+  slidesPerGroup: 4,
+  spaceBetween: 15,
+  pagination: {
+    el: ".rec-movie-pagination"
+  },
+  navigation: {
+    nextEl: ".rec-movie-button-next",
+    prevEl: ".rec-movie-button-prev"
   }
 })
