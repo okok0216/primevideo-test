@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/user.css">
     <link rel="stylesheet" href="../../css/respond.css">
+    <link rel="stylesheet" href="../../css/style_searchTab.css">
+    <script defer src="../../js/header-footer-sub.js"></script>
 </head>
 
 <body>
@@ -86,7 +88,7 @@
             <p class="bell-btn"><a href="#"><img src="../../images/logo-icon/lyra-icon-Bell.png" alt="알림"></a></p>
         </div>
     </header>
-
+    
     <main>
         <section class="form-wrap">
             <div class="inner">
@@ -97,12 +99,20 @@
                             <label for="user-name">이름</label>
                             <input type="text" id="user-name" class="user-name user-input" placeholder="사용자 이름">
                         </div>
-                        <div>
+                        <div class="tel-change-input">
+                            <label for="user-tel">휴대폰번호</label>
+                            <input type="text" id="user-tel" class="user-tel user-input" placeholder="01012345678">
+                        </div>
+                        <div class="email-change-input">
                             <label for="user-email">이메일</label>
                             <input type="text" id="user-email" class="user-email user-input" placeholder="abc1234@oooo.com">
                         </div>
                         <div class="tel-email-change">
-                            <a href="./signup-tel.html">
+                            <a href="#" class="tel-change">
+                                <span>휴대폰번호 대신 이메일 사용하기</span>
+                                <img src="../../images/login-signup/signup-Arrow.png" alt="화살표">
+                            </a>
+                            <a href="#" class="email-change">
                                 <span>이메일 대신 휴대폰번호 사용하기</span>
                                 <img src="../../images/login-signup/signup-Arrow.png" alt="화살표">
                             </a>
@@ -149,6 +159,30 @@
             <p class="copy">amazon.com</p>
         </div>
     </footer>
+    <script>
+        // 회원가입 tel-email-change
+        let telInput = document.querySelector(".tel-change-input");
+        let emailImput = document.querySelector(".email-change-input");
+        let telChange = document.querySelector(".tel-change");
+        let emailChange = document.querySelector(".email-change");
+
+        // 초기 설정 - 이메일 숨기기
+        emailImput.style.display = "none";
+        emailChange.style.display = "none";
+
+        telChange.addEventListener("click", ()=>{
+            telChange.style.display = "none";
+            telInput.style.display = "none";
+            emailImput.style.display = "flex";
+            emailChange.style.display = "block";
+        });
+        emailChange.addEventListener("click", ()=>{
+            emailChange.style.display = "none";
+            emailImput.style.display = "none";
+            telChange.style.display = "block";
+            telInput.style.display = "flex";
+        });
+    </script>
 </body>
 
 </html>

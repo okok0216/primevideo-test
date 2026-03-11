@@ -152,7 +152,7 @@
     margin: 20px 0;
 }
 
-.signup-form>div:nth-child(4) {
+.signup-form>div:last-of-type {
     margin: 20px 0 30px;
 }
 
@@ -167,6 +167,10 @@
 
 .tel-email-change>img {
     width: 20px;
+}
+.tel-change, .tel-change-input,
+.email-change, .email-change-input{
+    display: flex;
 }
 
 .account-form .line{
