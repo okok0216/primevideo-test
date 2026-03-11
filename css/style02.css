@@ -437,6 +437,7 @@ section .inner {
 
 }
 
+
 .information-wrap>.movie-list-wrap>a {
     display: flex;
     gap: 10px;
@@ -478,8 +479,13 @@ section .inner {
     color: #fff;
 }
 
+.tab-content-wrap {
+    position: relative;
+}
+
 .tab-content {
     position: absolute;
+    top: 0;
     opacity: 0;
 }
 
