@@ -1,6 +1,7 @@
 body {
-    background: #000F;
+    background: #000000;
     color: #fff;
+    overflow-x: hidden;
 }
 
 body::before {
