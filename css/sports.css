@@ -528,21 +528,21 @@ section .pager-btn>.active>a {
     display: block;
 } */
 .highlight-list>li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover;
+    display: block; */
 }
 
 .highlight-list>li {
-    width: calc((100% - 15px * 5) / 6);
+    /* width: calc((100% - 15px * 5) / 6); */
     /* ← 너비 직접 지정 */
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     /* ← 줄어들지 않게 */
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
+    /* aspect-ratio: 16 / 9; */
 }
 
 /* -------------------추천영화---------------------- */
@@ -552,7 +552,7 @@ section .pager-btn>.active>a {
 
 .rec-movie-list {
     width: calc(100% * 10 / 6);
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .rec-movie-list>li img {
@@ -560,7 +560,7 @@ section .pager-btn>.active>a {
 }
 
 .rec-movie-list>li {
-    flex: 1;
+    /* flex: 1; */
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
@@ -575,9 +575,9 @@ section .pager-btn>.active>a {
 }
 
 .original-list {
-    width: calc(100% * 10 / 5.3);
-    gap: 30px;
-    display: flex;
+    width: calc(100% * 10 / 4);
+    /* gap: 30px; */
+    /* display: flex; */
 }
 
 .original-list>li {
@@ -603,7 +603,7 @@ section .pager-btn>.active>a {
 
 .rec-series-list {
     width: calc(100% * 10 / 6);
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .rec-series-list>li img {
