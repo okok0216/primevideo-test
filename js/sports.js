@@ -95,3 +95,41 @@ let recTvSwiper = new Swiper(".rec-series-wrap", {
     prevEl: ".rec-series-button-prev"
   }
 })
+
+//
+const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
+  slidesPerView: 1.06,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: ".main-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".main-button-next",
+    prevEl: ".main-button-prev",
+  },
+  // autoplay: {
+  //     delay: 4000,
+  // }
+});
+
+let slides = document.querySelectorAll(".main-swiper .swiper-slide");
+// console.log(slides);
+
+slides.forEach(s => {
+  s.addEventListener("mouseenter", () => {
+    let video = s.children[0]
+    // console.log(video);
+
+    timer = setTimeout(() => {
+      video.play();
+    }, 500);
+  })
+  s.addEventListener("mouseleave", () => {
+    let video = s.children[0];
+    video.pause();
+    video.currentTime = 0;
+  })
+})
