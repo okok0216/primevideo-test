@@ -34,11 +34,12 @@ fetch("./page/header.html")
         })
 
         // ----nav submenu----------------------------------------
-        let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
+        let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre a");
         let subMenu = document.querySelector(".submenu-wrap");
+        let subCloseBtn = subMenu.querySelector(".close-btn");
 
         mainMenuGenre.addEventListener("mouseenter", () => {
-            console.log(wWidth);
+            // console.log(wWidth);
             if (wWidth > 640) {
                 subMenu.classList.add("active");
             }
@@ -48,13 +49,41 @@ fetch("./page/header.html")
                 subMenu.classList.remove("active");
             }
         });
+        mainMenuGenre.addEventListener("click", (e)=>{
+            e.preventDefault();//a의 기본 이벤트 막기
+            siteInit();
+            console.log(wWidth);
+            if(wWidth <= 640){
+                subMenu.classList.add("active");
+                subCloseBtn.style.display = "block";
+            }
+        });
+
+        subCloseBtn.addEventListener("click", (e) => {
+            e.preventDefault();//a의 기본 이벤트 막기
+            siteInit();
+            console.log(wWidth);
+            if (wWidth <= 640) {
+                console.log(wWidth);
+                subMenu.classList.remove("active");
+                subCloseBtn.style.display = "none";
+            }
+        });
+
+        // 윈도우의 너비가 변경되면 윈도우의 너비값 다시 받기
+        window.addEventListener("resize", () => {
+            siteInit();
+            subMenu.classList.remove("active");
+            subCloseBtn.style.display = "none";
+        });
 
         // ----gnb usermenu----------------------------------------
         let profileMenu = document.querySelector(".profile-submenu");
+        let gnbProfileA = document.querySelector(".gnb-profile>a");
         let gnbProfile = document.querySelector(".gnb-profile");
 
-        gnbProfile.addEventListener("click", (e) => {
-            e.preventDefault();//a의 기본 이벤트 막기
+        gnbProfileA.addEventListener("click", (e) => {
+            e.preventDefault();
             // 서브메뉴가 보이는지 체크하기
             let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
             if (isOpen) {
@@ -118,11 +147,6 @@ function siteInit() {
     wWidth = window.innerWidth;
 }
 siteInit();
-// 윈도우의 너비가 변경되면 윈도우의 너비값 다시 받기
-window.addEventListener("resize", () => {
-    siteInit();
-    subMenu.classList.remove("active");
-});
 
 
 

@@ -371,17 +371,16 @@ const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
 });
 
 let slides = document.querySelectorAll(".main-swiper .swiper-slide");
-console.log(slides);
+// console.log(slides);
 
 slides.forEach(s => {
     s.addEventListener("mouseenter", () => {
         let video = s.children[0]
-        console.log(video);
+        // console.log(video);
 
         timer = setTimeout(() => {
             video.play();
         }, 500);
-
     })
     s.addEventListener("mouseleave", () => {
         let video = s.children[0];
@@ -410,19 +409,6 @@ rankListLi.forEach((list, id) => {
 
         const clickedLi = e.target.closest(".swiper-slide");
         clickedLi.classList.toggle("active");
-
-        let startTime = null;
-        function syncSwiper(timestamp) {
-            if (!startTime) startTime = timestamp;
-            let progress = timestamp - startTime;
-
-            s.update(); // 현재 늘어나고 있는 너비에 맞춰 옆 슬라이드들 위치를 계속 재조정
-
-            if (progress < 300) { // CSS transition 시간(400ms)과 일치시킴
-                requestAnimationFrame(rankingSwiper);
-            }
-        }
-        requestAnimationFrame(rankingSwiper);
     });
 });
 
