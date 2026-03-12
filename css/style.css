@@ -457,9 +457,11 @@ section .pager-btn>li.active>a {
 .ranking-list>li>div.expand {
     display: none;
 }
+
 .ranking-list>li.active>div.expand {
     display: block;
 }
+
 .ranking-list>li.active>div.default {
     display: none;
 }
@@ -559,10 +561,12 @@ section .pager-btn>li.active>a {
     padding: 5px;
     margin: 0;
 }
+
 .rank-icon-list img {
     transition: 0.3s;
 }
-.rank-icon-list img:hover{
+
+.rank-icon-list img:hover {
     transform: scale(1.1);
 }
 
@@ -960,7 +964,7 @@ section .pager-btn>li.active>a {
 }
 
 .open-banner-list .text-box>h3 {
-    font-size: 1.88em;
+    font-size: 1.5em;
 }
 
 .open-banner-list>li .text-box .text {
@@ -968,7 +972,7 @@ section .pager-btn>li.active>a {
 }
 
 .open-banner-list>li .text-box p {
-    font-size: 1.38em;
+    font-size: 1.3em;
 }
 
 /* swiper 플러그인 */
