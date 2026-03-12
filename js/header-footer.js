@@ -34,7 +34,8 @@ fetch("./page/header.html")
         })
 
         // ----nav submenu----------------------------------------
-        let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre a");
+        let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
+        let mainMenuGenreA = document.querySelector(".main-menu .mainmenu-genre>a");
         let subMenu = document.querySelector(".submenu-wrap");
         let subCloseBtn = subMenu.querySelector(".close-btn");
 
@@ -49,7 +50,7 @@ fetch("./page/header.html")
                 subMenu.classList.remove("active");
             }
         });
-        mainMenuGenre.addEventListener("click", (e)=>{
+        mainMenuGenreA.addEventListener("click", (e)=>{
             e.preventDefault();//a의 기본 이벤트 막기
             siteInit();
             console.log(wWidth);
