@@ -468,6 +468,9 @@ section .pager-btn>li.active>a {
 .ranking-list>li.active>div.expand {
     display: block;
 }
+.ranking-list>li.active>div.expand .text-box h3{ 
+    font-size: 2.81em;
+}
 
 .ranking-list>li.active>div.default {
     display: none;
