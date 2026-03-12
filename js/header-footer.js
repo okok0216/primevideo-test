@@ -39,7 +39,7 @@ fetch("./page/header.html")
         let subMenu = document.querySelector(".submenu-wrap");
         let subCloseBtn = subMenu.querySelector(".close-btn");
 
-        mainMenuGenreA.addEventListener("mouseenter", () => {
+        mainMenuGenre.addEventListener("mouseenter", () => {
             // console.log(wWidth);
             if (wWidth > 640) {
                 subMenu.classList.add("active");

@@ -114,9 +114,6 @@ header>.inner {
 .main-menu>li>a:hover::after {
     width: 100%;
 }
-.main-menu .mainmenu-genre:hover .submenu-wrap{
-    height: 100px;
-}
 
 /* submenu */
 .submenu-wrap {
