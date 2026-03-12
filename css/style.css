@@ -135,18 +135,22 @@ header>.inner {
     height: 100px;
 }
 
+.submenu-wrap .close-btn{
+    display: none;
+}
+
 .sub-menu {
     display: flex;
     gap: 40px;
     font-weight: 600;
 }
 
-.sub-menu:first-child {
+.sub-menu:first-of-type {
     margin-bottom: 20px;
     padding: 20px 200px 0 200px;
 }
 
-.sub-menu:last-child {
+.sub-menu:last-of-type {
     padding: 0 200px 20px 200px;
 }
 
@@ -803,9 +807,9 @@ section .pager-btn>li.active>a {
     position: relative;
 }
 
-.sport-brand-list {
-    /* gap: var(--gap12); */
-}
+/* .sport-brand-list {
+    gap: var(--gap12);
+} */
 
 .sport-expect-event {
     padding: 20px 0px;
@@ -876,10 +880,10 @@ section .pager-btn>li.active>a {
     position: relative;
 }
 
-.sport-real-list {
-    /* gap: var(--gap16); */
-    /* width: calc(100% * 5 / 3.5); */
-}
+/* .sport-real-list {
+    gap: var(--gap16);
+    width: calc(100% * 5 / 3.5);
+} */
 
 .sport-real-list>li {
     background: #000;
@@ -943,10 +947,10 @@ section .pager-btn>li.active>a {
     position: relative;
 }
 
-.open-banner-list {
-    /* width: calc(100% * 7 / 3.5); */
-    /* gap: 20px; */
-}
+/* .open-banner-list {
+    width: calc(100% * 7 / 3.5);
+    gap: 20px;
+} */
 
 .open-banner-list>li {
     position: relative;
