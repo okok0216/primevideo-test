@@ -7,7 +7,7 @@ fetch("./page/header.html")
         // ================검색창================
         let searchBtn = document.querySelector(".search-btn");
         let searchTab = document.querySelector(".search-wrap");
-        let searchCloseBtn = searchTab.querySelector(".close-btn");
+        let searchCloseBtn = searchTab.querySelector(".search-close-btn");
         searchBtn.addEventListener("click", e => {
             e.preventDefault();//a의 기본 이벤트 막기
             //console.log("isclicked", e);
@@ -34,7 +34,8 @@ fetch("./page/header.html")
         })
 
         // ----nav submenu----------------------------------------
-        let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre a");
+        let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
+        let mainMenuGenreA = document.querySelector(".main-menu .mainmenu-genre>a");
         let subMenu = document.querySelector(".submenu-wrap");
         let subCloseBtn = subMenu.querySelector(".close-btn");
 
@@ -49,7 +50,7 @@ fetch("./page/header.html")
                 subMenu.classList.remove("active");
             }
         });
-        mainMenuGenre.addEventListener("click", (e)=>{
+        mainMenuGenreA.addEventListener("click", (e)=>{
             e.preventDefault();//a의 기본 이벤트 막기
             siteInit();
             console.log(wWidth);
