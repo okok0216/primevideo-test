@@ -347,7 +347,7 @@ main {
 
 section {
     padding: 30px 0;
-
+    overflow: visible;
 }
 
 section .inner {
