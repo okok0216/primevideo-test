@@ -7,7 +7,7 @@ fetch("./page/header.html")
         // ================검색창================
         let searchBtn = document.querySelector(".search-btn");
         let searchTab = document.querySelector(".search-wrap");
-        let searchCloseBtn = searchTab.querySelector(".close-btn");
+        let searchCloseBtn = searchTab.querySelector(".search-close-btn");
         searchBtn.addEventListener("click", e => {
             e.preventDefault();//a의 기본 이벤트 막기
             //console.log("isclicked", e);

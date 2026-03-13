@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "genre": "movie",
+        "title": "미키17",
+        "imagePath": "../../images/wish-list/wish-1.png",
+        "imageName": "/wish-1.png",
+        "description": "코미디, 어드벤처, 드라마, SF"
+    },
+    {
+        "id": 2,
+        "genre": "movie",
+        "title": "비긴어게인",
+        "imagePath": "../../images/wish-list/wish-2.png",
+        "imageName": "/wish-2.png",
+        "description": "멜로·로맨스"
+    },
+    {
+        "id": 3,
+        "genre": "movie",
+        "title": "위대한 쇼맨",
+        "imagePath": "../../images/wish-list/wish-3.png",
+        "imageName": "/wish-3.png",
+        "description": "뮤지컬, 드라마"
+    },
+    {
+        "id": 4,
+        "genre": "movie",
+        "title": "내사랑",
+        "imagePath": "../../images/wish-list/wish-4.png",
+        "imageName": "wish-4.png",
+        "description": "멜로·로맨스"
+    },
+    {
+        "id": 5,
+        "genre": "movie",
+        "title": "UP",
+        "imagePath": "../../images/wish-list/wish-5.png",
+        "imageName": "wish-5.png",
+        "description": "어드벤처, 애니메이션"
+    },
+    {
+        "id": 6,
+        "genre": "movie",
+        "title": "해리포터 1",
+        "imagePath": "../../images/wish-list/wish-6.png",
+        "imageName": "wish-6.png",
+        "description": "어드벤처, 애니메이션, SF"
+    },
+    {
+        "id": 7,
+        "genre": "movie",
+        "title": "타오르는 여인의 초상",
+        "imagePath": "../../images/wish-list/wish-7.png",
+        "imageName": "wish-7.png",
+        "description": "드라마"
+    },
+    {
+        "id": 8,
+        "genre": "movie",
+        "title": "원더",
+        "imagePath": "../../images/wish-list/wish-8.png",
+        "imageName": "wish-8.png",
+        "description": "드라마"
+    },
+    {
+        "id": 9,
+        "genre": "movie",
+        "title": "보이후드",
+        "imagePath": "../../images/wish-list/wish-9.png",
+        "imageName": "/wish-9.png",
+        "description": "드라마"
+    },
+    {
+        "id": 10,
+        "genre": "movie",
+        "title": "PAST LIVES",
+        "imagePath": "../../images/wish-list/wish-10.png",
+        "imageName": "/wish-10.png",
+        "description": "로맨스, 드라마"
+    },
+    {
+        "id": 11,
+        "genre": "sports",
+        "title": "아이러브 바스켓볼 4",
+        "imagePath": "../../images/wish-list/wish-11.png",
+        "imageName": "/wish-11.png",
+        "description": "스포츠"
+    },
+    {
+        "id": 12,
+        "genre": "sports",
+        "title": "진에어 V리그",
+        "imagePath": "../../images/wish-list/wish-12.png",
+        "imageName": "/wish-12.png",
+        "description": "스포츠"
+    },
+    {
+        "id": 13,
+        "genre": "sports",
+        "title": "BNK금융 여자프로농구",
+        "imagePath": "../../images/wish-list/wish-13.png",
+        "imageName": "/wish-13.png",
+        "description": "스포츠"
+    },
+    {
+        "id": 14,
+        "genre": "tv",
+        "title": "런닝맨",
+        "imagePath": "../../images/wish-list/wish-14.png",
+        "imageName": "/wish-14.png",
+        "description": "예능"
+    },
+    {
+        "id": 15,
+        "genre": "tv",
+        "title": "무한도전",
+        "imagePath": "../../images/wish-list/wish-15.png",
+        "imageName": "/wish-15.png",
+        "description": "예능"
+    },
+    {
+        "id": 16,
+        "genre": "tv",
+        "title": "포켓몬스터",
+        "imagePath": "../../images/wish-list/wish-16.png",
+        "imageName": "/wish-16.png",
+        "description": "애니메이션"
+    },
+    {
+        "id": 17,
+        "genre": "tv",
+        "title": "굿닥터",
+        "imagePath": "../../images/wish-list/wish-17.png",
+        "imageName": "/wish-17.png",
+        "description": "드라마"
+    },
+    {
+        "id": 18,
+        "genre": "tv",
+        "title": "정글의 법칙",
+        "imagePath": "../../images/wish-list/wish-18.png",
+        "imageName": "/wish-18.png",
+        "description": "예능"
+    },
+    {
+        "id": 19,
+        "genre": "tv",
+        "title": "영셸던",
+        "imagePath": "../../images/wish-list/wish-19.png",
+        "imageName": "/wish-19.png",
+        "description": "드라마"
+    },
+    {
+        "id": 20,
+        "genre": "tv",
+        "title": "틴 타이탄스 고!",
+        "imagePath": "../../images/wish-list/wish-20.png",
+        "imageName": "/wish-20.png",
+        "description": "애니메이션"
+    }
+]

@@ -455,4 +455,3 @@ rankListLi.forEach((list, id) => {
         clickedLi.classList.toggle("active");
     });
 });
-
