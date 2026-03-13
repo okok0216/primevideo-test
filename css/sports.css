@@ -74,6 +74,11 @@ section .pager-btn>.active>a {
     /* flex: 0 0 230px; */
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.sports-game-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .sports-game-list>li img {
@@ -112,7 +117,7 @@ section .pager-btn>.active>a {
 
 
 .sports-live-list>li:hover {
-    /* transform: translate(0, -10px); */
+    transform: translate(0, -10px);
 }
 
 .sports-live-list>li>.img-box {
@@ -190,6 +195,11 @@ section .pager-btn>.active>a {
     /* flex: 0 0 230px; */
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.sports-brand-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 /* ------------------하이라이트---------------------- */
@@ -224,6 +234,11 @@ section .pager-btn>.active>a {
     border-radius: 20px;
     overflow: hidden;
     /* aspect-ratio: 16 / 9; */
+    transition: 0.3s;
+}
+
+.highlight-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 /* -------------------추천영화---------------------- */
@@ -244,6 +259,11 @@ section .pager-btn>.active>a {
     /* flex: 1; */
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.rec-movie-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .rec-movie-wrap>.more-btn>a {
@@ -263,6 +283,11 @@ section .pager-btn>.active>a {
 
 .original-list>li {
     flex-shrink: initial;
+    transition: 0.3s;
+}
+
+.original-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 .original-list>li>a img {
@@ -295,6 +320,11 @@ section .pager-btn>.active>a {
     /* flex: 1; */
     box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.rec-series-list>li:hover {
+    transform: translate(0, -10px);
 }
 
 /* -------------------footer----------------------- */
