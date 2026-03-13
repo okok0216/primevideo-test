@@ -397,10 +397,10 @@ let rankList = document.querySelector(".ranking-list");
 rankListLi.forEach((list, id) => {
     list.addEventListener("click", (e) => {
         e.preventDefault();//a의 기본 이벤트 막기
-        
+
         rankListLi.forEach((l, i) => {
             l.style.transition = "none";
-            if(id !== i){
+            if (id !== i) {
                 l.classList.remove("active");
             }
             setTimeout(() => {
@@ -425,4 +425,3 @@ rankListLi.forEach((list, id) => {
         requestAnimationFrame(rankingSwiper);
     });
 });
-

@@ -14,10 +14,15 @@
 
 }
 
-.close-btn {
+.search-close-btn {
     position: absolute;
     top: 25px;
     right: 30px;
+    transition: 0.1s;
+}
+
+.search-close-btn:hover {
+    transform: scale(1.1);
 }
 
 /* search-tab */
@@ -92,7 +97,8 @@
 .content-box {
     display: flex;
     flex-direction: column;
-    background: #151313;
+    background: rgb(20, 20, 20);
+    box-shadow: 2px 2px 2px 2px black;
     padding: 10px;
     color: white;
     position: relative;
@@ -110,7 +116,17 @@
 .content-box>.txt-info-box>.line1 {
     text-align: center;
     margin-bottom: 5px;
+    /* position: relative; */
 }
+
+
+/* .content-box>.txt-info-box>.line1>.content-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+} */
+
 
 .content-box>.txt-info-box>.line2 {
     display: flex;
@@ -142,29 +158,36 @@
     transform: scale(1.2, 1.2);
 }
 
-.search-more-btn:hover {
+.search-plus-btn:hover {
     transition: 0.3s;
     transform: scale(1.2, 1.2);
 }
 
 
-.content-box>.txt-info-box>.content-title {
+
+.content-box>.img-box-v {
     text-align: center;
 }
 
-
-.content-box>.img-box {
-    text-align: center;
+.content-box>.img-box-h {
+    display: none;
 }
 
-.content-box>.img-box>a>img {
+.content-box>.img-box-v>a>img {
     width: 200px;
     aspect-ratio: 1/1.485;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.search-more-btn {
+.content-box>.img-box-h>a>img {
+    width: 120px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.search-plus-btn {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -192,7 +215,7 @@
         /* text-align: center; */
     }
 
-    .search-wrap .search-more-btn {
+    .search-wrap .search-plus-btn {
         width: 20px;
         height: 20px;
     }
@@ -203,7 +226,7 @@
         gap: 15px;
     }
 
-    .content-box>.img-box {
+    .content-box>.img-box-v {
         text-align: center;
     }
 
@@ -229,7 +252,7 @@
         margin-bottom: 20px;
     }
 
-    .search-wrap .search-more-btn {
+    .search-wrap .search-plus-btn {
         width: 20px;
         height: 20px;
     }
@@ -239,33 +262,110 @@
 /* mobile */
 @media screen and (max-width:768px) {
 
-    .search-wrap .search-more-btn {
+    .search-wrap .search-plus-btn {
         width: 18px;
         height: 18px;
     }
 
     .search-wrap .top-contents {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(2, 0.65fr);
-        justify-content: center;
+        justify-content: center; */
+        display: flex;
+        flex-direction: column;
         gap: 13px;
     }
 
-    .content-box>.img-box {
-        text-align: center;
+
+
+    .content-box {
+        display: flex;
+        flex-direction: row;
+        background: #151313;
+        padding: 10px;
+        color: white;
+        position: relative;
+        border-radius: 10px;
+        position: relative;
+        align-items: center;
     }
+
+    .content-box>.img-box-v {
+        display: none;
+    }
+
+    .content-box>.img-box-h {
+        display: block;
+    }
+
+    .content-box>.txt-info-box {
+        /* position: relative; */
+        padding: 0px;
+        padding-left: 20px;
+        display: flex;
+        /* flex-direction: column; */
+        flex-direction: row;
+        gap: 10px;
+        /* position: relative; */
+        justify-content: center;
+    }
+
+
+    .content-box>.txt-info-box>.line1 {
+        text-align: center;
+        margin: 5px 0;
+        /* position: absolute; */
+        /* font-weight: 600; */
+        /* font-size: larger; */
+
+    }
+
+    .content-box>.txt-info-box>.line2 {
+        /* display: none; */
+        display: flex;
+        gap: 10px;
+        position: absolute;
+        right: 20px;
+        /* position: absolute;
+        bottom: 5px;
+        left: 15px; */
+    }
+
+    .content-box>.txt-info-box>.line2>.rank-diff {
+        display: none;
+    }
+
+
+    /* .content-box>.txt-info-box>.line2>.rank-diff {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto
+    } */
+
+    .plus-btn {
+        width: 25px;
+        height: 25px;
+    }
+
+    .search-close-btn {
+        position: absolute;
+        top: 25px;
+        right: 70px;
+        transition: 0.1s;
+    }
+
 }
 
 @media screen and (max-width:480px) {
 
-    .search-wrap .top-contents {
+    /* .search-wrap .top-contents {
         display: grid;
         grid-template-columns: repeat(1, 0.65fr);
         justify-content: center;
         gap: 13px;
     }
 
-    .content-box>.img-box {
+    .content-box>.img-box-v {
         text-align: center;
-    }
+    } */
 }

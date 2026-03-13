@@ -1,0 +1,130 @@
+{
+    "wishlist": [
+        {
+            "id": 1,
+            "type": "movie",
+            "title": "위시 영화 1",
+            "genre": "영화",
+            "description": "긴장감 있게 즐길 수 있는 영화.",
+            "image": "wish-1.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-1.png"
+        },
+        {
+            "id": 2,
+            "type": "tv",
+            "title": "위시 TV프로그램 1",
+            "genre": "TV프로그램",
+            "description": "가볍게 보기 좋은 TV 프로그램.",
+            "image": "wish-tv-1.png",
+            "imagePath": "../../images/wish-list/wish-tv/wish-tv-1.png"
+        },
+        {
+            "id": 3,
+            "type": "movie",
+            "title": "위시 영화 2",
+            "genre": "영화",
+            "description": "몰입감 있는 전개가 돋보이는 작품.",
+            "image": "wish-2.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-2.png"
+        },
+        {
+            "id": 4,
+            "type": "sports",
+            "title": "위시 스포츠 1",
+            "genre": "스포츠",
+            "description": "생생한 경기 분위기를 느낄 수 있는 콘텐츠.",
+            "image": "wish-sports-1.png",
+            "imagePath": "../../images/wish-list/wish-sports/wish-sports-1.png"
+        },
+        {
+            "id": 5,
+            "type": "tv",
+            "title": "위시 TV프로그램 2",
+            "genre": "TV프로그램",
+            "description": "편하게 정주행하기 좋은 시리즈.",
+            "image": "wish-tv-2.png",
+            "imagePath": "../../images/wish-list/wish-tv/wish-tv-2.png"
+        },
+        {
+            "id": 6,
+            "type": "movie",
+            "title": "위시 영화 3",
+            "genre": "영화",
+            "description": "강렬한 분위기가 인상적인 영화.",
+            "image": "wish-3.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-3.png"
+        },
+        {
+            "id": 7,
+            "type": "sports",
+            "title": "위시 스포츠 2",
+            "genre": "스포츠",
+            "description": "박진감 넘치는 스포츠 콘텐츠.",
+            "image": "wish-sports-2.png",
+            "imagePath": "../../images/wish-list/wish-sports/wish-sports-2.png"
+        },
+        {
+            "id": 8,
+            "type": "sports",
+            "title": "위시 스포츠 3",
+            "genre": "스포츠",
+            "description": "현장감이 살아 있는 경기 영상.",
+            "image": "wish-sports-3.png",
+            "imagePath": "../../images/wish-list/wish-sports/wish-sports-3.png"
+        },
+        {
+            "id": 9,
+            "type": "movie",
+            "title": "위시 영화 4",
+            "genre": "영화",
+            "description": "스토리 전개가 흥미로운 영화.",
+            "image": "wish-4.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-4.png"
+        },
+        {
+            "id": 10,
+            "type": "movie",
+            "title": "위시 영화 5",
+            "genre": "영화",
+            "description": "분위기와 영상미가 돋보이는 작품.",
+            "image": "wish-5.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-5.png"
+        },
+        {
+            "id": 11,
+            "type": "movie",
+            "title": "위시 영화 6",
+            "genre": "영화",
+            "description": "짧게 소개해도 매력이 느껴지는 영화.",
+            "image": "wish-6.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-6.png"
+        },
+        {
+            "id": 12,
+            "type": "tv",
+            "title": "위시 TV프로그램 3",
+            "genre": "TV프로그램",
+            "description": "에피소드별로 재미있게 볼 수 있는 작품.",
+            "image": "wish-tv-3.png",
+            "imagePath": "../../images/wish-list/wish-tv/wish-tv-3.png"
+        },
+        {
+            "id": 13,
+            "type": "movie",
+            "title": "위시 영화 7",
+            "genre": "영화",
+            "description": "가볍게 시작했다가 빠져들 수 있는 영화.",
+            "image": "wish-7.png",
+            "imagePath": "../../images/wish-list/wish-movie/wish-7.png"
+        },
+        {
+            "id": 14,
+            "type": "tv",
+            "title": "위시 TV프로그램 4",
+            "genre": "TV프로그램",
+            "description": "부담 없이 보기 좋은 TV 콘텐츠.",
+            "image": "wish-tv-4.png",
+            "imagePath": "../../images/wish-list/wish-tv/wish-tv-4.png"
+        }
+    ]
+}

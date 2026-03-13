@@ -457,9 +457,11 @@ section .pager-btn>li.active>a {
 .ranking-list>li>div.expand {
     display: none;
 }
+
 .ranking-list>li.active>div.expand {
     display: block;
 }
+
 .ranking-list>li.active>div.default {
     display: none;
 }
@@ -559,10 +561,12 @@ section .pager-btn>li.active>a {
     padding: 5px;
     margin: 0;
 }
+
 .rank-icon-list img {
     transition: 0.3s;
 }
-.rank-icon-list img:hover{
+
+.rank-icon-list img:hover {
     transform: scale(1.1);
 }
 

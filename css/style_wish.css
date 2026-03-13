@@ -40,9 +40,7 @@ body {
     color: #000;
 }
 
-/* .main-menu>li>a:hover {
-    color: #00A8E1;
-} */
+
 
 .wish-section-wrap {
     width: 100%;
@@ -74,15 +72,7 @@ body {
     z-index: 10;
 }
 
-/* .close-btn {
-    position: absolute;
-    background-color: #00A8E1;
-    bottom: 10px;
-    top: 10px;
-    right: 10px;
 
-    display: none;
-} */
 
 .search-close-btn {
     position: absolute;
@@ -121,17 +111,6 @@ body {
 
 }
 
-/* .wish-content:hover .original {
-    display: none;
-}
-
-.wish-content:hover .card-hovered {
-
-    transform: translateY(-20px);
-    transform: scale(1.1);
-
-    display: block;
-} */
 
 
 
@@ -146,9 +125,16 @@ body {
     font-size: 20px;
 }
 
+.card-hovered>.box-bottom>.line1>.title {
+    font-size: smaller;
+    font-weight: 500;
+}
+
 .card-hovered>.box-bottom>.line2 {
     gap: 10px;
 }
+
+
 
 .btn-wrap {
     position: absolute;
