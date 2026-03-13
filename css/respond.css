@@ -67,10 +67,6 @@
         width: 50% !important;
     }
 
-    .ranking-list>li.active .text-box .rank-icon-list {
-        margin: 5px 0;
-    }
-
     .movie-list {
         width: calc(100% * 18 / 5);
     }

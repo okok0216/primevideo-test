@@ -1,27 +1,20 @@
 let genreBtnArr = document.querySelectorAll(".genre-list li");
 // console.log(genreBtnArr);
 
-const wishContents = document.querySelectorAll(".wish-content");
-console.log(wishContents);
-// let arr = wishContents.filter(e => e.classList[0] == "all");
-// console.log(arr);
-console.log(typeof (wishContents));
-console.log(wishContents[0].classList);
-let wishContentsArr = Object.values(wishContents);
-console.log(wishContentsArr);
+//wishlist 카드 영역
+let wishCardsWrap = document.querySelector(".wish-list");
 
-let cardHoverdList = document.querySelectorAll(".card-hovered");
-let cardHoveredArr = Object.values(cardHoverdList);
+//data 저장 배열
+let wishInfoList = [];
+
+//선택된 장르 저장 변수
+let selectedGenre = "";
 
 
-let originalList = document.querySelectorAll(".original");
-let originalArr = Object.values(originalList);
+
 //버튼 색상 변경
 genreBtnArr.forEach((genreBtn, id, arr) => {
-    // console.log(genreBtn);
-    // console.log(genreBtn.classList);
     genreBtn.addEventListener("click", () => {
-        // console.log(genreBtn);
         genreBtnArr.forEach(btn => {
             btn.classList.remove("active");
         })
@@ -30,183 +23,131 @@ genreBtnArr.forEach((genreBtn, id, arr) => {
 
 })
 
-//버튼 클릭하면 리스트 필터링
+
+//wishlist json 파일 불러오기
+async function fetchInfo() {
+    try {
+        await fetch("../../data/wishlist-content-info.json")
+            .then(res => res.json())
+            .then(data => {
+                console.log("get data : ", data);
+                wishInfoList = data;
+                console.log("arr : ", wishInfoList);
+                //화면에 랜덤 배열로 렌더링하기..?
+                let shuffledArr = wishInfoList.sort(() => Math.random() - 0.5);
+
+                renderCards(shuffledArr);
+            })
+    } catch (err) {
+        console.log("데이터 불러오기 실패 : ", err);
+    }
+}
+
+fetchInfo();
+
+function renderCards(arr) {
+    console.log("filterContent in", arr);
+    wishCardsWrap.innerHTML = "";
+
+    arr.forEach(element => {
+        console.log(element.genre);
+        let li = document.createElement("li");
+        li.setAttribute("class", "wish-content");
+        console.log(element.imagePath)
+        li.innerHTML = `
+                <img src="${element.imagePath}" alt="wish1" class="original">
+                 <div class="card-hovered">
+                    <div class="box-top">
+                        <img src="${element.imagePath}" alt="wish1">
+                    </div>
+                    <div class="box-bottom">
+                        <div class="line1">
+                            <div class="title">
+                                <p>${element.title}</p>
+                            </div>
+                            <div class="btn-wrap">
+                                <a href="#"><img src="../../images/wish-list/wish-card-btn/btn_play.png"
+                                    alt="재생버튼" class="btn-play"></a>
+                                <a href="#"><img src="../../images/wish-list/wish-card-btn/btn_trash.png"
+                                    alt="삭제버튼" class="btn-trash"></a>
+                            </div>
+                        </div>
+                        <div class="line2">
+                            <span>${element.description}</span>
+                        </div>
+                    </div>
+                </div> 
+            `
+        wishCardsWrap.append(li);
+
+        li.addEventListener("mouseenter", () => {
+            console.log("render card click in");
+            console.log(li.querySelector(".card-hovered"));
+            let cardHovered = li.querySelector(".card-hovered");
+            cardHovered.style.opacity = 100;
+            cardHovered.style.visibility = "visible";
+        })
+
+
+        li.addEventListener("mouseleave", () => {
+            console.log("render card click out");
+            console.log(li.querySelector(".card-hovered"));
+            let cardHovered = li.querySelector(".card-hovered");
+            cardHovered.style.opacity = 0;
+            cardHovered.style.visibility = "hidden";
+        })
+
+    })
+
+}
+
+
+//장르 버튼 클릭하면 화면 리스트 필터링
 genreBtnArr.forEach((genreBtn, id, arr) => {
     genreBtn.addEventListener("click", () => {
         console.log(genreBtn.classList[0]);
-        if (genreBtn.classList[0] == "all-btn") {
-            let all = wishContentsArr.filter(e => e.classList[e.classList.length - 1] == "wish-content");
-            console.log(all);
-            wishContentsArr.forEach(e => {
-                //console.log(e);
-                //console.log(e.style);
-                e.style.display = "block";
-            });
-        } else if (genreBtn.classList[0] == "movie-btn") {
-            let movieArr = wishContentsArr.filter(e => e.classList[0] == "movie");
-            console.log(movieArr);
-            wishContentsArr.forEach(e => {
-                //console.log(e);
-                //console.log(e.style);
-                e.style.display = "none";
-            });
-            movieArr.forEach(e => {
-                e.style.display = "block";
-            })
-        } else if (genreBtn.classList[0] == "tv-btn") {
-            let tvArr = wishContentsArr.filter(e => e.classList[0] == "tv");
-            console.log(tvArr);
-            wishContentsArr.forEach(e => {
-                //console.log(e);
-                //console.log(e.style);
-                e.style.display = "none";
-            });
-            tvArr.forEach(e => {
-                e.style.display = "block";
-            })
-        } else if (genreBtn.classList[0] == "sports-btn") {
-            let sportsArr = wishContentsArr.filter(e => e.classList[0] == "sports");
-            console.log(sportsArr);
-            wishContentsArr.forEach(e => {
-                //console.log(e);
-                //console.log(e.style);
-                e.style.display = "none";
-            });
-            sportsArr.forEach(e => {
-                e.style.display = "block";
-            })
-        }
-    })
-})
-
-//카드 호버하면 확대되게
-// wishContentsArr.forEach((content, i) => {
-//     content.addEventListener("mouseenter", (e) => {
-//         //console.log(content);
-//         content.style.transform = `scale(${1.1})`;
-//         // content.style.zindex = "10000";
-//         content.style.zindex = 100000;
-//         cardHoveredArr[i].style.opacity = 1;
-//         cardHoveredArr[i].style.visibility = "visible";
-
-//     })
-//     content.addEventListener("mouseleave", (e) => {
-//         content.style.transform = `scale(${1})`;
-//         content.style.zindex = 10;
-//         cardHoveredArr[i].style.opacity = 0;
-//         cardHoveredArr[i].style.visibility = "hidden";
-//     })
-// })
-
-
-wishContentsArr.forEach((content, i) => {
-    content.addEventListener("mouseenter", e => {
-        content.style.zindex = 100;
-        cardHoveredArr[i].style.opacity = 1;
-        cardHoveredArr[i].style.visibility = "visible";
-        cardHoveredArr[i].style.transform = `scale${1.1}`;
-        originalArr[i].style.opacity = 0;
-        //content.style.transform = `scale${1.3}`;
-    })
-    content.addEventListener("mouseleave", e => {
-        content.style.zindex = 10;
-        cardHoveredArr[i].style.opacity = 0;
-        cardHoveredArr[i].style.visibility = "hidden";
-        cardHoveredArr[i].style.transform = `scale${1}`;
-        originalArr[i].style.opacity = 1;
+        selectedGenre = genreBtn.classList[0];
+        console.log("selected", selectedGenre);
+        //컨텐츠 필터하기
+        let filteredContentArr = [];
+        wishInfoList.forEach((element) => {
+            if (element.genre === selectedGenre) {
+                filteredContentArr.push(element);
+            } else if (selectedGenre === "all") {
+                filteredContentArr = wishInfoList;
+            }
+        })
+        renderCards(filteredContentArr);
     })
 })
 
 // ================검색창================
-let searchBtn = document.querySelector(".search-btn");
-let searchTab = document.querySelector(".search-wrap");
-let searchCloseBtn = searchTab.querySelector(".search-close-btn");
-searchBtn.addEventListener("click", e => {
-    //console.log("isclicked", e);
-    searchTab.style.top = 0;
-    // searchBtn.style.display = "none";
-    searchBtn.style.opacity = `${50}%`
-})
-searchCloseBtn.addEventListener("click", e => {
-    searchTab.style.top = `-${120}%`;
-    // searchBtn.style.display = "block";
-    searchBtn.style.opacity = `${100}%`
-})
+// let searchBtn = document.querySelector(".search-btn");
+// let searchTab = document.querySelector(".search-wrap");
+// let searchCloseBtn = searchTab.querySelector(".search-close-btn");
+// searchBtn.addEventListener("click", e => {
+//     //console.log("isclicked", e);
+//     searchTab.style.top = 0;
+//     // searchBtn.style.display = "none";
+//     searchBtn.style.opacity = `${50}%`
+// })
+// searchCloseBtn.addEventListener("click", e => {
+//     searchTab.style.top = `-${120}%`;
+//     // searchBtn.style.display = "block";
+//     searchBtn.style.opacity = `${100}%`
+// })
 
-//검색창 커서
-let searchInput = document.querySelector(".searchInput");
-searchInput.addEventListener("focus", function () {
-    this.type = "text";
-    this.classList.add("active");
-    this.previousElementSibling.style.display = "none";
-})
-searchInput.addEventListener("blur", function () {
-    this.classList.remove("active");
-    this.previousElementSibling.style.display = "block";
-    this.type = "reset";
-    this.value = "";
-})
-
-// ----공통함수----------------------------------------
-// 윈도우의 너비값 체크할 함수
-let wWidth;
-function siteInit() {
-    wWidth = window.innerWidth;
-}
-siteInit();
-// 윈도우의 너비가 변경되면 윈도우의 너비값 다시 받기
-window.addEventListener("resize", () => {
-    siteInit();
-    subMenu.classList.remove("active");
-});
-
-// ----gnb usermenu----------------------------------------
-let profileMenu = document.querySelector(".profile-submenu");
-let gnbProfile = document.querySelector(".gnb-profile");
-
-gnbProfile.addEventListener("click", () => {
-    console.log("enter");
-    // 서브메뉴가 보이는지 체크하기
-    if (wWidth > 640) {
-        let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
-        if (isOpen) {
-            profileMenu.style.height = 0;
-        } else {
-            let profileHeight = profileMenu.scrollHeight;
-            profileMenu.style.height = profileHeight + "px";
-        }
-    }
-});
-
-// ----footer lang선택----------------------------------------
-// .lang-wrap click event 
-let langWrap = document.querySelector(".lang-wrap>a");
-let lang = document.querySelector(".lang");
-let langA = document.querySelectorAll(".lang>li a");
-let langWrapA = document.querySelector(".lang-wrap>a span");
-
-function langToggle() {//lang active클래스 붙이는 공통함수
-    lang.classList.toggle('active');
-    langWrap.classList.toggle('active');
-}
-
-// .lang-wrap click event 
-langWrap.addEventListener("click", (e) => {
-    e.preventDefault();//a의 기본 이벤트 막기
-    langToggle();
-});
-
-// .lang click event
-langA.forEach((a) => {
-    a.addEventListener("click", (e) => {
-        e.preventDefault();//a의 기본 이벤트 막기
-        langWrapA.innerText = a.innerText;
-        langToggle();
-    });
-});
-
-lang.addEventListener("mouseleave", () => {
-    langWrap.classList.remove("active");
-    lang.classList.remove("active");
-});
+// //검색창 커서
+// let searchInput = document.querySelector(".searchInput");
+// searchInput.addEventListener("focus", function () {
+//     this.type = "text";
+//     this.classList.add("active");
+//     this.previousElementSibling.style.display = "none";
+// })
+// searchInput.addEventListener("blur", function () {
+//     this.classList.remove("active");
+//     this.previousElementSibling.style.display = "block";
+//     this.type = "reset";
+//     this.value = "";
+// })
 
