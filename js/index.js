@@ -212,8 +212,8 @@ let originalSwiper = new Swiper(".original-wrap .original-list-wrap", {
 
 // 회원추천 swiper
 let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
-    slidesPerView: 1.5,
-    slidesPerGroup: 1.5,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 15,
     pagination: {
         el: ".review-pagination",
@@ -223,9 +223,13 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
         prevEl: ".review-button-prev",
     },
     breakpoints: {
+        550: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
         640: {
-            slidesPerView: 1.5,
-            slidesPerGroup: 1.5,
+            slidesPerView: 2,
+            slidesPerGroup: 2,
         },
         768: {
             slidesPerView: 2,

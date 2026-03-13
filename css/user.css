@@ -357,10 +357,13 @@
     width: 100%;
     background: #333;
     display: flex;
-    gap: 10em;
+    /* gap: 10em; */
     padding: 20px;
     border-radius: 10px;
     align-items: center;
+}
+.playing-record-list>li>a p:first-child{
+    width: 40%;
 }
 .playing-record-list>li .trash-btn{
     position: absolute;
@@ -380,6 +383,9 @@
         align-items: start;
         gap: 1em;
         padding: 10px;
+    }
+    .playing-record-list>li>a p:first-child {
+        width: initial;
     }
 }
 @media screen and (max-width:640px) {
