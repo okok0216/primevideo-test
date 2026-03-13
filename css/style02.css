@@ -58,6 +58,16 @@ header.active {
     background: #000;
 }
 
+header.active {
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #000;
+}
+
 header>.inner {
     display: flex;
     justify-content: space-between;
@@ -691,7 +701,7 @@ section .inner {
 
 .relative-video-wrap>ul {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     padding: 36px 0;
 }
 
@@ -811,8 +821,12 @@ section .inner {
     /* overflow-x: scroll; */
 }
 
-.review-section:hover {
+.review-section {
     transition: 0.5s;
+}
+
+.review-section:hover {
+
     transform: translateY(-10px);
 }
 
@@ -1069,7 +1083,7 @@ section .inner {
 }
 
 .temporary-save-box:hover {
-    transform: translateY(-2px);
+    transform: scale(1.02);
     background: rgba(255, 255, 255, 0.14);
 }
 
@@ -1084,8 +1098,24 @@ section .inner {
     box-shadow: 0 14px 28px rgba(0, 168, 225, 0.38);
 }
 
-.director {
-    /* overflow-x: scroll; */
+.director-list {
+    display: flex;
+    gap: 20px;
+    margin: 36px 0;
+}
+
+
+.director-list>li p {
+    margin-top: 20px;
+
+}
+
+.director-list>li .img-box {
+    transition: 0.3s;
+}
+
+.director-list>li:hover .img-box {
+    transform: translateY(-10px);
 }
 
 .director::-webkit-scrollbar {
@@ -1101,6 +1131,7 @@ section .inner {
     background: #606060;
     border-radius: 10px;
 }
+
 
 .cast-list {
     display: flex;
