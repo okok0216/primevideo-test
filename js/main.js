@@ -125,10 +125,10 @@ stars.forEach((star, id) => {
 })
 
 //시즌별로 탭
-let movieListWrap = document.querySelector(".movie-list-wrap");
-let mList = document.querySelector(".movie-list");
-let mListA = document.querySelectorAll(".movie-list>li a");
-let movieListWrapA = document.querySelector(".movie-list-wrap>a");
+let movieListWrap = document.querySelector(".season-list-wrap");
+let mList = document.querySelector(".season-list");
+let mListA = document.querySelectorAll(".season-list>li a");
+let movieListWrapA = document.querySelector(".season-list-wrap>a");
 
 function movieToggle() {//active클래스 붙이는 공통함수
     movieListWrapA.classList.toggle('active');
