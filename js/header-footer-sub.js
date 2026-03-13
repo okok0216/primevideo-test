@@ -3,11 +3,13 @@ fetch("../header-sub.html")
     .then(res => res.text())
     .then(data => {
         document.querySelector("header").innerHTML = data;
+        //url읽기
+        let params = new URLSearchParams(window.location.pathname);
 
         // ================검색창================
         let searchBtn = document.querySelector(".search-btn");
         let searchTab = document.querySelector(".search-wrap");
-        let searchCloseBtn = searchTab.querySelector(".close-btn");
+        let searchCloseBtn = searchTab.querySelector(".search-close-btn");
         searchBtn.addEventListener("click", e => {
             e.preventDefault();//a의 기본 이벤트 막기
             //console.log("isclicked", e);
@@ -32,6 +34,27 @@ fetch("../header-sub.html")
             this.type = "reset";
             this.value = "";
         })
+
+        // ================wishlist 페이지로 넘어왔을 때================
+        //wishlist 클릭 시 => searchBtn은 남겨두고 opacity만 조정, wishlist 아이콘 display none
+        let wishBtn = document.querySelector(".wish-btn");
+        if (params.toString().includes("wish-list")) {
+            wishBtn.style.display = "none";
+
+            searchBtn.addEventListener("click", e => {
+                e.preventDefault();//a의 기본 이벤트 막기
+                //console.log("isclicked", e);
+                searchTab.style.top = 0;
+                searchBtn.style.display = "block";
+                searchBtn.style.opacity = `${50}%`;
+            })
+            searchCloseBtn.addEventListener("click", e => {
+                searchTab.style.top = `-${120}%`;
+                searchBtn.style.opacity = `${100}%`;
+                //searchBtn.style.display = "block";
+            })
+        }
+
 
         // ----nav submenu----------------------------------------
         let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
