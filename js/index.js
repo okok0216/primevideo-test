@@ -249,8 +249,8 @@ let reviewSwiper = new Swiper(".review-wrap .review-list-wrap", {
 
 // 스포츠
 let spbrandSwiper = new Swiper(".sport-brand-wrap", {
-    slidesPerView: 8,
-    slidesPerGroup: 8,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
     spaceBetween: 12,
     pagination: {
         el: ".spbrand-pagination"
@@ -258,14 +258,36 @@ let spbrandSwiper = new Swiper(".sport-brand-wrap", {
     navigation: {
         nextEl: ".spbrand-button-next",
         prevEl: ".spbrand-button-prev",
-    }
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 3.5,
+            slidesPerGroup: 3,
+        },
+        768: {
+            slidesPerView: 5,
+            slidesPerGroup: 4,
+        },
+        980: {
+            slidesPerView: 5.5,
+            slidesPerGroup: 5,
+        },
+        1280: {
+            slidesPerView: 6.5,
+            slidesPerGroup: 6.5,
+        },
+        1300: {
+            slidesPerView: 8,
+            slidesPerGroup: 8,
+        },
+    },
 })
 
 
-//스포츠이벤트
+//중계 예정
 let spEventSwiper = new Swiper(".sport-event-wrap", {
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 1.5,
+    slidesPerGroup: 1,
     spaceBetween: 16,
     pagination: {
         el: ".sport-event-pagination"
@@ -273,14 +295,36 @@ let spEventSwiper = new Swiper(".sport-event-wrap", {
     navigation: {
         nextEl: ".sport-event-button-next",
         prevEl: ".sport-event-button-prev",
-    }
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.5,
+            slidesPerGroup: 1.5,
+        },
+        768: {
+            slidesPerView: 2.5,
+            slidesPerGroup: 2.5,
+        },
+        980: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+        1300: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+    },
 })
 
 
 // 공개예정
 let opBannerSwiper = new Swiper(".open-banner-wrap", {
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: 1.5,
+    slidesPerGroup: 1,
     spaceBetween: 16,
     pagination: {
         el: ".open-banner-pagination"
@@ -289,35 +333,35 @@ let opBannerSwiper = new Swiper(".open-banner-wrap", {
         nextEl: ".open-banner-button-next",
         prevEl: ".open-banner-button-prev",
     },
-    // breakpoints: {
-    //     640: {
-    //         slidesPerView: 1.5,
-    //         slidesPerGroup: 1.5,
-    //     },
-    //     768: {
-    //         slidesPerView: 2,
-    //         slidesPerGroup: 2,
-    //     },
-    //     980: {
-    //         slidesPerView: 3,
-    //         slidesPerGroup: 3,
-    //     },
-    //     1280: {
-    //         slidesPerView: 4,
-    //         slidesPerGroup: 4,
-    //     },
-    //     1300: {
-    //         slidesPerView: 5,
-    //         slidesPerGroup: 5,
-    //     },
-    // },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.5,
+            slidesPerGroup: 1.5,
+        },
+        768: {
+            slidesPerView: 2.5,
+            slidesPerGroup: 2.5,
+        },
+        980: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        1280: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+        1300: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+    },
 })
 
 
 //실시간
 let liveSwiper = new Swiper(".sport-real-wrap", {
-    slidesPerView: 3.5,
-    slidesPerGroup: 1.5,
+    slidesPerView: 1.2,
+    slidesPerGroup: 1,
     spaceBetween: 15,
     pagination: {
         el: ".live-pagination"
@@ -325,29 +369,29 @@ let liveSwiper = new Swiper(".sport-real-wrap", {
     navigation: {
         nextEl: ".live-button-next",
         prevEl: ".live-button-prev"
-    }
-    // breakpoints: {
-    //     640: {
-    //         slidesPerView: 1.5,
-    //         slidesPerGroup: 1.5,
-    //     },
-    //     768: {
-    //         slidesPerView: 2,
-    //         slidesPerGroup: 2,
-    //     },
-    //     980: {
-    //         slidesPerView: 3,
-    //         slidesPerGroup: 3,
-    //     },
-    //     1280: {
-    //         slidesPerView: 4,
-    //         slidesPerGroup: 4,
-    //     },
-    //     1300: {
-    //         slidesPerView: 5,
-    //         slidesPerGroup: 5,
-    //     },
-    // },
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 1.5,
+            slidesPerGroup: 1,
+        },
+        768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+        },
+        980: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        1280: {
+            slidesPerView: 3.5,
+            slidesPerGroup: 3.5,
+        },
+        1300: {
+            slidesPerView: 3.5,
+            slidesPerGroup: 3.5,
+        },
+    },
 });
 
 // ================메인슬라이더================
@@ -371,17 +415,16 @@ const mainSwiper = new Swiper(".main-slider-wrap .swiper", {
 });
 
 let slides = document.querySelectorAll(".main-swiper .swiper-slide");
-console.log(slides);
+// console.log(slides);
 
 slides.forEach(s => {
     s.addEventListener("mouseenter", () => {
         let video = s.children[0]
-        console.log(video);
+        // console.log(video);
 
         timer = setTimeout(() => {
             video.play();
         }, 500);
-
     })
     s.addEventListener("mouseleave", () => {
         let video = s.children[0];
@@ -410,18 +453,5 @@ rankListLi.forEach((list, id) => {
 
         const clickedLi = e.target.closest(".swiper-slide");
         clickedLi.classList.toggle("active");
-
-        let startTime = null;
-        function syncSwiper(timestamp) {
-            if (!startTime) startTime = timestamp;
-            let progress = timestamp - startTime;
-
-            s.update(); // 현재 늘어나고 있는 너비에 맞춰 옆 슬라이드들 위치를 계속 재조정
-
-            if (progress < 300) { // CSS transition 시간(400ms)과 일치시킴
-                requestAnimationFrame(rankingSwiper);
-            }
-        }
-        requestAnimationFrame(rankingSwiper);
     });
 });

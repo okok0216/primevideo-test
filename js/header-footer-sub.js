@@ -1,5 +1,5 @@
 // header불러오기
-fetch("./page/header.html")
+fetch("../header-sub.html")
     .then(res => res.text())
     .then(data => {
         document.querySelector("header").innerHTML = data;
@@ -7,7 +7,7 @@ fetch("./page/header.html")
         // ================검색창================
         let searchBtn = document.querySelector(".search-btn");
         let searchTab = document.querySelector(".search-wrap");
-        let searchCloseBtn = searchTab.querySelector(".search-close-btn");
+        let searchCloseBtn = searchTab.querySelector(".close-btn");
         searchBtn.addEventListener("click", e => {
             e.preventDefault();//a의 기본 이벤트 막기
             //console.log("isclicked", e);
@@ -39,7 +39,7 @@ fetch("./page/header.html")
         let subMenu = document.querySelector(".submenu-wrap");
         let subCloseBtn = subMenu.querySelector(".close-btn");
 
-        mainMenuGenre.addEventListener("mouseenter", () => {
+        mainMenuGenreA.addEventListener("mouseenter", () => {
             // console.log(wWidth);
             if (wWidth > 640) {
                 subMenu.classList.add("active");
@@ -50,11 +50,11 @@ fetch("./page/header.html")
                 subMenu.classList.remove("active");
             }
         });
-        mainMenuGenreA.addEventListener("click", (e)=>{
+        mainMenuGenreA.addEventListener("click", (e) => {
             e.preventDefault();//a의 기본 이벤트 막기
             siteInit();
             console.log(wWidth);
-            if(wWidth <= 640){
+            if (wWidth <= 640) {
                 subMenu.classList.add("active");
                 subCloseBtn.style.display = "block";
             }
@@ -102,7 +102,7 @@ fetch("./page/header.html")
     });
 
 // footer불러오기
-fetch("./page/footer.html")
+fetch("../footer-sub.html")
     .then(res => res.text())
     .then(data => {
         document.querySelector("footer").innerHTML = data;
