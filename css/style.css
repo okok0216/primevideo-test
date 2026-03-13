@@ -534,6 +534,10 @@ section .pager-btn>li.active>a {
     z-index: 10;
 }
 
+.ranking-list>li.active:last-child .text-box {
+    left: 150px;
+}
+
 .ranking-list>li.active .text-box h3 {
     font-size: 45px;
     font-weight: 500;
