@@ -124,29 +124,39 @@ stars.forEach((star, id) => {
     })
 })
 
-let profileMenu = document.querySelector(".profile-submenu");
-let gnbProfile = document.querySelector(".gnb-profile");
-
-gnbProfile.addEventListener("click", () => {
-    // 서브메뉴가 보이는지 체크하기
-    let isOpen = profileMenu.style.height && profileMenu.style.height !== "0px";
-    if (isOpen) {
-        profileMenu.style.height = 0;
-    } else {
-        let profileHeight = profileMenu.scrollHeight;
-        profileMenu.style.height = profileHeight + "px";
-    }
-});
-
-
 //시즌별로 탭
-gnbProfile.addEventListener("mouseleave", () => {
-    profileMenu.style.height = 0;
+let movieListWrap = document.querySelector(".movie-list-wrap");
+let mList = document.querySelector(".movie-list");
+let mListA = document.querySelectorAll(".movie-list>li a");
+let movieListWrapA = document.querySelector(".movie-list-wrap>a");
+
+function movieToggle() {//active클래스 붙이는 공통함수
+    movieListWrapA.classList.toggle('active');
+    let isOpen = mList.style.height && mList.style.height !== "0px";
+    if (isOpen) {
+        mList.style.height = 0;
+    } else {
+        let mheight = mList.scrollHeight;
+        mList.style.height = mheight + "px";
+    }
+}
+
+// click event 
+movieListWrapA.addEventListener("click", (e) => {
+    e.preventDefault();//a의 기본 이벤트 막기
+    movieToggle();
 });
 
-let movieList = document.querySelector(".movie-list-wrap")
-let mList = document.querySelectorAll(".movie-list>info")
+mListA.forEach((a) => {
+    a.addEventListener("click", (e) => {
+        e.preventDefault();//a의 기본 이벤트 막기
+        movieListWrapA.innerText = a.innerText;
+        movieToggle();
+    });
+});
 
-movieList.addEventListener("click", () => {
-    mList.classList.add("active");
-})
+mList.addEventListener("mouseleave", () => {
+    movieListWrapA.classList.remove("active");
+    mList.style.height = 0;
+});
+

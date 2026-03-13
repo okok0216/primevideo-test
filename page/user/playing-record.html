@@ -96,8 +96,8 @@
                 <ul class="playing-record-list">
                     <li>
                         <a href="#">
-                            <p>제목</p>
-                            <p>시리즈 몇화</p>
+                            <p>극한직업</p>
+                            <p>시즌1</p>
                         </a>
                         <div class="trash-btn">
                             <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
@@ -105,13 +105,67 @@
                     </li>
                     <li>
                         <a href="#">
-                            <p>제목</p>
-                            <p>시리즈 몇화</p>
+                            <p>너의 이름은</p>
+                            <p>시즌1</p>
                         </a>
                         <div class="trash-btn">
                             <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
                         </div>
                     </li>
+                    <li>
+                        <a href="#">
+                            <p>메이즈 러너: 데스 큐어</p>
+                            <p>시즌3</p>
+                        </a>
+                        <div class="trash-btn">
+                            <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>선재 업고 튀어</p>
+                            <p>시즌1 - 5화</p>
+                        </a>
+                        <div class="trash-btn">
+                            <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>친애하는 X</p>
+                            <p>시즌1 - 1화</p>
+                        </a>
+                        <div class="trash-btn">
+                            <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>이 사랑 통역 되나요?</p>
+                            <p>시즌1 - 9화</p>
+                        </a>
+                        <div class="trash-btn">
+                            <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>선재 업고 튀어</p>
+                            <p>시즌1 - 4화</p>
+                        </a>
+                        <div class="trash-btn">
+                            <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>선재 업고 튀어</p>
+                            <p>시즌1 - 3화</p>
+                        </a>
+                        <div class="trash-btn">
+                            <a href="#"><img src="../../images/card-icon/btn_trash.png" alt="기록삭제"></a>
+                        </div>
+                    </li>             
                 </ul>
                 <p class="profile-btn btn"><a href="./profile-setup.html">프로필 관리</a></p>
             </div>
@@ -149,6 +203,18 @@
             <p class="copy">amazon.com</p>
         </div>
     </footer>
+    <script>
+        // 쓰레기 버튼 누루면 그 한줄 삭제
+        let trashBtn = document.querySelectorAll(".playing-record-list .trash-btn a");
+
+        trashBtn.forEach(btn => {
+            btn.addEventListener("click", (e)=>{
+                e.preventDefault();
+                let btnLi = btn.closest("li");
+                btnLi.style.display = "none";
+            });
+        });
+    </script>
 </body>
 
 </html>
