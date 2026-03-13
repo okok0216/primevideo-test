@@ -230,6 +230,10 @@
         height: 32px; */
     }
 
+    .ranking-list>li.active .text-box .rank-icon-list {
+        margin: 10px 0;
+    }
+
     .movie-list {
         width: calc(100% * 18 / 3);
     }
@@ -239,6 +243,7 @@
     }
 
     .more-btn>a {
+        top: -42px;
         left: 80px;
     }
 
@@ -427,6 +432,10 @@
     .ranking-list>li.active>div.expand>a::after {
         width: calc(100% - 20px);
         left: 10px;
+    }
+
+    .ranking-list>li.active .text-box {
+        bottom: 10px;
     }
 
     .movie-list {

@@ -662,7 +662,7 @@ section .pager-btn>li.active>a {
     position: absolute;
     display: flex;
     left: 100px;
-    top: -55px;
+    top: -45px;
     align-items: center;
 }
 
