@@ -287,7 +287,12 @@
     }
 
     .main-menu>li:hover>a {
-        color: white;
+        color: #000;
+        background: #fff;
+    }
+
+    .main-menu>li.mainmenu-genre:hover>a {
+        color: #fff;
     }
 
     .main-menu>li:last-child>a {
@@ -384,7 +389,6 @@
             height: 100%;
             object-fit: cover;
             object-position: center center;
-            transform: scale(1.4);
         }
     }
 
