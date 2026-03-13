@@ -6,22 +6,6 @@ fetch("../header-sub.html")
         //url읽기
         let params = new URLSearchParams(window.location.pathname);
 
-        //헤더 고정,배경 바꾸기
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.querySelector("header");
-            const logoHeight = document.querySelector(".logo").offsetHeight;
-
-            window.addEventListener("scroll", function () {
-                const sPos = window.scrollY;
-
-                if (sPos > logoHeight) {
-                    header.classList.add("active");
-                } else {
-                    header.classList.remove("active");
-                }
-            });
-        });
-
         // ================검색창================
         let searchBtn = document.querySelector(".search-btn");
         let searchTab = document.querySelector(".search-wrap");
