@@ -122,32 +122,32 @@ genreBtnArr.forEach((genreBtn, id, arr) => {
 })
 
 // ================검색창================
-let searchBtn = document.querySelector(".search-btn");
-let searchTab = document.querySelector(".search-wrap");
-let searchCloseBtn = searchTab.querySelector(".search-close-btn");
-searchBtn.addEventListener("click", e => {
-    //console.log("isclicked", e);
-    searchTab.style.top = 0;
-    // searchBtn.style.display = "none";
-    searchBtn.style.opacity = `${50}%`
-})
-searchCloseBtn.addEventListener("click", e => {
-    searchTab.style.top = `-${120}%`;
-    // searchBtn.style.display = "block";
-    searchBtn.style.opacity = `${100}%`
-})
+// let searchBtn = document.querySelector(".search-btn");
+// let searchTab = document.querySelector(".search-wrap");
+// let searchCloseBtn = searchTab.querySelector(".search-close-btn");
+// searchBtn.addEventListener("click", e => {
+//     //console.log("isclicked", e);
+//     searchTab.style.top = 0;
+//     // searchBtn.style.display = "none";
+//     searchBtn.style.opacity = `${50}%`
+// })
+// searchCloseBtn.addEventListener("click", e => {
+//     searchTab.style.top = `-${120}%`;
+//     // searchBtn.style.display = "block";
+//     searchBtn.style.opacity = `${100}%`
+// })
 
-//검색창 커서
-let searchInput = document.querySelector(".searchInput");
-searchInput.addEventListener("focus", function () {
-    this.type = "text";
-    this.classList.add("active");
-    this.previousElementSibling.style.display = "none";
-})
-searchInput.addEventListener("blur", function () {
-    this.classList.remove("active");
-    this.previousElementSibling.style.display = "block";
-    this.type = "reset";
-    this.value = "";
-})
+// //검색창 커서
+// let searchInput = document.querySelector(".searchInput");
+// searchInput.addEventListener("focus", function () {
+//     this.type = "text";
+//     this.classList.add("active");
+//     this.previousElementSibling.style.display = "none";
+// })
+// searchInput.addEventListener("blur", function () {
+//     this.classList.remove("active");
+//     this.previousElementSibling.style.display = "block";
+//     this.type = "reset";
+//     this.value = "";
+// })
 
