@@ -75,6 +75,10 @@
         width: 185px;
     }
 
+    .movie-list>li>.expand {
+        width: 100%;
+    }
+
     /* review-wrap */
 
     .review-card {
