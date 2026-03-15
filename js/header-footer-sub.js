@@ -60,7 +60,7 @@ fetch("../header-sub.html")
         let mainMenuGenre = document.querySelector(".main-menu .mainmenu-genre");
         let mainMenuGenreA = document.querySelector(".main-menu .mainmenu-genre>a");
         let subMenu = document.querySelector(".submenu-wrap");
-        let subCloseBtn = subMenu.querySelector(".close-btn");
+        let subCloseBtn = subMenu.querySelector(".search-close-btn");
 
         mainMenuGenreA.addEventListener("mouseenter", () => {
             // console.log(wWidth);
