@@ -459,3 +459,13 @@ rankListLi.forEach((list, id) => {
         clickedLi.classList.toggle("active");
     });
 });
+
+let exMovieLi = document.querySelector(".ex-expand");
+let exMovieDiv = document.querySelector(".ex-expand .expand");
+ 
+exMovieLi.addEventListener("click", (e)=>{
+    e.preventDefault();//a의 기본 이벤트 막기
+
+    exMovieLi.classList.toggle("active");
+    exMovieDiv.classList.toggle("active");
+});
